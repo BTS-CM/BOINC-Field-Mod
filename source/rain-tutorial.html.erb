@@ -31,7 +31,10 @@
                 </div>
                 <div class="panel-body">
                     <p>
-                        You'll need to download the user XML files from the BOINC projects that you are interested in raining your asset upon:
+                        You'll need to download the user XML files from the BOINC projects that you are interested in raining your asset upon!
+                    </p>
+                    <p>
+                        You can speed up this process by modifying <a href="https://github.com/grctest/grcnode/tree/master/BackEnd/BOINC%20stats/Overall/Scripts">these XML download scripts</a>.
                     </p>
 
                     <table class="table table-hover table-condensed">
@@ -465,15 +468,107 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4>
-                        Step 3: Extract Project-Rain.CO.UK details
+                        Step 3: ETL - Extract, Transform & Load!
                     </h4>
                 </div>
                 <div class="panel-body">
-                    <p>
-                        If you downloaded the user.gz file, extract it to an XML file.
+                    <h4>
+                        Extract
+                    </h4>
+                    <p style="padding-left:10px;">
+                        Pick the projects you want to distribute your asset to and either download each project's compressed user xml files or extract a specific BOINC team user xml data (See "Step 2: Download BOINC project XML files").
                     </p>
-                    <p>
-                        Once you have the XML file, extract each user's CPID and cryptocurrency address/accounts.
+                    <p style="padding-left:10px;">
+                        Store the downloaded files in a time stamped folder to keep track of the age of 'project-rain' sharedrop target data (Pull the data as close to the 'project-rain' distribution as possible).
+                    </p>
+                    <p style="padding-left:10px;">
+                        <b>Note</b>: Please do not pull the compressed XML GZ files from 'Project-Rain' nor any external BOINC project server more frequently than once every 24hrs to save server resources. Most BOINC projects do not update RAC more than once every 24hrs (so it'd be a waste of time pulling the data more frequently).
+                    </p>
+
+                    <hr/>
+                    
+                    <h4>
+                        Transform
+                    </h4>
+                    <p style="padding-left:10px;">
+                        If you downloaded the GZ compressed files, extract the .GZ & change the file name to end with <code>.XML</code> if it doesn't have a file type. Generally the files labeled <code>*.xml.gz</code> will extract directly to an XML file where as <code>*.GZ</code> will need the <code>.XML</code> file type added.
+                    </p>
+                    
+                    <hr/>
+                    
+                    <h4>
+                        Load
+                    </h4>
+                    <p style="padding-left:10px;">
+                        This step is a bit complex, you're going to need to load the XML into a database. For the purpose of this tutorial we are going to use MariaDB, but you can use any method of storing/parsing XML data.
+                    </p>
+                    <h5>
+                        Pre-Reqs: Install software    
+                    </h5>
+                    <p style="padding-left:10px;">
+                        <a href="https://mariadb.org/">Install MariaDB</a> and install a suitable <a href="https://mariadb.com/kb/en/mariadb/graphical-and-enhanced-clients/">MariaDB Graphical User Interface</a>, I've used NaviCat on Linux successfully in the past.
+                    </p>
+                    <h5>
+                        Create a Database
+                    </h5>
+                    <p style="padding-left:10px;">
+                        <a href="">Template</a><br/>
+                        <a href="">All projects</a>
+                    </p>
+
+                    <h5>
+                        Create 'Project-Rain' BOINC project table
+                    </h5>
+                    <p style="padding-left:10px;">
+                        Add your crypto asset of choice & Don't forget to provide an accurate varchar length.<br/>
+                        <a href="">Template</a><br/>
+                        <a href="">All projects</a>
+                    </p>
+
+                    <h5>
+                        Create BOINC project tables
+                    </h5>
+                    <p style="padding-left:10px;">
+                        For each target BOINC project create a table using the following template:
+                    </p>
+                    <p style="padding-left:10px;">
+                        <a href="">Template</a><br/>
+                        <a href="">All projects</a>
+                    </p>
+
+                    <h5>
+                        Create USER tables
+                    </h5>
+                    <p style="padding-left:10px;">
+                        Add your crypto asset of choice & Don't forget to provide an accurate varchar length.<br/>
+                        <a href="">Template</a><br/>
+                        <a href="">All projects</a>
+                    </p>
+
+                    <h5>
+                        Importing BOINC Project 'User' XML
+                    </h5>
+                    <p style="padding-left:10px;">
+                        <b>Note</b>: The previously compressed GZ XML will take a significant amount of time to load into the database on slow computers with this method of importing XML data. There may be a better import method, if you know of one please do <a href="https://github.com/grctest/project-rain-site/issues">raise an issue on GitHub</a>.<br/>
+                        <a href="">Template</a><br/>
+                        <a href="">All projects</a>
+                    </p>
+
+                    <h5>
+                        Gather CPIDs from each project for 'Overview' table
+                    </h5>
+                    <p style="padding-left:10px;">
+                        <b>Note</b>: .<br/> 
+                        <a href="">Template</a><br/>
+                        <a href="">All projects</a>
+                    </p>
+
+                    <h5>
+                        Populate the 'Overview' table
+                    </h5>
+                    <p style="padding-left:10px;">
+                        <a href="">Template</a><br/>
+                        <a href="">All projects</a>
                     </p>
                 </div>
             </div>
@@ -516,6 +611,9 @@
                     </p>
                     <p style="padding-left:10px;">
                         Note: Amounts are double-precision floating point numbers & the wallet must be fully unlocked.
+                    </p>
+                    <p style="padding-left:10px;">
+                        <a href="https://grcnode.co.uk/Projects/gpugrid/gpugrid.html">Example javacript implementation</a>. 
                     </p>
                     
                     <hr>
