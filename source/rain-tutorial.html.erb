@@ -1,0 +1,657 @@
+<container>
+    <div class="row" style="padding:10px;">
+        <div class="col-xs-12">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        Step 1: Extract XML from the Project-Rain BOINC project
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <h5>Extract user XML from the entire project</h5>
+                        <code>https://www.project-rain.co.uk/boincserver/stats/user.gz</code>
+                        <h5>Alternatively, extract a specific team's XML  (Replace <b>TEAMID</b> with your project-rain team ID).</h5>
+                        <code>https://www.project-rain.co.uk/boincserver/team_email_list.php?teamid=<b>TEAMID</b>&xml=1</code>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row" style="padding:10px;">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        Step 2: Download BOINC project XML files
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        You'll need to download the user XML files from the BOINC projects that you are interested in raining your asset upon:
+                    </p>
+
+                    <table class="table table-hover table-condensed">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Project
+                                </th>
+                                <th>
+                                    Category
+                                </th>
+                                <th>
+                                    User XML
+                                </th>
+                                <th>
+                                    Team XML
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="http://setiathome.berkeley.edu/">SETI@Home</a>
+                                </td>
+                                <td>
+                                    Physical Science
+                                </td>
+                                <td>
+                                    <a href="http://setiweb.ssl.berkeley.edu/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://setiathome.berkeley.edu/team_email_list.php?teamid=145340&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://einstein.phys.uwm.edu/">Einstein@Home</a>
+                                </td>
+                                <td>
+                                    Physical Science
+                                </td>
+                                <td>
+                                    <a href="http://einstein.phys.uwm.edu/stats/user_id.gz">user_id.gz</a>
+                                </td>
+                                <td>
+                                    <a href="https://einstein.phys.uwm.edu/team_email_list.php?teamid=13630&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://climateprediction.net/">ClimatePrediction</a>
+                                </td>
+                                <td>
+                                    Earth Sciences
+                                </td>
+                                <td>
+                                    <a href="http://www.climateprediction.net/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://climateapps2.oerc.ox.ac.uk/cpdnboinc/team_email_list.php?teamid=10427&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://boinc.bakerlab.org/rosetta/">Rosetta@Home</a>
+                                </td>
+                                <td>
+                                    Biology and Medicine
+                                </td>
+                                <td>
+                                    <a href="http://boinc.bakerlab.org/rosetta/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://boinc.bakerlab.org/rosetta/team_email_list.php?teamid=12575&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://burp.renderfarming.net/">BURP</a>
+                                </td>
+                                <td>
+                                    Mathematics/Computing
+                                </td>
+                                <td>
+                                    <a href="http://burp.boinc.dk/stats/user_id.gz">user_id.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://burp.renderfarming.net/team_email_list.php?teamid=1285&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://www.primegrid.com/">PrimeGrid</a>
+                                </td>
+                                <td>
+                                    Mathematics/Computing
+                                </td>
+                                <td>
+                                    <a href="http://www.primegrid.com/stats/user_id.gz">user_id.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://www.primegrid.com/team_email_list.php?teamid=4469&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://szdg.lpds.sztaki.hu/szdg/">Sztaki desktop grid</a>
+                                </td>
+                                <td>
+                                    Mathematics/Computing
+                                </td>
+                                <td>
+                                    <a href="http://szdg.lpds.sztaki.hu/szdg/stats/user.xml.gz">user.xml.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://szdg.lpds.sztaki.hu/szdg/team_email_list.php?teamid=3502&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://www.worldcommunitygrid.org/">World Community Grid</a>
+                                </td>
+                                <td>
+                                    Multiple applications
+                                </td>
+                                <td>
+                                    <a href="http://www.worldcommunitygrid.org/boinc/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://www.worldcommunitygrid.org/boinc/team_email_list.php?teamid=30513&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://www.malariacontrol.net/">MalariaControl</a>
+                                </td>
+                                <td>
+                                    Biology and Medicine
+                                </td>
+                                <td>
+                                    <a href="http://www.malariacontrol.net/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://www.malariacontrol.net/team_email_list.php?teamid=4059&xml=1">XML</a>
+                                </td>
+                            </tr><!--
+                            <tr>
+                                <td>
+                                    <a href="">Lattice</a>
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    <a href="http://boinc.umiacs.umd.edu/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href=""></a>
+                                </td>
+                            </tr>-->
+                            <tr>
+                                <td>
+                                    <a href="http://boinc.gorlaeus.net/">Leiden</a>
+                                </td>
+                                <td>
+                                    Earth Sciences
+                                </td>
+                                <td>
+                                    <a href="http://boinc.gorlaeus.net/stats/user.xml.gz">user.xml.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://boinc.gorlaeus.net/team_email_list.php?teamid=1629&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://moowrap.net/">MooWrap</a>
+                                </td>
+                                <td>
+                                    Mathematics/Computing
+                                </td>
+                                <td>
+                                    <a href="http://moowrap.net/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://moowrap.net/team_email_list.php?teamid=2190&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://www.gpugrid.net/">GPUGRID</a>
+                                </td>
+                                <td>
+                                    Biology and Medicine
+                                </td>
+                                <td>
+                                    <a href="https://www.gpugrid.net/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://www.gpugrid.net/team_email_list.php?teamid=3493&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://asteroidsathome.net/boinc/">Asteroids</a>
+                                </td>
+                                <td>
+                                    Physical Science
+                                </td>
+                                <td>
+                                    <a href="http://asteroidsathome.net/boinc/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://asteroidsathome.net/boinc/team_email_list.php?teamid=2218&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://milkyway.cs.rpi.edu/milkyway/">Milkyway@Home</a>
+                                </td>
+                                <td>
+                                    Physical Science
+                                </td>
+                                <td>
+                                    <a href="http://milkyway.cs.rpi.edu/milkyway/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://milkyway.cs.rpi.edu/milkyway/team_email_list.php?teamid=6566&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://boinc.fzk.de/poem/">POEM</a>
+                                </td>
+                                <td>
+                                    Biology and Medicine
+                                </td>
+                                <td>
+                                    <a href="http://boinc.fzk.de/poem/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://boinc.fzk.de/poem/team_email_list.php?teamid=3147&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://boinc.thesonntags.com/collatz/">Collatz</a>
+                                </td>
+                                <td>
+                                    Mathematics/Computing
+                                </td>
+                                <td>
+                                    <a href="http://boinc.thesonntags.com/collatz/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://boinc.thesonntags.com/collatz/team_email_list.php?teamid=3029&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://volunteer.cs.und.edu/csg/">Citizen Science Grid</a>
+                                </td>
+                                <td>
+                                    Multiple applications
+                                </td>
+                                <td>
+                                    <a href="http://csgrid.org/csg/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://csgrid.org/csg/team_email_list.php?teamid=154&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://yafu.myfirewall.org/yafu/">YAFU</a>
+                                </td>
+                                <td>
+                                    Mathematics/Computing
+                                </td>
+                                <td>
+                                    <a href="http://yafu.myfirewall.org/yafu/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://yafu.myfirewall.org/yafu/team_email_list.php?teamid=260&xml=1">XML</a>
+                                </td>
+                            </tr><!--
+                            <tr>
+                                <td>
+                                    Find@Home
+                                </td>
+                                <td>
+                                    <a href="http://findah.ucd.ie/stats/user.gz">http://findah.ucd.ie/stats/user.gz</a>
+                                </td>
+                            </tr>-->
+                            <tr>
+                                <td>
+                                    <a href="http://www.cosmologyathome.org/">Cosmology@Home</a>
+                                </td>
+                                <td>
+                                    Physical Science
+                                </td>
+                                <td>
+                                    <a href="http://www.cosmologyathome.org/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://www.cosmologyathome.org/team_email_list.php?teamid=3637&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://lhcathome2.cern.ch/vLHCathome/">vLHC@Home</a>
+                                </td>
+                                <td>
+                                    Physical Science
+                                </td>
+                                <td>
+                                    <a href="http://lhcathome2.cern.ch/vLHCathome/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://lhcathome2.cern.ch/vLHCathome/team_email_list.php?teamid=2429&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://mindmodeling.org/">MindModeling</a>
+                                </td>
+                                <td>
+                                    Cognitive science & Artifical Intelligence
+                                </td>
+                                <td>
+                                    <a href="https://mindmodeling.org/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://mindmodeling.org/team_email_list.php?teamid=2415&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://escatter11.fullerton.edu/nfs/">NFS</a>
+                                </td>
+                                <td>
+                                    Mathematics/Computing
+                                </td>
+                                <td>
+                                    <a href="https://escatter11.fullerton.edu/nfs/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://escatter11.fullerton.edu/nfs/team_email_list.php?teamid=2353&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://numberfields.asu.edu/NumberFields/">NumbersFields</a>
+                                </td>
+                                <td>
+                                    Mathematics/Computing
+                                </td>
+                                <td>
+                                    <a href="http://numberfields.asu.edu/NumberFields/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://numberfields.asu.edu/NumberFields/team_email_list.php?teamid=2069&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://pogs.theskynet.org/pogs/">Skynet Pogs</a>
+                                </td>
+                                <td>
+                                    Physical Science
+                                </td>
+                                <td>
+                                    <a href="https://pogs.theskynet.org/pogs/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://pogs.theskynet.org/pogs/team_email_list.php?teamid=2020&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://www.rechenkraft.net/yoyo/">YOYO</a>
+                                </td>
+                                <td>
+                                    Multiple applications
+                                </td>
+                                <td>
+                                    <a href="http://www.rechenkraft.net/yoyo/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://www.rechenkraft.net/yoyo/team_email_list.php?teamid=1475&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://sat.isa.ru/pdsat/">SAT@Home</a>
+                                </td>
+                                <td>
+                                    Mathematics/Computing
+                                </td>
+                                <td>
+                                    <a href="http://sat.isa.ru/pdsat/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://sat.isa.ru/pdsat/team_email_list.php?teamid=2059&xml=1">XML</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="http://atlasathome.cern.ch/">ATLAS@Home</a>
+                                </td>
+                                <td>
+                                    Physical Science
+                                </td>
+                                <td>
+                                    <a href="http://atlasathome.cern.ch/stats/user.gz">user.gz</a>
+                                </td>
+                                <td>
+                                    <a href="http://atlasathome.cern.ch/team_email_list.php?teamid=1869&xml=1">XML</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="padding:10px;">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        Step 3: Extract Project-Rain.CO.UK details
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        If you downloaded the user.gz file, extract it to an XML file.
+                    </p>
+                    <p>
+                        Once you have the XML file, extract each user's CPID and cryptocurrency address/accounts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="padding:10px;">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        Step 4: Extract RAC or TotalRAC for each CPID in extracted BOINC project XML files
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        12345
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="padding:10px;">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        Step 5: Generate 'Project Rain' transaction(s)
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <h4>
+                        <a href="https://www.gridcoin.us">Gridcoin</a>
+                    </h4>
+                    <p style="padding-left:10px;">Command:</br>
+                    <code>"sendmany  <fromaccount> {address:amount,...} [minconf=1] [comment]"</code>
+                    </p>
+                    <p style="padding-left:10px;">Example:<br/><code>sendmany "1" '{"RzS1Z6vm84AiCJ8Nwe3V2JvvaQtWfnYfGf":112.322,"S9CDQg4yP9wuBA9N5PkbUv6T5b4JokrjMQ":68.939}' 5 "message"</code>
+                    </p>
+                    <p style="padding-left:10px;">
+                        Note: Amounts are double-precision floating point numbers & the wallet must be fully unlocked.
+                    </p>
+                    
+                    <hr>
+
+                    <h4>
+                        <a href="https://bitshares.org/">Bitshares</a>
+                    </h4>
+                    <p style="padding-left:10px;">
+                    The general principle for generating, singing and broadcasting an arbitrary transactions:<br/>
+                    <b>1</b>. Create an instance of the transaction builder<br/>
+                    <b>2</b>. Add arbitrary operation types<br/>
+                    <b>3</b>. Add the required amount of fees<br/>
+                    <b>4</b>. Sign and broadcast your transaction<br/>
+                    </p>
+                    <p>
+                        <a href="http://docs.bitshares.org/bitshares/tutorials/construct-transaction.html">Transaction construction guide</a>.
+                    </p>
+                    <p>
+                        Alternatively:<br/>
+                        <a href="http://docs.bitshares.org/bitshares/tutorials/propose-transaction.html">Transaction proposal guide</a>.<br/>
+                        <a href="http://docs.bitshares.org/bitshares/tutorials/confidential-transactions.html">Confidential transfer guide</a>.<br/>
+                    </p>
+                    
+                    <hr>
+
+                    <h4>
+                        <a href="https://steem.io/">STEEM</a>
+                    </h4>
+                    <p style="padding-left:10px;">
+                        An idea: You could create a 'Project Rain' STEEM post to raise STEEM funds to 'project rain' upon BOINC project participants.
+                    </p>
+                    <p style="padding-left:10px;">
+                        <a href="https://steem.io/documentation/how-use-wallet-via-json-rpc-over-http/">JSON RPC curl tutorial</a>.<br/>
+                        <a href="http://python-steem.readthedocs.io/en/latest/transactions.html">Python library - build transaction</a>.
+                    </p>
+                    
+                    <hr>
+
+                    <h4>
+                        <a href="https://www.ethereum.org/">Ethereum</a>
+                    </h4>
+                    <p style="padding-left:10px;">
+                        <a href="https://ethereum.gitbooks.io/frontier-guide/content/ether_transfer.html">Frontier Guide: Ether transfer</a>.<br/>
+                        <a href="https://ethereum.stackexchange.com/questions/3386/create-and-sign-offline-raw-transactions">Create and sign offline raw transactions</a>.<br/>
+                        <a href="https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions#ether-transfer">Go-Ethereum: Ether transfer</a>.<br/>
+                        <a href="https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions#testing-contracts-and-transactions">Go-Ethereum: Testing transactions</a>.<br/>
+                        <a href="https://ethereum-homestead.readthedocs.io/en/latest/contracts-and-transactions/ethereum-tests/transaction_tests/index.html">Homestead: Testing transactions</a>.<br/>
+                        <a href="https://ethereum-homestead.readthedocs.io/en/latest/contracts-and-transactions/index.html">Homestead: Contracts and Transaction guides</a>.<br/>
+                        <a href="https://github.com/ethereum/pyethapp/wiki/The_Console#creating-transactions">Pyethapp: Creating transactions</a>.<br/>
+                    </p>
+                    
+                    <hr>
+
+                    <h4>
+                        <a href="https://nxt.org">NXT</a>
+                    </h4>
+                    <p style="padding-left:10px;">
+                        It's currently not possible to generate a single transaction with multiple recipients, you will need to create individual transactions for each target recipient.
+                    </p>
+
+                    <p style="padding-left:10px;">
+                        <a href="http://nxtwiki.org/wiki/The_Nxt_API#Send_Money">Send_Money API Guide</a>.<br/>
+                        <a href="http://nxtwiki.org/wiki/The_Nxt_API_Examples#Send_Money">Send_Money example</a>.<br/>
+                        <a href="https://nxtforum.org/general-discussion/'project-rain'-distribute-nxtardor-assets-to-boinc-users!/">NXT forum post regarding NXT 'project-rain'</a>.
+                    </p>
+                    
+                    
+                    <hr>
+
+                    <h4>
+                        <a href="https://www.ardorplatform.org/">Ardor</a>
+                    </h4>
+                    <p style="padding-left:10px;">
+                        I'll update this section once <a href="https://www.ardorplatform.org/">Ardor</a> has been released & documentation is available.
+                    </p>
+                    
+                    <hr>
+
+                    <h4>
+                        <a href="https://www.hyperledger.org/">Hyperledger</a>
+                    </h4>
+                    <p style="padding-left:10px;">
+                        <a href="https://github.com/hyperledger/hyperledger">Github: Hyperledger</a><br/>
+                        <a href="https://github.com/hyperledger/fabric">Hyperledger: Fabric</a>.<br/>
+                        <a href="https://github.com/hyperledger/sawtooth-core">Hyperledger: Sawtooth Lake<a/>.<br/>
+                    </p>
+                    
+                    <hr>
+
+                    <h4>
+                        <a href="https://wavesplatform.com/">Waves</a>
+                    </h4>
+                    <p style="padding-left:10px;">
+                        ???
+                    </p>
+                    
+                    <hr>
+
+                    <h4>
+                        <a href="http://omnilayer.org">Omnilayer</a>
+                    </h4>
+                    <p style="padding-left:10px;">                        Sendmany?
+                    </p>
+                    
+                    <hr>
+
+                    <h4>
+                        <a href="https://counterparty.io">Counterparty</a>
+                    </h4>
+                    <p style="padding-left:10px;">
+                        Sendmany?
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="padding:10px;">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>
+                        Any of the above info incorrect?
+                    </h4>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        I'm primarily a Gridcoin user, the majority of step 5 was the result of quick googling.
+                    </p>
+                    <p>
+                        If you see anything that could be improved, please do not hesitate to email me with more info: <code>contact AT project-rain DOT co DOT uk</code>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</container>
