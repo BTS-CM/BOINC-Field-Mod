@@ -2,8 +2,8 @@ USE ProjectRain;
 create table Overview (
    name varchar(254),
    country varchar(254),
-   ExampleProject1_Mag_All double DEFAULT 0,
-   ExampleProject2_Mag_All double DEFAULT 0,
+   ExampleProject1_Mag double DEFAULT 0,
+   ExampleProject2_Mag double DEFAULT 0,
    TotalMag_All double DEFAULT 0,
    bitshares_account varchar(254),
    steem_account varchar(254),
