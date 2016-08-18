@@ -35,7 +35,7 @@ SET Overview.country = Project2_user.country
 WHERE Overview.cpid = Project2_user.cpid;
 
 
-#Tallying ALL user's total magnitude across all whitelisted projects.
+#Tallying ALL user's total magnitude across target projects.
 UPDATE Overview
 SET TotalMag_All = Project1_Mag_All + Project2_Mag_All;
 
