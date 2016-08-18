@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title>Project Rain</title>
+        <meta name="description" content="GRCNode stats/info/tools">
+        <meta name="author" content="CM">
+        <meta name="viewport" content="width=device-width">
+
+        <!--Favicons
+        <link rel="apple-touch-icon" sizes="57x57" href="/img/Favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/img/Favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/img/Favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/img/Favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/img/Favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/img/Favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/img/Favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/img/Favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/Favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/img/Favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/Favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/img/Favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/Favicons/favicon-16x16.png">
+        <link rel="manifest" href="/img/Favicons/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/img/Favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        /Favicons-->
+
+        <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <script type="text/javascript" src="/js/Mandatory/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/Mandatory/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/Mandatory/analytics.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+        ﻿<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/index.html">Project Rain</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BOINC Projects <span class="caret"></span></a>
+           <ul class="dropdown-menu dropdown-menu-inverse" role="menu" style="text-align:center;">
+            <li role="presentation" class="dropdown-header" style="color:black;">BOINC Projects</li>
+            <li>
+                <a href="http://asteroids@home.net/boinc/" style="color:#9A9899;">Asteroids@Home</a>
+                <a href="http://atlasathome.cern.ch/" style="color:#9A9899;">ATLAS@Home</a>
+                <a href="http://burp.renderfarming.net/" style="color:#9A9899;">BURP</a>
+                <a href="http://boinc.thesonntags.com/collatz/" style="color:#9A9899;">Collatz Conjecture</a>
+                <a href="http://csgrid.org/csg/" style="color:#9A9899;">Citizens Science Grid</a>
+                <a href="http://www.cosmologyathome.org/" style="color:#9A9899;">Cosmology@Home</a>
+                <a href="http://einstein.phys.uwm.edu/" style="color:#9A9899;">Einstein@Home</a>
+                <a href="http://www.enigmaathome.net/" style="color:#9A9899;">Enigma@Home</a>
+                <a href="http://www.gpugrid.net/" style="color:#9A9899;">GPUGRID</a>
+                <a href="http://boinc.gorlaeus.net/" style="color:#9A9899;">Leiden Classical</a>
+                <a href="http://lhcathome.cern.ch/lhcathome/" style="color:#9A9899;">LHC@Home Classic</a>
+                <a href="http://milkyway.cs.rpi.edu/milkyway/" style="color:#9A9899;">Milkyway@Home</a>
+                <a href="http://mindmodeling.org/beta/" style="color:#9A9899;">MindModeling@Home</a>
+                <a href="http://www.moowrap.net/" style="color:#9A9899;">MooWrap</a>
+                <a href="http://escatter11.fullerton.edu/nfs/" style="color:#9A9899;">NFS@Home</a>
+                <a href="http://numberfields.as.edu/NumberFields/" style="color:#9A9899;">NumbersField@Home</a>
+                <a href="http://boinc.fzk.de/poem/" style="color:#9A9899;">POEM@Home</a>
+                <a href="http://www.primegrid.com/" style="color:#9A9899;">PrimeGrid</a>
+                <a href="https://boinc.bakerlab.org/" style="color:#9A9899;">Rosetta@Home</a>
+                <a href="http://sat.isa.ru/pdsat/" style="color:#9A9899;">SAT@Home</a>
+                <a href="http://setiathome.berkeley.edu/" style="color:#9A9899;">SETI@Home</a>
+                <a href="http://szdg.lpds.sztaki.hu/szdg/" style="color:#9A9899;">Sztaki desktop grid</a>
+                <a href="http://pogs.theskynet.org/pogs/" style="color:#9A9899;">SkyNet POGs</a>
+                <a href="http://universeathome.pl/universe/" style="color:#9A9899;">Universe@Home</a>
+                <a href="http://yafu.myfirewall.org/yafu/" style="color:#9A9899;">YAFU</a>
+                <a href="http://lhcathome2.cern.ch/vLHCathome/" style="color:#9A9899;">vLHC@Home</a>
+                <a href="http://www.rechenkraft.net/yoyo/" style="color:#9A9899;">World Community Grid</a>
+                <a href="http://www.rechenkraft.net/yoyo/" style="color:#9A9899;">YOYO@Home</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">BOINC Community <span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-menu-inverse" role="menu" style="text-align:center;">
+                <li role="presentation" class="dropdown-header" style="color:black;">BOINC Community</li>
+                <li>
+                    <a href="http://formula-boinc.org/" style="color:#9A9899;"><i class="fa fa-arrow-circle-right" style="color:#707C34;"></i> Formula BOINC</a>
+                </li>
+                <li>
+                    <a href="http://uotd.org/" style="color:#9A9899;"><i class="fa fa-arrow-circle-right" style="color:#707C34;"></i> User of the Day</a>
+                </li>
+                <li>
+                    <a href="https://boinc.berkeley.edu/dev/" style="color:#9A9899;"><i class="fa fa-arrow-circle-right" style="color:#707C34;"></i> BOINC Forum</a>
+                </li>
+                <li>
+                    <a href="http://hardforum.com/index.php" style="color:#9A9899;"><i class="fa fa-arrow-circle-right" style="color:#707C34;"></i> [H]ard|Forum</a>
+                </li>
+                <li>
+                    <a href="http://www.rechenkraft.net/" style="color:#9A9899;"><i class="fa fa-arrow-circle-right" style="color:#707C34;"></i> Rechenkraft.net</a>
+                </li>
+                <li>
+                    <a href="http://desktopgridfederation.org/" style="color:#9A9899;"><i class="fa fa-arrow-circle-right" style="color:#707C34;"></i> IDGF</a>
+                </li>
+                <li>
+                    <a href="http://www.seti-germany.de/" style="color:#9A9899;"><i class="fa fa-arrow-circle-right" style="color:#707C34;"></i> Seti-Germany</a>
+                </li>
+                <li>
+                    <a href="http://www.setiusa.us" style="color:#9A9899;"><i class="fa fa-arrow-circle-right" style="color:#707C34;"></i> SETI.USA</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Gridcoin <span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-menu-inverse" role="menu" style="text-align:center;">
+                <li role="presentation" class="dropdown-header" style="color:black;">Gridcoin Community</li>
+                <li>
+                    <a href="https://gridcoin.us" style="color:#9A9899;">
+                        <i class="fa fa-home" style="color:#707C34;"></i> Home page
+                    </a>
+                    <a href="https://www.fb.com/gridcoins" style="color:#9A9899;">
+                        <i class="fa fa-facebook" style="color:#707C34;"></i> Facebook
+                    </a>
+                    <a href="https://cryptocointalk.com/forum/464-gridcoin-grc/" style="color:#9A9899;">
+                        <i class="fa fa-users" style="color:#707C34;"></i> Forum
+                    </a>
+                    <a href="https://github.com/gridcoin/Gridcoin-Research" style="color:#9A9899;">
+                        <i class="fa fa-github" style="color:#707C34;"></i> Github
+                    </a>
+                    <a href="https://twitter.com/GridcoinNetwork" style="color:#9A9899;">
+                        <i class="fa fa-twitter" style="color:#707C34;"></i> Twitter
+                    </a>
+                    <a href="https://www.reddit.com/r/gridcoin" style="color:#9A9899;">
+                        <i class="fa fa-reddit" style="color:#707C34;"></i> Reddit
+                    </a>
+                    <a href="https://steemit.com/active/gridcoin" style="color:#9A9899;">
+                        <i class="fa fa-newspaper-o" style="color:#707C34;"></i> Steemit
+                    </a>
+                    <a href="https://soundcloud.com/gridcoin-community-hangouts/" style="color:#9A9899;">
+                        <i class="fa fa-soundcloud" style="color:#707C34;"></i> Soundcloud
+                    </a>
+                    <a href="http://wiki.gridcoin.us/Main_Page" style="color:#9A9899;"><i class="fa fa-wikipedia-w" style="color:#707C34;"></i> Gridcoin Wiki</a>
+                </li>
+                <li role="presentation" class="dropdown-header" style="color:black;">Exchanges</li>
+                <li>
+                    <a href="https://holytransaction.com/" style="color:#9A9899;"><i class="fa fa-credit-card" style="color:#707C34;"></i> HolyTransactions</a>
+                    <a href="https://poloniex.com/exchange/btc_grc" style="color:#9A9899;"><i class="fa fa-credit-card" style="color:#707C34;"></i> Poloniex</a>
+                    <a href="https://c-cex.com/?p=grc-btc" style="color:#9A9899;"><i class="fa fa-credit-card" style="color:#707C34;"></i> C-Cex</a>
+                    <a href="https://bittrex.com/Market/Index?MarketName=BTC-GRC" style="color:#9A9899;"><i class="fa fa-credit-card" style="color:#707C34;"></i> Bittrex</a>
+                    <a href="https://www.bitsquare.io" style="color:#9A9899;"><i class="fa fa-credit-card" style="color:#707C34;"></i> BitSquare</a>
+                </li>
+                <li role="presentation" class="dropdown-header" style="color:black;">Exchange Stats</li>
+                <li>
+                    <a href="http://coinmarketcap.com/currencies/gridcoin/" style="color:#9A9899;"><i class="fa fa-line-chart" style="color:#707C34;"></i> Coinmarketcap</a>
+                    <a href="https://www.coingecko.com/en/coins/gridcoin-research" style="color:#9A9899;"><i class="fa fa-line-chart" style="color:#707C34;"></i> CoinGecko</a>
+                    <a href="https://www.cryptocompare.com/coins/grc/overview" style="color:#9A9899;"><i class="fa fa-line-chart" style="color:#707C34;"></i> Cryptocompare</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Bitshares <span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-menu-inverse" role="menu" style="text-align:center;">
+                <li role="presentation" class="dropdown-header" style="color:black;">Community links</li>
+                <li>
+                    <a href="https://bitshares.org" style="color:#9A9899;"><i class="fa fa-home" style="color:#707C34;"></i> Home page</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/officialbitshares/" style="color:#9A9899;">
+                        <i class="fa fa-facebook" style="color:#707C34;"></i> Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="https://bitsharestalk.org/" style="color:#9A9899;"><i class="fa fa-users" style="color:#707C34;"></i> Forum</a>
+                </li>
+                <li>
+                    <a href="https://github.com/bitshares/bitshares-2" style="color:#9A9899;">
+                        <i class="fa fa-github" style="color:#707C34;"></i> Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/bitshares" style="color:#9A9899;">
+                        <i class="fa fa-twitter" style="color:#707C34;"></i> Twitter
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.reddit.com/r/bitshares" style="color:#9A9899;">
+                        <i class="fa fa-reddit" style="color:#707C34;"></i> Reddit
+                    </a>
+                </li>
+                <li>
+                    <a href="https://steemit.com/active/bitshares" style="color:#9A9899;">
+                        <i class="fa fa-newspaper-o" style="color:#707C34;"></i> Steemit
+                    </a>
+                </li>
+                <li>
+                    <a href="https://soundcloud.com/beyond-bitcoin-hangouts" style="color:#9A9899;">
+                        <i class="fa fa-soundcloud" style="color:#707C34;"></i> BeyondBitcoin
+                    </a>
+                </li>
+                <li role="presentation" class="dropdown-header" style="color:black;">Web wallets</li>
+                <li>
+                    <a href="https://bitshares.openledger.info/" style="color:#9A9899;"><i class="fa fa-credit-card" style="color:#707C34;"></i> Openledger</a>
+                </li>
+                <li>
+                    <a href="https://secure.freedomledger.com/" style="color:#9A9899;"><i class="fa fa-credit-card" style="color:#707C34;"></i> Freedomledger</a>
+                </li>
+                <li role="presentation" class="dropdown-header" style="color:black;">Block explorer</li>
+                <li>
+                    <a href="https://cryptofresh.com/" style="color:#9A9899;"><i class="fa fa-bolt" style="color:#707C34;"></i> Cryptofresh</a>
+                </li>
+                <li role="presentation" class="dropdown-header" style="color:black;">Exchange Stats</li>
+                <li>
+                    <a href="http://coinmarketcap.com/currencies/bitshares/" style="color:#9A9899;"><i class="fa fa-line-chart" style="color:#707C34;"></i> Coinmarketcap</a>
+                    <a href="https://www.coingecko.com/en/coins/bitshares" style="color:#9A9899;"><i class="fa fa-line-chart" style="color:#707C34;"></i> CoinGecko</a>
+                    <a href="https://www.cryptocompare.com/coins/bts/overview" style="color:#9A9899;"><i class="fa fa-line-chart" style="color:#707C34;"></i> Cryptocompare</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ETH <span class="caret"></span></a>
+            <ul class="dropdown-menu dropdown-menu-inverse" role="menu" style="text-align:center;">
+                <li role="presentation" class="dropdown-header" style="color:black;">Community links</li>
+                <li>
+                    <a href="https://bitshares.org" style="color:#9A9899;"><i class="fa fa-home" style="color:#707C34;"></i> Home page</a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/officialbitshares/" style="color:#9A9899;">
+                        <i class="fa fa-facebook" style="color:#707C34;"></i> Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="https://bitsharestalk.org/" style="color:#9A9899;"><i class="fa fa-users" style="color:#707C34;"></i> Forum</a>
+                </li>
+                <li>
+                    <a href="https://github.com/bitshares/bitshares-2" style="color:#9A9899;">
+                        <i class="fa fa-github" style="color:#707C34;"></i> Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/bitshares" style="color:#9A9899;">
+                        <i class="fa fa-twitter" style="color:#707C34;"></i> Twitter
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.reddit.com/r/ethereum" style="color:#9A9899;">
+                        <i class="fa fa-reddit" style="color:#707C34;"></i> Reddit
+                    </a>
+                </li>
+                <li>
+                    <a href="https://steemit.com/active/ethereum" style="color:#9A9899;">
+                        <i class="fa fa-newspaper-o" style="color:#707C34;"></i> Steemit
+                    </a>
+                </li>
+                <li role="presentation" class="dropdown-header" style="color:black;">Web wallets</li>
+                <li>
+                    <a href="https://bitshares.openledger.info/" style="color:#9A9899;"><i class="fa fa-credit-card" style="color:#707C34;"></i> Openledger</a>
+                </li>
+                <li>
+                    <a href="https://secure.freedomledger.com/" style="color:#9A9899;"><i class="fa fa-credit-card" style="color:#707C34;"></i> Freedomledger</a>
+                </li>
+                <li role="presentation" class="dropdown-header" style="color:black;">Block explorer</li>
+                <li>
+                    <a href="https://cryptofresh.com/" style="color:#9A9899;"><i class="fa fa-bolt" style="color:#707C34;"></i> Cryptofresh</a>
+                </li>
+                <li role="presentation" class="dropdown-header" style="color:black;">Exchange Stats</li>
+                <li>
+                    <a href="http://coinmarketcap.com/currencies/bitshares/" style="color:#9A9899;"><i class="fa fa-line-chart" style="color:#707C34;"></i> Coinmarketcap</a>
+                    <a href="https://www.coingecko.com/en/coins/bitshares" style="color:#9A9899;"><i class="fa fa-line-chart" style="color:#707C34;"></i> CoinGecko</a>
+                    <a href="https://www.cryptocompare.com/coins/bts/overview" style="color:#9A9899;"><i class="fa fa-line-chart" style="color:#707C34;"></i> Cryptocompare</a>
+                </li>
+            </ul>
+        </li>
+
+
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+        <!--Yield-->
+        <container>
+    <div class="row" style="padding:10px;">
+        <div class="col-xs-12 col-sm-6">
+            <img src="./img/boinc-transparent.png" alt="BOINC logo" />
+            <h3>What is BOINC?</h3>
+            <p>
+                BOINC</a> (<a href="http://www.berkeley.edu/">Berkeley</a> Open Infrastructure for Network Computing) is an open-source volunteer oriented computing grid that combines the processing power of all individual users for the purposes of scientific research.
+            </p>
+            <p>
+                 Berkeley Open Infrastructure for Network Computing (<a href="https://boinc.berkeley.edu/">BOINC</a>) is an open-source middleware system which supports volunteer and grid computing. Originally developed to support the <a href="https://www.setiathome.ssl.berkeley.edu">SETI@home</a> project, it became generalized as a platform for other distributed applications in areas as diverse as mathematics, linguistics, medicine, molecular biology, climatology, environmental science, and astrophysics, among others. <a href="https://boinc.berkeley.edu/">BOINC</a> aims to enable researchers to tap into the enormous processing resources of multiple personal computers around the world.
+            </p>
+            <h4>Can I create an BOINC project?</h4>
+            <p>
+                Anyone can create a BOINC project! If you've got an idea for a <a href="https://en.wikipedia.org/wiki/Distributed_computing">distributed computing</a> project, head on over to the <a href="https://steemit.com/gridcoin/@cm-steem/brainstorming-new-boinc-projects-anyone-can-create-a-project-and-reward-their-users-with-gridcoin">BOINC project brainstorming thread</a> on <a href="https://steemit.com">STEEM</a> to get an idea of possible BOINC projects.
+            </p>
+
+            <h4>What's this talk of a whitelist?</h4>
+            <p>
+                The BOINC project whitelist is a voted upon list of projects rewarded within the <a href="https://www.gridcoin.us">Gridcoin network</a>. We don't reward all projects because some projects are inactive/dead or are insecure & a risk to our users.
+            </p>
+            <p>
+                If you have concerns regarding the whitelist or wish to have your project whitelisted then <a href="https://cryptocointalk.com/topic/29841-discussion-boinc-whitelist-monitoring/">speak up in the Gridcoin whitelist thread</a>.
+            </p>
+            <p>
+                Due to the nature of this BOINC project, there's nothing stopping you from ignoring the whitelist and distributing your crypto assets against non-whitelisted projects but you do so at your own risk (and potentially at the risk of your own crypto community).
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="row">
+                <div class="col-xs-6">
+                    <img src="./img/project-rain.png" alt="Project Rain" />
+                </div>
+                <div class="col-xs-6" style="padding-top:55px;">
+                    <a href="https://www.project-rain.co.uk/boincserver/">
+                         <button type="button" class="btn btn-default">Continue to Project Rain BOINC project</button>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3>What is Project Rain?</h3>
+                    <p>
+                        'Project Rain' is the practice of distributing crypto assets to BOINC users based on their verified BOINC computation; it was initially devised within the <a href="https://www.gridcoin.us">Gridcoin</a> network and has been expanded to multiple cryptocurrencies and all BOINC teams through this BOINC project.
+                    </p>
+                    <p>
+                        Through this BOINC project, you will be able to match user's BOINC <a href="http://boincfaq.mundayweb.com/index.php?view=192">CPID</a> to their multiple crypto asset addresses/accounts to which you can distribute your asset against.
+                    </p>
+                    <p>
+                        Think of Project Rain as a new share-dropping vector that doesn't require end-users handling wallet private keys nor providing proof of IRL identity.
+                    </p>
+                    <p>
+                        What is exciting about project rain is that there are currently over <b>500,000 active</b> BOINC users and <b>4 million total</b> registered BOINC users of whom you could potentially distribute your asset of choice to.
+                    </p>
+                    <h4>
+                        What cryptocurrencies are currently supported?
+                    </h4>
+                    <p>
+                        <a href="https://www.gridcoin.us">Gridcoin</a>, <a href="https://www.bitshares.org">Bitshares</a>, <a href="https://steemit.com/">STEEM</a>, <a href="https://www.ethereum.org/">Ethereum (ETH)</a>, <a href="https://ethereumclassic.github.io/">Ethereum Classic (ETC)</a>, <a href="https://nxt.org/">NXT</a>, <a href="https://ardorplatform.org/">Ardor</a>, <a href="https://www.hyperledger.org/">Hyperledger</a>, <a href="https://wavesplatform.com/">Waves</a>, <a href="http://www.omnilayer.org">Omnilayer</a> and <a href="https://counterparty.io">Counterparty</a>.
+                    </p>
+                    <h4>
+                        Is there a mandatory team requirement?
+                    </h4>
+                    <p>
+                        There is no mandatory team requirement for joining the website. Assets may be distributed by individuals to specific teams though - that is out of our hands.
+                    </p>
+                    <h4>
+                        Who decides upon asset distribution details?
+                    </h4>
+                    <p>
+                        The individual 'project raining' an asset is responsible for picking target projects, teams and 'rain weight' for each chosen project. The Project Rain BOINC project admins have no input on who/what gets rained upon.
+                    </p>
+                    <h4>
+                        Is a fee charged for this service?
+                    </h4>
+                    <p>
+                        No fees are charged by the Project-Rain website. You'll likely have to pay a large fee to distribute your asset on your cryptocurrency platform of choice (due to the scale of the project rain distribution).
+                    </p>
+                    <h4>
+                        How can I 'Project Rain' crypto assets?
+                    </h4>
+                    <a href="/rain-tutorial.html">
+                         <button type="button" class="btn btn-default">Project Rain Tutorial</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding:10px;">
+        <div class="col-xs-12">
+            <hr>
+            <h3 style="text-align:center;">Help keep Project-Rain.co.uk running</h3>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-5" style="padding-top:15px;">
+            <h4>Cryptocurrency addresses/accounts</h4>
+            <b>BOINC Team</b>: <a href="http://boincstats.com/en/stats/-5/team/detail/118094994/overview">Gridcoin</a><br/>
+            <b>Gridcoin</b>: S4LzoZWFERYbEpeS77Zq26N7Yx5sCWaDRC<br/>
+            <b>STEEM</b>: <a href="https://steemit.com/@cm-steem">@cm-steem</a><br/>
+            <b>Bitshares</b>: cryptocryptocrypto123<br/>
+            <b>Ethereum (ETH)</b>: 0x8102f0B48154C163d1a44F2d67ee558AE6e50E16<br/>
+            <b>Ethereum Classic (ETC)</b>: ???<br/>
+            <b>NXT</b>: NXT-NTUN-YFGP-9GR3-6FZKL<br/>
+            <b>Ardor</b>: ???<br/>
+            <b>Waves</b>: 1W3PNGU4apFprCLgES83FZZRMcL87iW2o26Vm<br/>
+            <b>Hyperledger-Fabric</b>: ???<br/>
+            <b>Hyperledger-Sawtooth-Lake</b>: ???<br/>
+            <b>OmniLayer</b>: ???<br/>
+            <b>CounterParty</b>: ???<br/>            
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3" style="padding-top:15px;">
+            <h4>Refferal links</h4>
+            <a href="https://www.digitalocean.com/?refcode=b86d3e55f889">
+                <img src="/img/DigitalOcean.png" width="300px;" alt="DigitalOcean Logo">
+            </a>
+            </br>
+            <a href="http://nordvpn.com/?ref=135613bd">
+                <img src="/img/NORD.png" width="250px;" alt="NORD Logo" style="padding-top:10px;">
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4" style="padding-top:15px;">
+            <h4>Advertisements</h4>
+        </div>
+    </div>
+</container>
+        <!--/Yield-->
+        <div class="row">
+            <div class="class-xs-12" style="text-align:center;">
+                <hr>
+                <a href="./rules-and-policies.html">Rules and Policies</a> | <a href="./rain-tutorial.html">Project Rain tutorial</a> | <a href="http://www.project-rain.co.uk/boincserver/create_account_form.php?next_url=">Sign up</a>
+                <br>
+                Copyright © 2016 Project-Rain. All rights reserved.<br>
+                <b>Email address</b>: contact AT project-rain DOT co DOT uk<br/><br/>
+            </div>
+        </div>
+    </body>
+</html>
