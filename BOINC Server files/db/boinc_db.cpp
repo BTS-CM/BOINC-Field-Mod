@@ -337,6 +337,12 @@ void DB_USER::db_print(char* buf){
     ESCAPE(steem_account);
     ESCAPE(gridcoin_address);
     ESCAPE(ethereum_address);
+    ESCAPE(ethereum_classic_address);
+    ESCAPE();
+    ESCAPE();
+    ESCAPE();
+    ESCAPE();
+    ESCAPE();
     ESCAPE(nxt_account_id);
     ESCAPE(global_prefs);
     ESCAPE(project_prefs);
@@ -346,7 +352,7 @@ void DB_USER::db_print(char* buf){
         "create_time=%d, email_addr='%s', name='%s', "
         "authenticator='%s', "
         "country='%s', postal_code='%s', "
-        "bitshares_account='%s', steem_account='%s', gridcoin_address='%s', ethereum_address='%s', nxt_account_id='%s', "
+        "bitshares_account='%s', steem_account='%s', gridcoin_address='%s', ethereum_address='%s', ethereum_classic_address='%s', nxt_account_id='%s', "
         "total_credit=%.15e, expavg_credit=%.15e, expavg_time=%.15e, "
         "global_prefs='%s', project_prefs='%s', "
         "teamid=%lu, venue='%s', url='%s', send_email=%d, show_hosts=%d, "
