@@ -173,12 +173,12 @@ struct USER {
     char golem_address[42];
     char nxt_account_id[24];
     char ardor_account_id[24];
-    char hyperledger_sawtooth_lake[64];
-    char hyperledger_fabric[64];
-    char waves_address[];
-    char peershares_address[];
-    char omnilayer_address[];
-    char counterparty_address[];
+    char hyperledger_sawtooth_lake[34];
+    char hyperledger_fabric[34];
+    char waves_address[37];
+    char peershares_address[34];
+    char omnilayer_address[34];
+    char counterparty_address[34];
     double total_credit;
     double expavg_credit;           // credit per second, recent average
     double expavg_time;             // when the above was computed
