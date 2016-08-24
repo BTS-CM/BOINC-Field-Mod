@@ -54,8 +54,12 @@ function show_nav() {
         <p>
         Project-Rain is hosted on <a href='https://www.digitalocean.com/?refcode=b86d3e55f889'>DigitalOcean</a>, and run by CM from the <a href='https://www.gridcoin.us'>Gridcoin</a> community.
         <ul>
-        <li> <a href='https://steemit.com/boinc/@cm-steem/project-rain-distributing-crypto-assets-to-boinc-users-based-on-their-verified-boinc-computation'>Project-Rain Steem post</a>.
-        <li> Got an idea for a BOINC project? <a href='https://steemit.com/gridcoin/@cm-steem/brainstorming-new-boinc-projects-anyone-can-create-a-project-and-reward-their-users-with-gridcoin'>Post your ideas in the Brainstorming thread</a> on Steem!
+        <li> <a href='https://steemit.com/boinc/@cm-steem/project-rain-distributing-crypto-assets-to-boinc-users-based-on-their-verified-boinc-computation'>Project-Rain Steem post</a>.</li>
+        <li> Got an idea for a BOINC project? <a href='https://steemit.com/gridcoin/@cm-steem/brainstorming-new-boinc-projects-anyone-can-create-a-project-and-reward-their-users-with-gridcoin'>Post your ideas in the Brainstorming thread</a> on Steem!</li>
+        </ul>
+        <ul>
+            <li>Currently supported cryptocurrencies:</li>
+            <li>Gridcoin, Bitshares, STEEM, Ethereum (ETH), Ethereum Classic (ETC), Golem, NXT, Ardor, Hyperledger, Waves, Peershares, Omnilayer and Counterparty.</li>
         </ul>
         <h2 class=headline>Assimilate!</h2>
         <ul>

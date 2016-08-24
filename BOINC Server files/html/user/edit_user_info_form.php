@@ -55,12 +55,36 @@ row2(tra("Gridcoin address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>
 row2(tra("Ethereum address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=ethereum_address type=text size=20 value='$user->ethereum_address'>"
 );
-row2(tra("NXT account id %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+row2(tra("Ethereum Classic address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=ethereum_classic_address type=text size=20 value='$user->ethereum_classic_address'>"
+);
+row2(tra("Golem address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=golem_address type=text size=20 value='$user->golem_address'>"
+);
+row2(tra("NXT account ID %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=nxt_account_id type=text size=20 value='$user->nxt_account_id'>"
 );
-
-
-
+row2(tra("Ardor account ID %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=ardor_account_id type=text size=20 value='$user->ardor_account_id'>"
+);
+row2(tra("Hyperledger Sawtooth Lake %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=hyperledger_sawtooth_lake type=text size=20 value='$user->hyperledger_sawtooth_lake'>"
+);
+row2(tra("Hyperledger Fabric %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=hyperledger_fabric type=text size=20 value='$user->hyperledger_fabric'>"
+);
+row2(tra("Waves address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=waves_address type=text size=20 value='$user->waves_address'>"
+);
+row2(tra("Peershares address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=peershares_address type=text size=20 value='$user->peershares_address'>"
+);
+row2(tra("Omnilayer address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=omnilayer_address type=text size=20 value='$user->omnilayer_address'>"
+);
+row2(tra("CounterParty Address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=counterparty_address type=text size=20 value='$user->counterparty_address'>"
+);
 row2("", "<input class=\"btn btn-default\" type=submit value='".tra("Update info")."'>");
 end_table();
 echo "</form>\n";

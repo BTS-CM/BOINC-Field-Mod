@@ -48,7 +48,16 @@ $bitshares_account = sanitize_tags(post_str("bitshares_account", true));
 $steem_account = sanitize_tags(post_str("steem_account", true));
 $gridcoin_address = sanitize_tags(post_str("gridcoin_address", true));
 $ethereum_address = sanitize_tags(post_str("ethereum_address", true));
+$ethereum_classic_address = sanitize_tags(post_str("ethereum_classic_address", true));
+$golem_address = sanitize_tags(post_str("golem_address", true));
 $nxt_account_id = sanitize_tags(post_str("nxt_account_id", true));
+$ardor_account_id = sanitize_tags(post_str("ardor_account_id", true));
+$hyperledger_sawtooth_lake = sanitize_tags(post_str("hyperledger_sawtooth_lake", true));
+$hyperledger_fabric = sanitize_tags(post_str("hyperledger_fabric", true));
+$waves_address = sanitize_tags(post_str("waves_address", true));
+$peershares_address = sanitize_tags(post_str("peershares_address", true));
+$omnilayer_address = sanitize_tags(post_str("omnilayer_address", true));
+$counterparty_address = sanitize_tags(post_str("counterparty_address", true));
 
 $name = BoincDb::escape_string($name);
 $url = BoincDb::escape_string($url);
@@ -57,7 +66,16 @@ $bitshares_account = BoincDb::escape_string($bitshares_account);
 $steem_account = BoincDb::escape_string($steem_account);
 $gridcoin_address = BoincDb::escape_string($gridcoin_address);
 $ethereum_address = BoincDb::escape_string($ethereum_address);
+$ethereum_classic_address = BoincDb::escape_string($ethereum_classic_address);
+$golem_address = BoincDb::escape_string($golem_address);
 $nxt_account_id = BoincDb::escape_string($nxt_account_id);
+$ardor_account_id = BoincDb::escape_string($ardor_account_id);
+$hyperledger_sawtooth_lake = BoincDb::escape_string($hyperledger_sawtooth_lake);
+$hyperledger_fabric = BoincDb::escape_string($hyperledger_fabric);
+$waves_address = BoincDb::escape_string($waves_address);
+$peershares_address = BoincDb::escape_string($peershares_address);
+$omnilayer_address = BoincDb::escape_string($omnilayer_address);
+$counterparty_address = BoincDb::escape_string($counterparty_address);
 
 $result = $user->update(
     "name='$name', url='$url', country='$country', postal_code='$postal_code', bitshares_account='$bitshares_account', steem_account='$steem_account', gridcoin_address='$gridcoin_address', ethereum_address='$ethereum_address', nxt_account_id='$nxt_account_id' "

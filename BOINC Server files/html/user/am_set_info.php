@@ -61,7 +61,15 @@ if ($auth) {
     $steem_account = post_str("steem_account", true);
     $gridcoin_address = post_str("gridcoin_address", true);
     $ethereum_address = post_str("ethereum_address", true);
+    $golem_address = post_str("golem_address", true);
     $nxt_account_id = post_str("nxt_account_id", true);
+    $ardor_account_id = post_str("ardor_account_id", true);
+    $hyperledger_sawtooth_lake = post_str("hyperledger_sawtooth_lake", true);
+    $hyperledger_fabric = post_str("hyperledger_fabric", true);
+    $waves_address = post_str("waves_address", true);
+    $peershares_address = post_str("peershares_address", true);
+    $omnilayer_address = post_str("omnilayer_address", true);
+    $counterparty_address = post_str("counterparty_address", true);
     $global_prefs = post_str("global_prefs", true);
     $project_prefs = post_str("project_prefs", true);
     $url = post_str("url", true);
@@ -80,7 +88,16 @@ if ($auth) {
     $steem_account = get_str("steem_account", true);
     $gridcoin_address = get_str("gridcoin_address", true);
     $ethereum_address = get_str("ethereum_address", true);
+    $ethereum_classic_address = get_str("ethereum_classic_address", true);
+    $golem_address = get_str("golem_address", true);
     $nxt_account_id = get_str("nxt_account_id", true);
+    $ardor_account_id = get_str("ardor_account_id", true);
+    $hyperledger_sawtooth_lake = get_str("hyperledger_sawtooth_lake", true);
+    $hyperledger_fabric = get_str("hyperledger_fabric", true);
+    $waves_address = get_str("waves_address", true);
+    $peershares_address = get_str("peershares_address", true);
+    $omnilayer_address = get_str("omnilayer_address", true);
+    $counterparty_address = get_str("counterparty_address", true);
     $global_prefs = get_str("global_prefs", true);
     $project_prefs = get_str("project_prefs", true);
     $url = get_str("url", true);
@@ -107,7 +124,16 @@ $bitshares_account = BoincDb::escape_string($bitshares_account);
 $steem_account = BoincDb::escape_string($steem_account);
 $gridcoin_address = BoincDb::escape_string($gridcoin_address);
 $ethereum_address = BoincDb::escape_string($ethereum_address);
+$ethereum_classic_address = BoincDb::escape_string($ethereum_classic_address);
+$golem_address = BoincDb::escape_string($golem_address);
 $nxt_account_id = BoincDb::escape_string($nxt_account_id);
+$ardor_account_id = BoincDb::escape_string($ardor_account_id);
+$hyperledger_sawtooth_lake = BoincDb::escape_string($hyperledger_sawtooth_lake);
+$hyperledger_fabric = BoincDb::escape_string($hyperledger_fabric);
+$waves_address = BoincDb::escape_string($waves_address);
+$peershares_address = BoincDb::escape_string($peershares_address);
+$omnilayer_address = BoincDb::escape_string($omnilayer_address);
+$counterparty_address = BoincDb::escape_string($counterparty_address);
 $global_prefs = BoincDb::escape_string($global_prefs);
 $project_prefs = BoincDb::escape_string($project_prefs);
 
@@ -158,8 +184,35 @@ if ($gridcoin_address) {
 if ($ethereum_address) {
     $query .= " ethereum_address='$ethereum_address', ";
 }
+if ($ethereum_classic_address) {
+    $query .= " ethereum_classic_address='$ethereum_classic_address', ";
+}
+if ($golem_address) {
+    $query .= " golem_address='$golem_address', ";
+}
 if ($nxt_account_id) {
     $query .= " nxt_account_id='$nxt_account_id', ";
+}
+if ($ardor_account_id) {
+    $query .= " ardor_account_id='$ardor_account_id', ";
+}
+if ($hyperledger_sawtooth_lake) {
+    $query .= " hyperledger_sawtooth_lake='$hyperledger_sawtooth_lake', ";
+}
+if ($hyperledger_fabric) {
+    $query .= " hyperledger_fabric='$hyperledger_fabric', ";
+}
+if ($waves_address) {
+    $query .= " waves_address='$waves_address', ";
+}
+if ($peershares_address) {
+    $query .= " peershares_address='$peershares_address', ";
+}
+if ($omnilayer_address) {
+    $query .= " omnilayer_address='$omnilayer_address', ";
+}
+if ($counterparty_address) {
+    $query .= " counterparty_address='$counterparty_address', ";
 }
 
 if ($global_prefs) {
