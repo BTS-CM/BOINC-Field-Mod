@@ -169,7 +169,16 @@ struct USER {
     char steem_account[254];
     char gridcoin_address[34];
     char ethereum_address[42];
+    char ethereum_classic_address[42];
+    char golem_address[42];
     char nxt_account_id[24];
+    char ardor_account_id[24];
+    char hyperledger_sawtooth_lake[64];
+    char hyperledger_fabric[64];
+    char waves_address[];
+    char peershares_address[];
+    char omnilayer_address[];
+    char counterparty_address[];
     double total_credit;
     double expavg_credit;           // credit per second, recent average
     double expavg_time;             // when the above was computed

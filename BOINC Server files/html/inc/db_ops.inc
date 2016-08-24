@@ -1200,7 +1200,16 @@ function show_user($user) {
     row("Steem account", $user->steem_account);
     row("Gridcoin address", $user->gridcoin_address);
     row("Ethereum address", $user->ethereum_address);
-    row("NXT account id", $user->nxt_account_id);
+    row("Ethereum Classic address", $user->ethereum_classic_address);
+    row("Golem address", $user->golem_address);
+    row("NXT account ID", $user->nxt_account_id);
+    row("Ardor account ID", $user->ardor_account_id);
+    row("Hyperledger Sawtooth Lake address", $user->hyperledger_sawtooth_lake);
+    row("Hyperledger fabric address", $user->hyperledger_fabric);
+    row("Waves address", $user->waves_address);
+    row("Peershares address", $user->peershares_address);
+    row("Omnilayer address", $user->omnilayer_address);
+    row("Counterparty address", $user->counterparty_address);
     row("Total credit", $user->total_credit);
     row("Average credit", $user->expavg_credit);
     row("Last average time", time_str($user->expavg_time));

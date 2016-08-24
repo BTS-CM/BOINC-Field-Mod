@@ -213,7 +213,17 @@ function show_user_info_private($user) {
     row2(tra("Steem account"), $user->steem_account);
     row2(tra("Gridcoin address"), $user->gridcoin_address);
     row2(tra("Ethereum address"), $user->ethereum_address);
+    row2(tra("Ethereum Classic address"), $user->ethereum_classic_address);
+    row2(tra("Golem address"), $user->golem_address);
     row2(tra("NXT account id"), $user->nxt_account_id);
+    row2(tra("Ardor account ID"), $user->ardor_account_id);
+    row2(tra("Hyperledger Sawtooth Lake address"), $user->hyperledger_sawtooth_lake);
+    row2(tra("Hyperledger fabric address"), $user->hyperledger_fabric);
+    row2(tra("Waves address"), $user->waves_address);
+    row2(tra("Peershares address"), $user->peershares_address);
+    row2(tra("Omnilayer address"), $user->omnilayer_address);
+    row2(tra("Counterparty address"), $user->counterparty_address);
+
     row2(tra("%1 member since", PROJECT), date_str($user->create_time));
     $url_tokens = url_tokens($user->authenticator);
     if (LDAP_HOST && is_ldap_email($user->email_addr)) {

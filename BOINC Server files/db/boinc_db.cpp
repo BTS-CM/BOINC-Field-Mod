@@ -328,6 +328,7 @@ void DB_APP_VERSION::db_parse(MYSQL_ROW &r) {
     beta = atoi(r[i++]);
 }
 
+
 void DB_USER::db_print(char* buf){
     ESCAPE(email_addr);
     ESCAPE(name);
@@ -338,12 +339,15 @@ void DB_USER::db_print(char* buf){
     ESCAPE(gridcoin_address);
     ESCAPE(ethereum_address);
     ESCAPE(ethereum_classic_address);
-    ESCAPE();
-    ESCAPE();
-    ESCAPE();
-    ESCAPE();
-    ESCAPE();
+    ESCAPE(golem_address);
     ESCAPE(nxt_account_id);
+    ESCAPE(ardor_account_id);
+    ESCAPE(hyperledger_sawtooth_lake);
+    ESCAPE(hyperledger_fabric);
+    ESCAPE(waves_address);
+    ESCAPE(peershares_address);
+    ESCAPE(omnilayer_address);
+    ESCAPE(counterparty_address);
     ESCAPE(global_prefs);
     ESCAPE(project_prefs);
     ESCAPE(url);
@@ -352,7 +356,7 @@ void DB_USER::db_print(char* buf){
         "create_time=%d, email_addr='%s', name='%s', "
         "authenticator='%s', "
         "country='%s', postal_code='%s', "
-        "bitshares_account='%s', steem_account='%s', gridcoin_address='%s', ethereum_address='%s', ethereum_classic_address='%s', nxt_account_id='%s', "
+        "bitshares_account='%s', steem_account='%s', gridcoin_address='%s', ethereum_address='%s', ethereum_classic_address='%s', golem_address='%s', nxt_account_id='%s', ardor_account_id='%s', hyperledger_sawtooth_lake='%s', hyperledger_fabric='%s', waves_address='%s', peershares_address='%s', omnilayer_address='%s', counterparty_address='%s', "
         "total_credit=%.15e, expavg_credit=%.15e, expavg_time=%.15e, "
         "global_prefs='%s', project_prefs='%s', "
         "teamid=%lu, venue='%s', url='%s', send_email=%d, show_hosts=%d, "
@@ -364,7 +368,7 @@ void DB_USER::db_print(char* buf){
         create_time, email_addr, name,
         authenticator,
         country, postal_code,
-        bitshares_account, steem_account, gridcoin_address, ethereum_address, nxt_account_id,
+        bitshares_account, steem_account, gridcoin_address, ethereum_address, ethereum_classic_address, golem_address, nxt_account_id, ardor_account_id, hyperledger_sawtooth_lake, hyperledger_fabric, waves_address, peershares_address, omnilayer_address, counterparty_address,
         total_credit, expavg_credit, expavg_time,
         global_prefs, project_prefs,
         teamid, venue, url, send_email, show_hosts,
@@ -382,7 +386,15 @@ void DB_USER::db_print(char* buf){
     UNESCAPE(steem_account);
     UNESCAPE(gridcoin_address);
     UNESCAPE(ethereum_address);
+    UNESCAPE(ethereum_classic_address);
     UNESCAPE(nxt_account_id);
+    UNESCAPE(ardor_account_id);
+    UNESCAPE(hyperledger_sawtooth_lake);
+    UNESCAPE(hyperledger_fabric);
+    UNESCAPE(waves_address);
+    UNESCAPE(peershares_address);
+    UNESCAPE(omnilayer_address);
+    UNESCAPE(counterparty_address);
     UNESCAPE(global_prefs);
     UNESCAPE(project_prefs);
     UNESCAPE(url);
@@ -403,7 +415,15 @@ void DB_USER::db_parse(MYSQL_ROW &r) {
     strcpy2(steem_account, r[i++]);
     strcpy2(gridcoin_address, r[i++]);
     strcpy2(ethereum_address, r[i++]);
+    strcpy2(ethereum_classic_address, r[i++]);
     strcpy2(nxt_account_id, r[i++]);    
+    strcpy2(ardor_account_id, r[i++]);    
+    strcpy2(hyperledger_sawtooth_lake, r[i++]);    
+    strcpy2(hyperledger_fabric, r[i++]);    
+    strcpy2(waves_address, r[i++]);    
+    strcpy2(peershares_address, r[i++]);    
+    strcpy2(omnilayer_address, r[i++]);    
+    strcpy2(counterparty_address, r[i++]);   
     total_credit = atof(r[i++]);
     expavg_credit = atof(r[i++]);
     expavg_time = atof(r[i++]);

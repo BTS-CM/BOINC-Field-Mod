@@ -93,7 +93,16 @@ function handle_team($team, $f) {
    <user_steem_account>".escape($user->steem_account)."</user_steem_account>
    <user_gridcoin_address>".escape($user->gridcoin_address)."</user_gridcoin_address>
    <user_ethereum_address>".escape($user->ethereum_address)."</user_ethereum_address>
+   <user_ethereum_classic_address>".escape($user->ethereum_classic_address)."</user_ethereum_classic_address>    
+   <user_golem_address>".escape($user->golem_address)."</user_golem_address>
    <user_nxt_account_id>".escape($user->nxt_account_id)."</user_nxt_account_id>
+   <user_ardor_account_id>".escape($user->ardor_account_id)."</user_ardor_account_id>
+   <user_hyperledger_sawtooth_lake>".escape($user->hyperledger_sawtooth_lake)."</user_hyperledger_sawtooth_lake>
+   <user_hyperledger_fabric>".escape($user->hyperledger_fabric)."</user_hyperledger_fabric>
+   <user_waves_address>".escape($user->waves_address)."</user_waves_address>
+   <user_peershares_address>".escape($user->peershares_address)."</user_peershares_address>
+   <user_omnilayer_address>".escape($user->omnilayer_address)."</user_omnilayer_address>
+   <user_counterparty_address>".escape($user->counterparty_address)."</user_counterparty_address>
    <user_url>".escape($user->url)."</user_url>
 </team>
 "

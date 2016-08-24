@@ -40,7 +40,16 @@ $bitshares_account = urlencode($user->bitshares_account);
 $steem_account = urlencode($user->steem_account);
 $gridcoin_address = urlencode($user->gridcoin_address);
 $ethereum_address = urlencode($user->ethereum_address);
+$ethereum_classic_address = urlencode($user->ethereum_classic_address);
+$golem_address = urlencode($user->golem_address);
 $nxt_account_id = urlencode($user->nxt_account_id);
+$ardor_account_id = urlencode($user->ardor_account_id);
+$hyperledger_sawtooth_lake = urlencode($user->hyperledger_sawtooth_lake);
+$hyperledger_fabric = urlencode($user->hyperledger_fabric);
+$waves_address = urlencode($user->waves_address);
+$peershares_address = urlencode($user->peershares_address);
+$omnilayer_address = urlencode($user->omnilayer_address);
+$counterparty_address = urlencode($user->counterparty_address);
 $url = urlencode($user->url);
 $weak_auth = weak_auth($user);
 $cpid = md5($user->cross_project_id.$user->email_addr);
@@ -54,7 +63,16 @@ $ret = "<id>$user->id</id>
 <steem_account>$steem_account</steem_account>
 <gridcoin_address>$gridcoin_address</gridcoin_address>
 <ethereum_address>$ethereum_address</ethereum_address>
+<ethereum_classic_address>$ethereum_classic_address</ethereum_classic_address>    
+<golem_address>$golem_address</golem_address>
 <nxt_account_id>$nxt_account_id</nxt_account_id>
+<ardor_account_id>$ardor_account_id</ardor_account_id>
+<hyperledger_sawtooth_lake>$hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
+<hyperledger_fabric>$hyperledger_fabric</hyperledger_fabric>
+<waves_address>$waves_address</waves_address>
+<peershares_address>$peershares_address</peershares_address>
+<omnilayer_address>$omnilayer_address</omnilayer_address>
+<counterparty_address>$counterparty_address</counterparty_address>
 <cpid>$cpid</cpid>
 <has_profile>$user->has_profile</has_profile>
 <create_time>$user->create_time</create_time>
