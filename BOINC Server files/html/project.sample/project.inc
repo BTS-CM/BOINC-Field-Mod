@@ -45,16 +45,16 @@ function make_php_mailer() {
     $mail->SMTPSecure = "tls";
     $mail->Host = "smtp.gmail.com";
     $mail->Port = 587;
-    $mail->Username = "john.doe@gmail.com";
+    $mail->Username = "contact@project-rain.co.uk";
     $mail->Password = "xxx";
         // Google's application-specific password,
         // if you are using the 2-Step Verification: 16 characters, no spaces.
         // OR: Put here the regular Gmail password if you are not using the
         // 2-Step Verification with your Gmail account.
         // See https://support.google.com/accounts/answer/185833?hl=en";
-    $mail->SetFrom('admin@boincproject.com', 'John Doe');
-    $mail->AddReplyTo("admin@boincproject.com", "John Doe");
-    $mail->From = "admin@boincproject.com";
+    $mail->SetFrom('contact@project-rain.co.uk', 'CM');
+    $mail->AddReplyTo("contact@project-rain.co.uk", "CM");
+    $mail->From = "contact@project-rain.co.uk";
     return $mail;
 }
 }

@@ -57,11 +57,11 @@ function show_nav() {
         <li> <a href='https://steemit.com/boinc/@cm-steem/project-rain-distributing-crypto-assets-to-boinc-users-based-on-their-verified-boinc-computation'>Project-Rain Steem post</a>.</li>
         <li> Got an idea for a BOINC project? <a href='https://steemit.com/gridcoin/@cm-steem/brainstorming-new-boinc-projects-anyone-can-create-a-project-and-reward-their-users-with-gridcoin'>Post your ideas in the Brainstorming thread</a> on Steem!</li>
         </ul>
+        <p>Currently supported cryptocurrencies:</p>
         <ul>
-            <li>Currently supported cryptocurrencies:</li>
             <li>Gridcoin, Bitshares, STEEM, Ethereum (ETH), Ethereum Classic (ETC), Golem, NXT, Ardor, Hyperledger, Waves, Peershares, Omnilayer and Counterparty.</li>
         </ul>
-        <h2 class=headline>Assimilate!</h2>
+        <h2 class=headline>Join the project!</h2>
         <ul>
     ";
     if ($no_computing) {

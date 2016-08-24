@@ -118,7 +118,7 @@ $postal_code = sanitize_tags(post_str("postal_code", true));
 
 $user = make_user(
     $new_email_addr, $new_name, $passwd_hash,
-    $country, $postal_code, $project_prefs, $teamid, $
+    $country, $postal_code, $project_prefs, $teamid
 );
 if (!$user) {
     show_error(tra("Couldn't create account"));
