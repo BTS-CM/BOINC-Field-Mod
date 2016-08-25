@@ -585,7 +585,22 @@ function make_user(
     $country = BoincDb::escape_string($country);
     $postal_code = sanitize_tags(BoincDb::escape_string($postal_code));
 
-    $uid = BoincUser::insert("(create_time, email_addr, name, authenticator, country, postal_code, total_credit, expavg_credit, expavg_time, project_prefs, teamid,  venue, send_email, show_hosts, posts, seti_id, seti_nresults, seti_last_result_time, seti_total_cpu, has_profile, cross_project_id, passwd_hash, email_validated, donated) values($now, '$email_addr', '$name', '$authenticator', '$country', '$postal_code', 0, 0, unix_timestamp(), '$project_prefs', $teamid, '', 1, 1, 0, 0, 0, 0, 0, 0, '$cross_project_id', '$passwd_hash', 0, 0)");
+    $bitshares_account = '';
+    $steem_account = '';
+    $gridcoin_address = '';
+    $ethereum_address = '';
+    $ethereum_classic_address = '';
+    $golem_address = '';
+    $nxt_account_id = '';
+    $ardor_account_id = '';
+    $hyperledger_sawtooth_lake = '';
+    $hyperledger_fabric = '';
+    $waves_address = '';
+    $peershares_address = '';
+    $omnilayer_address = '';
+    $counterparty_address = '';
+
+    $uid = BoincUser::insert("(create_time, email_addr, name, authenticator, country, postal_code, bitshares_account, steem_account, gridcoin_address, ethereum_address, ethereum_classic_address, golem_address, nxt_account_id, ardor_account_id, hyperledger_sawtooth_lake, hyperledger_fabric, waves_address, peershares_address, omnilayer_address, counterparty_address, total_credit, expavg_credit, expavg_time, project_prefs, teamid,  venue, send_email, show_hosts, posts, seti_id, seti_nresults, seti_last_result_time, seti_total_cpu, has_profile, cross_project_id, passwd_hash, email_validated, donated) values($now, '$email_addr', '$name', '$authenticator', '$country', '$postal_code', 0, 0, unix_timestamp(), '$project_prefs', $teamid, '', 1, 1, 0, 0, 0, 0, 0, 0, '$cross_project_id', '$passwd_hash', 0, 0)");
 
     if (!$uid) {
         return null;
@@ -607,7 +622,21 @@ function make_user_ldap($email_addr, $name) {
     $cross_project_id = random_string();
     $passwd_hash = random_string();
     $now = time();
-    $uid = BoincUser::insert("(create_time, email_addr, name, authenticator, country, postal_code, total_credit, expavg_credit, expavg_time, project_prefs, teamid,  send_email, show_hosts, cross_project_id, passwd_hash) values($now, '$email_addr', '$name', '$authenticator', '', '', 0, 0, unix_timestamp(), '', 0, 1, 1, '$cross_project_id', '$passwd_hash')");
+    $bitshares_account = '';
+    $steem_account = '';
+    $gridcoin_address = '';
+    $ethereum_address = '';
+    $ethereum_classic_address = '';
+    $golem_address = '';
+    $nxt_account_id = '';
+    $ardor_account_id = '';
+    $hyperledger_sawtooth_lake = '';
+    $hyperledger_fabric = '';
+    $waves_address = '';
+    $peershares_address = '';
+    $omnilayer_address = '';
+    $counterparty_address = '';
+    $uid = BoincUser::insert("(create_time, email_addr, name, authenticator, country, postal_code, bitshares_account, steem_account, gridcoin_address, ethereum_address, ethereum_classic_address, golem_address, nxt_account_id, ardor_account_id, hyperledger_sawtooth_lake, hyperledger_fabric, waves_address, peershares_address, omnilayer_address, counterparty_address, total_credit, expavg_credit, expavg_time, project_prefs, teamid,  send_email, show_hosts, cross_project_id, passwd_hash) values($now, '$email_addr', '$name', '$authenticator', '', '', 0, 0, unix_timestamp(), '', 0, 1, 1, '$cross_project_id', '$passwd_hash')");
 
     if ($uid) {
         return BoincUser::lookup_id($uid);
