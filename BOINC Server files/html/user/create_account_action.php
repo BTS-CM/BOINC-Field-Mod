@@ -118,7 +118,7 @@ $postal_code = sanitize_tags(post_str("postal_code", true));
 
 $user = make_user(
     $new_email_addr, $new_name, $passwd_hash,
-    $country, $postal_code, $project_prefs, $teamid
+    $country, $postal_code, $project_prefs, $teamid, $bitshares_account, $steem_account, $gridcoin_address, $ethereum_address, $ethereum_classic_address, $golem_address, $nxt_account_id, $ardor_account_id, $hyperledger_sawtooth_lake, $hyperledger_fabric, $waves_address, $peershares_address, $omnilayer_address, $counterparty_address
 );
 if (!$user) {
     show_error(tra("Couldn't create account"));
