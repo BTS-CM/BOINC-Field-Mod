@@ -568,7 +568,7 @@ function is_valid_user_name($name, &$reason) {
 function make_user(
     $email_addr, $name, $passwd_hash,
     $country=null, $postal_code=null, $project_prefs=null, $teamid=0,
-    $bitshares_account=null, $steem_account=null, $gridcoin_address=null, $ethereum_address=null, $ethereum_classic_address=null, $golem_address=null, $nxt_account_id=null, $ardor_account_id=null, $hyperledger_sawtooth_lake=null, $hyperledger_fabric=null, $waves_address=null, $peershares_address=null, $omnilayer_address=null, $counterparty_address=null
+    $bitshares_account, $steem_account, $gridcoin_address, $ethereum_address, $ethereum_classic_address, $golem_address, $nxt_account_id, $ardor_account_id, $hyperledger_sawtooth_lake, $hyperledger_fabric, $waves_address, $peershares_address, $omnilayer_address, $counterparty_address
 ) {
     if (!is_valid_email_addr($email_addr)) return null;
     if (is_banned_email_addr($email_addr)) return null;

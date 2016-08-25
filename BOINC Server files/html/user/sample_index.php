@@ -155,11 +155,6 @@ include 'schedulers.txt';
 ;
     }
 echo "
-    <link rel=\"stylesheet\" href=\"css/bootstrap-theme.min.css\">
-    <link rel=\"stylesheet\" href=\"css/bootstrap.css\">
-    <script type=\"text/javascript\" src=\"js/jquery.min.js\"></script>
-    <script type=\"text/javascript\" src=\"js/bootstrap.min.js\"></script>
-    <script type=\"text/javascript\" src=\"js/analytics.js\"></script>
     </head><body>
     <div class=page_title>".PROJECT."</div>
 ";
