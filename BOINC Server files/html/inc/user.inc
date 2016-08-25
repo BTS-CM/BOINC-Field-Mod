@@ -567,8 +567,7 @@ function is_valid_user_name($name, &$reason) {
 //
 function make_user(
     $email_addr, $name, $passwd_hash,
-    $country=null, $postal_code=null, $project_prefs=null, $teamid=0,
-    $bitshares_account=null, $steem_account=null, $gridcoin_address=null, $ethereum_address=null, $ethereum_classic_address=null, $golem_address=null, $nxt_account_id=null, $ardor_account_id=null, $hyperledger_sawtooth_lake=null, $hyperledger_fabric=null, $waves_address=null, $peershares_address=null, $omnilayer_address=null, $counterparty_address=null
+    $country=null, $postal_code=null, $project_prefs=null, $teamid=0
 ) {
     if (!is_valid_email_addr($email_addr)) return null;
     if (is_banned_email_addr($email_addr)) return null;
@@ -586,22 +585,7 @@ function make_user(
     $country = BoincDb::escape_string($country);
     $postal_code = sanitize_tags(BoincDb::escape_string($postal_code));
 
-    $bitshares_account = '';
-    $steem_account = '';
-    $gridcoin_address = '';
-    $ethereum_address = '';
-    $ethereum_classic_address = '';
-    $golem_address = '';
-    $nxt_account_id = '';
-    $ardor_account_id = '';
-    $hyperledger_sawtooth_lake = '';
-    $hyperledger_fabric = '';
-    $waves_address = '';
-    $peershares_address = '';
-    $omnilayer_address = '';
-    $counterparty_address = '';
-
-    $uid = BoincUser::insert("(create_time, email_addr, name, authenticator, country, postal_code, bitshares_account, steem_account, gridcoin_address, ethereum_address, ethereum_classic_address, golem_address, nxt_account_id, ardor_account_id, hyperledger_sawtooth_lake, hyperledger_fabric, waves_address, peershares_address, omnilayer_address, counterparty_address, total_credit, expavg_credit, expavg_time, project_prefs, teamid,  venue, send_email, show_hosts, posts, seti_id, seti_nresults, seti_last_result_time, seti_total_cpu, has_profile, cross_project_id, passwd_hash, email_validated, donated) values($now, '$email_addr', '$name', '$authenticator', '$country', '$postal_code', 0, 0, unix_timestamp(), '$project_prefs', $teamid, '', 1, 1, 0, 0, 0, 0, 0, 0, '$cross_project_id', '$passwd_hash', 0, 0)");
+    $uid = BoincUser::insert("(create_time, email_addr, name, authenticator, country, postal_code, total_credit, expavg_credit, expavg_time, project_prefs, teamid,  venue, send_email, show_hosts, posts, seti_id, seti_nresults, seti_last_result_time, seti_total_cpu, has_profile, cross_project_id, passwd_hash, email_validated, donated) values($now, '$email_addr', '$name', '$authenticator', '$country', '$postal_code', 0, 0, unix_timestamp(), '$project_prefs', $teamid, '', 1, 1, 0, 0, 0, 0, 0, 0, '$cross_project_id', '$passwd_hash', 0, 0)");
 
     if (!$uid) {
         return null;
