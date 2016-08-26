@@ -203,7 +203,7 @@ echo "
         <div class=\"row\">
             <div class=\"col-xs-12 page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>".PROJECT."</div>
         </div>
-    </div>
+    </div>"
 ;
 
 if (!$stopped) {
