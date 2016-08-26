@@ -16,7 +16,7 @@ define("IMAGE_URL", "user_profile/images/");
 define("PROFILE_PATH", "../user_profile/");
 define("PROFILE_URL", "user_profile/");
 define("LANGUAGE_FILE", "languages.txt");
-define("STYLESHEET", "white.css");
+define("STYLESHEET", "black.css");
 //define("STYLESHEET2", "xxx.css");
 define("FORUM_QA_MERGED_MODE", false); // Set to true to merge Message boards and Q&A section
 define("COPYRIGHT_HOLDER", "Project-Rain owner.");
@@ -64,7 +64,7 @@ function project_banner($title, $prefix) {
     // If you include any links, prepend URL with $prefix
 
     echo "
-    <div class=\"page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" />$title</div>
+    <div class=\"page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>$title</div>
     ";
 }
 
