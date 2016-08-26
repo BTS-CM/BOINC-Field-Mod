@@ -69,7 +69,7 @@ function show_nav() {
             Can you add cryptocurrency 'x/y/z'?
         </h4>
         <p>
-            Negative, once this project is live the cryptocurrencies selected will be set in stone. If you wish to create 'Project Rain' capabilities for your cryptocurrency, you can fork the <a href=''>Project-Rain Github repo</a> and create your own BOINC project. Alternatively, you could convert your cryptocurrency to Gridcoin/ETH/ETC/Steem/Bitshares assets to create a project rain on behalf of your cryptocurrency.
+            Negative, once this project is live the cryptocurrencies selected will be set in stone. If you wish to create 'Project Rain' capabilities for your cryptocurrency, you can fork the <a href='https://github.com/grctest/project-rain-site/'>Project-Rain Github repo</a> and create your own BOINC project. Alternatively, you could convert your cryptocurrency to Gridcoin/ETH/ETC/Steem/Bitshares assets to create a project rain on behalf of your cryptocurrency.
         </p>
         <h4>
             Is this not detrimental to Gridcoin?
