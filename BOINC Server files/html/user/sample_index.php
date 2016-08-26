@@ -184,7 +184,7 @@ include 'schedulers.txt';
 echo "
     </head><body>
     <div class=\"page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>".PROJECT."</div>"
-";
+;
 
 if (!$stopped) {
     get_logged_in_user(false);
