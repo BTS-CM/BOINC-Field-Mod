@@ -16,7 +16,7 @@ define("IMAGE_URL", "user_profile/images/");
 define("PROFILE_PATH", "../user_profile/");
 define("PROFILE_URL", "user_profile/");
 define("LANGUAGE_FILE", "languages.txt");
-define("STYLESHEET", "black.css");
+define("STYLESHEET", "white.css");
 //define("STYLESHEET2", "xxx.css");
 define("FORUM_QA_MERGED_MODE", false); // Set to true to merge Message boards and Q&A section
 define("COPYRIGHT_HOLDER", "Project-Rain owner.");
@@ -64,21 +64,38 @@ function project_banner($title, $prefix) {
     // If you include any links, prepend URL with $prefix
 
     echo "
-    <div class=\"page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>$title</div>
+    <div class=\"container\">
+        <div class=\"row\">
+            <div class=\"col-xs-12 page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>$title</div>
+        </div>
+    </div>
     ";
 }
 
 function project_footer($show_return, $show_date, $prefix) {
     // If you include any links, prepend URL with $prefix
-    echo "<br><hr noshade size=1><center>";
+    echo "<div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-xs-12\">";
     if ($show_return) {
         echo "<a href=".$prefix."index.php>".tra("Main page")."</a> &middot; <a href=".$prefix."home.php>".tra("Your account")."</a><br/>\n";
     }
-    echo "<br><br>".tra("Copyright")." &copy; ".gmdate("Y ").COPYRIGHT_HOLDER."</center>\n";
+    echo .tra("Copyright")." &copy; ".gmdate("Y ").COPYRIGHT_HOLDER."</center>\n";
     if ($show_date) {
         $t = time_str(time());
         echo "<p class=\"text-muted\">".tra("Generated")." $t</p>\n";
     }
+    echo "</div>
+    </div>";
+    echo "<div class=\"row\">
+            <div class=\"col-xs-6\" style=\"text-align:center;\">
+                <a href=\"https://boinc.berkeley.edu/\"><img align=\"middle\" border=\"0\" src=\"img/pb_boinc.gif\" alt=\"Powered by BOINC\"></a>
+            </div>
+            <div class=\"col-xs-6\" style=\"text-align:center;\">
+                <a href=\"https://www.digitalocean.com/?refcode=b86d3e55f889\"><img src=\"img/DigitalOcean.png\" alt=\"DigitalOcean\" style=\"padding-top:10px;\"/></a>
+            </div>
+        </div>
+    </div>";
 }
 
 // Authorize access to administrative pages.

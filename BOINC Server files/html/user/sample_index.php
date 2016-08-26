@@ -54,12 +54,16 @@ function show_nav() {
     }
     echo "
         <p>
-        Project-Rain is hosted on <a href='https://www.digitalocean.com/?refcode=b86d3e55f889'>DigitalOcean</a>, and run by CM from the <a href='https://www.gridcoin.us'>Gridcoin</a> community.
-        <ul>
-        <li> <a href='https://steemit.com/boinc/@cm-steem/project-rain-distributing-crypto-assets-to-boinc-users-based-on-their-verified-boinc-computation'>Project-Rain Steem post</a>.</li>
-        <li> <a href='https://steemit.com/steem/@cm-steem/gauging-interest-would-you-be-interested-being-able-to-tip-boinc-users-your-crypto-asset-of-choice'>Initial Steem post regarding the concept of 'project rain'</a></li>
-        <li> Got an idea for a BOINC project? <a href='https://steemit.com/gridcoin/@cm-steem/brainstorming-new-boinc-projects-anyone-can-create-a-project-and-reward-their-users-with-gridcoin'>Post your ideas in the Brainstorming thread</a> on Steem!</li>
-        </ul>
+            Project-Rain is hosted on <a href='https://www.digitalocean.com/?refcode=b86d3e55f889'>DigitalOcean</a>, and run by CM from the <a href='https://www.gridcoin.us'>Gridcoin</a> community.
+        </p>
+            <a href='https://steemit.com/boinc/@cm-steem/project-rain-distributing-crypto-assets-to-boinc-users-based-on-their-verified-boinc-computation'>Project-Rain Steem post</a>.
+        <p>
+            <a href='https://steemit.com/steem/@cm-steem/gauging-interest-would-you-be-interested-being-able-to-tip-boinc-users-your-crypto-asset-of-choice'>Initial Steem post regarding the concept of 'project rain'</a>
+        </p>
+        <p>
+            Do you have an idea for a BOINC project? <a href='https://steemit.com/gridcoin/@cm-steem/brainstorming-new-boinc-projects-anyone-can-create-a-project-and-reward-their-users-with-gridcoin'>Post your ideas in the Brainstorming thread</a> on Steem!
+        </p>
+        
         <h4>Currently supported cryptocurrencies:</h4>
         <p>
             <a href='https://www.gridcoin.us'>Gridcoin</a>, <a href='https://www.bitshares.org'>Bitshares</a>, <a href='https://steemit.com/'>STEEM</a>, <a href='https://www.ethereum.org/'>Ethereum (ETH)</a>, <a href='https://ethereumclassic.github.io/'>Ethereum Classic (ETC)</a>, <a href='http://www.golemproject.net/'>Golem</a>, <a href='https://nxt.org/'>NXT</a>, <a href='https://ardorplatform.org/'>Ardor</a>, <a href='https://intelledger.github.io/introduction.html'>Hyperledger: Sawtooth Lake (Intel)</a>, <a href='https://hyperledger-fabric.readthedocs.io/en/latest/'>Hyperledger: Fabric (IBM)</a>, <a href='https://wavesplatform.com/'>Waves</a>, <a href='www.peershares.net'>Peershares</a>, <a href='http://www.omnilayer.org'>Omnilayer</a> and <a href='https://counterparty.io'>Counterparty</a>.
@@ -78,16 +82,9 @@ function show_nav() {
             Is this not detrimental to Gridcoin?
         </h4>
         <p>
-            I do not believe so, this will allow Gridcoin users to recieve multiple crypto assets for their verified BOINC work, of which could be sold for Gridcoin. Merged mining does not damage the cryptocurrencies participating in merged mining, it strengthens their cryptocurrency platforms and gets their asset into more users hands - by the same logic we should not fear 'double dipping' of BOINC rewards. Lastly, this is a centralized method of issuing crypto assets, Gridcoin has a decentralized reward mechanism.
+            I do not believe so, no. Project-Rain will allow Gridcoin users to recieve multiple additional crypto assets for their verified BOINC work, not just Gridcoin. '<a href=\"https://en.bitcoin.it/wiki/Merged_mining_specification\">Merged mining</a>' does not damage the cryptocurrencies participating in merged mining, it strengthens their cryptocurrency platforms and distributes more assets  - by the same logic we should not fear 'double dipping' of BOINC rewards. Lastly, this is a centralized method of issuing crypto assets, Gridcoin has a decentralized reward mechanism.
         </p>
-        <h4>
-            ATTENTION:
-        </h4>
-        <p>
-            In order for your Project-Rain CPID to match your BOINC project CPIDs, you <b>must</b> add your Project-Rain account to your BOINC manager client alongside the running projects, otherwise your CPIDs will not match & you will be skipped for project rain!
-        </p>
-        <h2 class=headline>Join the project!</h2>
-        <ul>
+        </div>
     ";
     if ($no_computing) {
         if (!$no_web_account_creation && !$disable_acct) {
@@ -99,27 +96,26 @@ function show_nav() {
         }
     } else {
         echo "
-            <li> Want to potentially recieve 'project rain' across multiple crypto networks? <a href=\"create_account_form.php\">Create an account today</a>!
-        ";
-        echo "
-            <li><a href=\"info.php\">".tra("Read our rules and policies")."</a></li>
-        ";
-        if (0) {
-            echo "<li>";
-            show_button("register.php", "Join", null, "btn btn-green");
-        } else {
-            echo "<li> <a href=https://boinc.berkeley.edu/download.php>Download</a> and run BOINC.</li>
-                <li> Choose Add Project & enter https://www.project-rain.co.uk/boincserver/ into the URL field.</li>
-            ";
-        }
-        echo "
-            <li> If you have any problems with project-rain, do not hesitate to contact CM via email/IRC/Steem.</li>
-            </ul>
-            </div>
+        <div class=\"mainnav col-xs-12 col-sm-12 col-md-6\" style=\"padding:10px;\">
+            <h2 class=headline>Join the project!</h2>
+            <p>
+                Want to potentially recieve 'project rain' across multiple crypto networks? <a href=\"create_account_form.php\">Create an account today</a>!
+            </p>
+            <p>
+                In order for your Project-Rain <a href=\"http://boincfaq.mundayweb.com/index.php?view=192\">CPID</a> to match your BOINC project <a href=\"http://boincfaq.mundayweb.com/index.php?view=192\">CPID</a>s, you <b>must</b> add the Project-Rain BOINC project to your BOINC manager client alongside your other active BOINC projects, otherwise your CPIDs will not merge & you will be skipped for project rain! It's not our fault if you do not follow this step and miss out on a project rain.
+            </p>
+            <p>
+                <a href=https://boinc.berkeley.edu/download.php>Download</a> and run BOINC.
+            </p>
+            <p>
+                Once you've launched BOINC, Choose Add Project, enter https://www.project-rain.co.uk/rain/ into the URL field and log into the account you created (or create an account at this point via the BOINC manager).
+            </p>
+            <p>
+                If you have any problems with project-rain, do not hesitate to contact CM via email/IRC/Steem.
+            </p>
         ";
     }
     echo "
-        <div class=\"mainnav col-xs-12 col-sm-12 col-md-6\" style=\"padding:10px;\">
         <h2 class=headline>Returning participants</h2>
         <ul>
         <li><a href=\"home.php\">Your account</a> - view stats, modify preferences
@@ -145,12 +141,22 @@ function show_nav() {
         ";
     }
     echo "
-        <li><a href=\"user_search.php\">User search</a>
-        <li><a href=ffmail_form.php>Share</a>
+            <li><a href=\"user_search.php\">User search</a>
+            <li><a href=ffmail_form.php>Share</a>
     ";
     echo "
-        <li><a href=\"stats.php\">Statistics for aiding execution of 'project rain'</a>
-        <li><a href=language_select.php>Languages</a>
+            <li>
+                <a href=\"stats.php\">Project statistics</a></li>
+            </li>
+            <li>
+                <a href=\"https://project-rain.co.uk/rain/stats/\">Project Rain XML files for aiding execution of 'project rain' (matches CPID:address/account)</a></li>
+            </li>
+            <li>
+                <a href=language_select.php>Languages</a>
+            </li>
+            <li>
+                <a href=\"info.php\">".tra("Read our rules and policies")."</a>
+            </li>
         </ul>
         </div>
         </div>
@@ -175,6 +181,16 @@ echo "<html>
     <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">
     <script src=\"https://code.jquery.com/jquery-3.1.0.min.js\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-82680050-1', 'auto');
+      ga('send', 'pageview');
+    </script>
 ";
 include 'schedulers.txt';
     if (defined("SHORTCUT_ICON")) {
@@ -183,7 +199,11 @@ include 'schedulers.txt';
     }
 echo "
     </head><body>
-    <div class=\"page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>".PROJECT."</div>"
+        <div class=\"container\">
+        <div class=\"row\">
+            <div class=\"col-xs-12 page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>".PROJECT."</div>
+        </div>
+    </div>
 ;
 
 if (!$stopped) {
@@ -203,14 +223,6 @@ if ($stopped) {
 } else {
     show_nav();
 }
-
-echo "
-    <p>
-    <a href=\"https://boinc.berkeley.edu/\"><img align=\"middle\" border=\"0\" src=\"img/pb_boinc.gif\" alt=\"Powered by BOINC\"></a></br>
-    <a href=\"https://www.digitalocean.com/?refcode=b86d3e55f889\"><img src=\"img/DigitalOcean.png\" alt=\"DigitalOcean\" style=\"padding-top:10px;\"/></a>
-    </p>
-    </td>
-";
 
 if (!$stopped && !DISABLE_PROFILES) {
     $profile = get_current_uotd();
