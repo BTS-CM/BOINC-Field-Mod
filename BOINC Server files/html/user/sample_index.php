@@ -38,7 +38,9 @@ function show_nav() {
     $no_computing = parse_config($config, "<no_computing>");
     $no_web_account_creation = parse_bool($config, "no_web_account_creation");
     $disable_acct = parse_bool($config, "disable_account_creation");
-    echo "<div class=\"mainnav\">
+    echo "<div class=\"container\">
+    <div class=\"row\">
+    <div class=\"mainnav col-xs-12 col-sm-12 col-md-6\" style=\"padding:10px;\">
         <h2 class=headline>About ".PROJECT."</h2>
     ";
     if ($no_computing) {
@@ -55,6 +57,7 @@ function show_nav() {
         Project-Rain is hosted on <a href='https://www.digitalocean.com/?refcode=b86d3e55f889'>DigitalOcean</a>, and run by CM from the <a href='https://www.gridcoin.us'>Gridcoin</a> community.
         <ul>
         <li> <a href='https://steemit.com/boinc/@cm-steem/project-rain-distributing-crypto-assets-to-boinc-users-based-on-their-verified-boinc-computation'>Project-Rain Steem post</a>.</li>
+        <li> <a href='https://steemit.com/steem/@cm-steem/gauging-interest-would-you-be-interested-being-able-to-tip-boinc-users-your-crypto-asset-of-choice'>Initial Steem post regarding the concept of 'project rain'</a></li>
         <li> Got an idea for a BOINC project? <a href='https://steemit.com/gridcoin/@cm-steem/brainstorming-new-boinc-projects-anyone-can-create-a-project-and-reward-their-users-with-gridcoin'>Post your ideas in the Brainstorming thread</a> on Steem!</li>
         </ul>
         <h4>Currently supported cryptocurrencies:</h4>
@@ -96,6 +99,9 @@ function show_nav() {
         }
     } else {
         echo "
+            <li> Want to potentially recieve 'project rain' across multiple crypto networks? <a href=\"create_account_form.php\">Create an account today</a>!
+        ";
+        echo "
             <li><a href=\"info.php\">".tra("Read our rules and policies")."</a></li>
         ";
         if (0) {
@@ -108,11 +114,12 @@ function show_nav() {
         }
         echo "
             <li> If you have any problems with project-rain, do not hesitate to contact CM via email/IRC/Steem.</li>
+            </ul>
+            </div>
         ";
     }
     echo "
-        </ul>
-
+        <div class=\"mainnav col-xs-12 col-sm-12 col-md-6\" style=\"padding:10px;\">
         <h2 class=headline>Returning participants</h2>
         <ul>
         <li><a href=\"home.php\">Your account</a> - view stats, modify preferences
@@ -141,16 +148,12 @@ function show_nav() {
         <li><a href=\"user_search.php\">User search</a>
         <li><a href=ffmail_form.php>Share</a>
     ";
-    if (!DISABLE_FORUMS) {
-        echo "
-            <li><a href=\"forum_index.php\">".tra("Message boards")."</a>
-            <li><a href=\"forum_help_desk.php\">".tra("Questions and Answers")."</a>
-        ";
-    }
     echo "
         <li><a href=\"stats.php\">Statistics for aiding execution of 'project rain'</a>
         <li><a href=language_select.php>Languages</a>
         </ul>
+        </div>
+        </div>
         </div>
     ";
 }
@@ -169,6 +172,9 @@ echo "<html>
     <link rel=\"stylesheet\" type=\"text/css\" href=\"main.css\" media=\"all\" />
     <link rel=\"stylesheet\" type=\"text/css\" href=\"".STYLESHEET."\">
     <link rel=\"alternate\" type=\"application/rss+xml\" title=\"".$rssname."\" href=\"".$rsslink."\">
+    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">
+    <script src=\"https://code.jquery.com/jquery-3.1.0.min.js\"></script>
+    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>
 ";
 include 'schedulers.txt';
     if (defined("SHORTCUT_ICON")) {
@@ -177,7 +183,7 @@ include 'schedulers.txt';
     }
 echo "
     </head><body>
-    <div class=page_title>".PROJECT."</div>
+    <div class=\"page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>".PROJECT."</div>"
 ";
 
 if (!$stopped) {
