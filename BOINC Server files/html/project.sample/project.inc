@@ -80,7 +80,6 @@ function project_footer($show_return, $show_date, $prefix) {
     if ($show_return) {
         echo "<a href=".$prefix."index.php>".tra("Main page")."</a> &middot; <a href=".$prefix."home.php>".tra("Your account")."</a><br/>\n";
     }
-    echo .tra("Copyright")." &copy; ".gmdate("Y ").COPYRIGHT_HOLDER."</center>\n";
     if ($show_date) {
         $t = time_str(time());
         echo "<p class=\"text-muted\">".tra("Generated")." $t</p>\n";
