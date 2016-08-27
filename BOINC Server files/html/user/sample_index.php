@@ -202,7 +202,7 @@ echo "
     </head><body>
         <div class=\"container\">
         <div class=\"row\">
-            <div class=\"col-xs-6 page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>".PROJECT."</div>
+            <div class=\"col-xs-6 page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/><h2>".PROJECT."</h2></div>
             <div class=\"col-xs-6\">
                 <div class=\"col-xs-12\" style=\"text-align:center;\">
                     <a href=\"login_form.php\"><button type=\"button\" class=\"btn btn-success\">Login</button></a>
