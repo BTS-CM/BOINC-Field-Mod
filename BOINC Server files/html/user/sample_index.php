@@ -91,7 +91,7 @@ function show_nav() {
     } else {
         echo "
         <div class=\"mainnav col-xs-12 col-sm-12 col-md-6\" style=\"padding:10px;\">
-            <h2 class=headline>Join the project!</h2>
+            <h2 class=headline>Join the project to potentially receive project rain!</h2>
             <p>
                 Want to potentially recieve 'project rain' across multiple crypto networks? <a href=\"create_account_form.php\">Create an account today</a>!
             </p>
@@ -195,20 +195,17 @@ include 'schedulers.txt';
 echo "
     </head><body>
         <div class=\"container\">
-        <div class=\"row\">
-            <div class=\"col-xs-6\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>".PROJECT."</div>
-            <div class=\"col-xs-6\">
-                <div class=\"row\">
-                    <div class=\"col-xs-12\" style=\"text-align:center;\">
-                        <a href=\"login_form.php\"><button type=\"button\" class=\"btn btn-success\">Login</button></a>
-                    </div>
-                    <div class=\"col-xs-12\" style=\"text-align:center;\">
-                        <a href=\"create_account_form.php\"><button type=\"button\" class=\"btn btn-info\">Register</button></a>
-                    </div>
+            <div class=\"row\">
+                <div class=\"col-xs-3\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /></div>
+                <div class=\"col-xs-3\">".PROJECT."</div>
+                <div class=\"col-xs-3\" style=\"text-align:center;\">
+                    <a href=\"login_form.php\"><button type=\"button\" class=\"btn btn-success\">Login</button></a>
+                </div>
+                <div class=\"col-xs-3\" style=\"text-align:center;\">
+                    <a href=\"create_account_form.php\"><button type=\"button\" class=\"btn btn-info\">Register</button></a>
                 </div>
             </div>
-        </div>
-    </div>"
+        </div>"
 ;
 
 if (!$stopped) {
