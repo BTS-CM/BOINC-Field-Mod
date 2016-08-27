@@ -78,12 +78,6 @@ function show_nav() {
         <p>
             Negative, once this project is live the cryptocurrencies selected will be set in stone. If you wish to create 'Project Rain' capabilities for your cryptocurrency, you can fork the <a href='https://github.com/grctest/project-rain-site/'>Project-Rain Github repo</a> and create your own BOINC project. Alternatively, you could convert your cryptocurrency to Gridcoin/ETH/ETC/Steem/Bitshares assets to create a project rain on behalf of your cryptocurrency.
         </p>
-        <h4>
-            Is this not detrimental to Gridcoin?
-        </h4>
-        <p>
-            I do not believe so, no. Project-Rain will allow Gridcoin users to recieve multiple additional crypto assets for their verified BOINC work, not just Gridcoin. '<a href=\"https://en.bitcoin.it/wiki/Merged_mining_specification\">Merged mining</a>' does not damage the cryptocurrencies participating in merged mining, it strengthens their cryptocurrency platforms and distributes more assets  - by the same logic we should not fear 'double dipping' of BOINC rewards. Lastly, this is a centralized method of issuing crypto assets, Gridcoin has a decentralized reward mechanism.
-        </p>
         </div>
     ";
     if ($no_computing) {
@@ -202,13 +196,15 @@ echo "
     </head><body>
         <div class=\"container\">
         <div class=\"row\">
-            <div class=\"col-xs-6 page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/><h2>".PROJECT."</h2></div>
+            <div class=\"col-xs-6\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>".PROJECT."</div>
             <div class=\"col-xs-6\">
-                <div class=\"col-xs-12\" style=\"text-align:center;\">
-                    <a href=\"login_form.php\"><button type=\"button\" class=\"btn btn-success\">Login</button></a>
-                </div>
-                <div class=\"col-xs-12\" style=\"text-align:center;\">
-                    <a href=\"create_account_form.php\"><button type=\"button\" class=\"btn btn-info\">Register</button></a>
+                <div class=\"row\">
+                    <div class=\"col-xs-12\" style=\"text-align:center;\">
+                        <a href=\"login_form.php\"><button type=\"button\" class=\"btn btn-success\">Login</button></a>
+                    </div>
+                    <div class=\"col-xs-12\" style=\"text-align:center;\">
+                        <a href=\"create_account_form.php\"><button type=\"button\" class=\"btn btn-info\">Register</button></a>
+                    </div>
                 </div>
             </div>
         </div>
