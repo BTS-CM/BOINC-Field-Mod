@@ -29,7 +29,6 @@ if (function_exists("project_rules_policies")) {
     $show_default = project_rules_policies();
 }
 
-if ($show_default) {
 echo "
     <h2>Rules and Policies</h2>
     <hr>
@@ -102,7 +101,7 @@ echo "
         These other projects are not associated with Project-Rain, and we cannot vouch for their security practices or the nature of their research. Join them at your own risk. Joining projects outside of the <a href='https://www.gridcoin.us/Guides/whitelist.htm'>Gridcoin whitelist</a> potentially has a higher risk to the end user.
     </p>
 "
-}
+
 page_tail();
 $cvs_version_tracker[]="\$Id$";
 ?>

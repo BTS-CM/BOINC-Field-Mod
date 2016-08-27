@@ -70,7 +70,7 @@ function show_nav() {
         </p>
         <h4>Why is cryptocurrency 'x/y/z' not included?</h4>
         <p>
-            We mainly added cryptocurrencies that are '2nd gen', specifically those which allow the issuance of new crypto assets within their network (Bitshares/Ardor/Waves/etc). Cryptocurrencies such as Bitcoin are not supported due to the fact that project-rain would be classed as 'dust' and would not be sufficient precipitation for a 'project rain' against tens of thousands of users.
+            Only '2nd gen' cryptocurrencies have been added, mainly those which allow the issuance of new crypto assets within their network (Bitshares/Ardor/Waves/etc). Gridcoin and Golem are directly related to distributed computing and Steem has the potential for raising funds for project-rain. Cryptocurrencies such as Bitcoin are not supported due to the fact their project-rain would be classed as 'dust' and would not be sufficient precipitation for a 'project rain' against tens of thousands of users.
         </p>
         <h4>
             Can you add cryptocurrency 'x/y/z'?
@@ -137,14 +137,15 @@ function show_nav() {
     ";
     if (!DISABLE_PROFILES) {
         echo "
-            <li><a href=\"profile_menu.php\">".tra("Profiles")."</a>
+            <li><a href=\"profile_menu.php\">".tra("Profiles")."</a></li>
         ";
     }
     echo "
-            <li><a href=\"user_search.php\">User search</a>
-            <li><a href=ffmail_form.php>Share</a>
     ";
     echo "
+            <li>
+                <a href=\"user_search.php\">User search</a>
+            </li>
             <li>
                 <a href=\"stats.php\">Project statistics</a></li>
             </li>
@@ -201,14 +202,22 @@ echo "
     </head><body>
         <div class=\"container\">
         <div class=\"row\">
-            <div class=\"col-xs-12 page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>".PROJECT."</div>
+            <div class=\"col-xs-6 page_title\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/>".PROJECT."</div>
+            <div class=\"col-xs-6\">
+                <div class=\"col-xs-12\" style=\"text-align:center;\">
+                    <a href=\"login_form.php\"><button type=\"button\" class=\"btn btn-success\">Login</button></a>
+                </div>
+                <div class=\"col-xs-12\" style=\"text-align:center;\">
+                    <a href=\"create_account_form.php\"><button type=\"button\" class=\"btn btn-info\">Register</button></a>
+                </div>
+            </div>
         </div>
     </div>"
 ;
 
 if (!$stopped) {
     get_logged_in_user(false);
-    show_login_info();
+    //show_login_info();
 }
 
 echo "
