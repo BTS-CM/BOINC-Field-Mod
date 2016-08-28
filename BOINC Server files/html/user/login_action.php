@@ -159,6 +159,7 @@ if ($authenticator) {
 }
 
 //Recaptcha functionality!
+$config = get_config();
 $privatekey = parse_config($config, "<recaptcha_private_key>");
 if ($privatekey) {
     if (!boinc_recaptcha_isValidated($privatekey)) {
