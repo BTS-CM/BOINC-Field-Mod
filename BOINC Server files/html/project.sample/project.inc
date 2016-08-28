@@ -10,7 +10,7 @@ require_once("../inc/util.inc");
 
 $master_url = parse_config(get_config(), "<master_url>");
 define("PROJECT", "Project-Rain");
-define("DISABLE_FORUMS", true)
+define("DISABLE_FORUMS", true);
 define("URL_BASE", $master_url);
 define("IMAGE_PATH", "../user_profile/images/");
 define("IMAGE_URL", "user_profile/images/");
