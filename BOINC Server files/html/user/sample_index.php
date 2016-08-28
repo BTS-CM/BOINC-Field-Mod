@@ -83,7 +83,7 @@ function show_nav() {
     if ($no_computing) {
         if (!$no_web_account_creation && !$disable_acct) {
             echo "
-                <li> Want to potentially recieve 'project rain' across multiple crypto networks? <a href=\"create_account_form.php\">Create an account today</a>!
+                <li> Interested in potentially recieving regular 'project rain' across multiple crypto networks? <a href=\"create_account_form.php\">Create an account today</a>!
             ";
         } else {
             echo "<li> This project is not currently accepting new accounts. Something has gone wrong, contact CM!";
@@ -205,15 +205,39 @@ echo "
 echo "
                 </div>
             </div>
-        </div>
 ";
 
+echo "<div class=\"row\">
+        <div class=\"col-xs-12\">
+            <table class=\"table table-bordered\">
+";
 
-
+if (!$stopped && !DISABLE_PROFILES) {
+    $profile = get_current_uotd();
+    if ($profile) {
+        echo "<tr>
+            <td class=uotd>
+            <h2 class=headline>".tra("User of the day")."</h2>
+        ";
+        show_uotd($profile);
+        echo "</td></tr>\n";
+    }
+}
 
 echo "
-    <table cellpadding=\"8\" cellspacing=\"4\" class=\"table table-bordered\">
-    <tr><td rowspan=\"2\" valign=\"top\" width=\"40%\">
+            <tr>
+                <td class=news>
+                    <h2 class=headline>News</h2>
+";
+include("motd.php");
+show_news(0, 5);
+echo "
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
 ";
 
 if ($stopped) {
@@ -223,30 +247,6 @@ if ($stopped) {
 } else {
     show_nav();
 }
-
-if (!$stopped && !DISABLE_PROFILES) {
-    $profile = get_current_uotd();
-    if ($profile) {
-        echo "
-            <td class=uotd>
-            <h2 class=headline>".tra("User of the day")."</h2>
-        ";
-        show_uotd($profile);
-        echo "</td></tr>\n";
-    }
-}
-
-//echo "
-//    <tr><td class=news>
-//   <h2 class=headline>News</h2>
-//    <p>
-//";
-//include("motd.php");
-//show_news(0, 5);
-echo "
-    </td>
-    </tr></table>
-";
 
 page_tail_main();
 

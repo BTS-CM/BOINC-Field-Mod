@@ -10,8 +10,9 @@ require_once("../inc/util.inc");
 
 $master_url = parse_config(get_config(), "<master_url>");
 define("PROJECT", "Project-Rain");
-//Disable forums & prevent spam account creation
-define("DISABLE_FORUMS", true);
+//Disable forums?
+//define("DISABLE_FORUMS", true);
+//Prevent spam account creation
 define("USE_STOPFORUMSPAM", true);
 //No fun!
 define("DISABLE_BADGES", true);

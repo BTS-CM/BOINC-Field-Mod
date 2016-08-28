@@ -154,7 +154,7 @@ function show_login_info($prefix="") {
     $user = get_logged_in_user(false);
     if ($user) {
         $url_tokens = url_tokens($user->authenticator);
-        echo "<nobr><h4>Username:</h4>$user->name <br/><a href=".$prefix."logout.php?$url_tokens><button type=\"button\" class=\"btn btn-warning\">Log Out</button></a></nobr>";
+        echo "<nobr><h4>Username:$user->name </h4><br/><a href=".$prefix."logout.php?$url_tokens><button type=\"button\" class=\"btn btn-warning\">Log Out</button></a></nobr>";
     } else {
         echo "<a href=\"login_form.php\"><button type=\"button\" class=\"btn btn-success\">Login</button></a>&nbsp;
               <a href=\"create_account_form.php\"><button type=\"button\" class=\"btn btn-info\">Register</button></a>";
