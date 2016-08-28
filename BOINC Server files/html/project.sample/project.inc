@@ -16,7 +16,7 @@ define("USE_STOPFORUMSPAM", true);
 //No fun!
 define("DISABLE_BADGES", true);
 //Implement SSL
-define("SECURE_URL_BASE", "https://project-rain.co.uk/");
+//define("SECURE_URL_BASE", "https://project-rain.co.uk/");
 define("URL_BASE", $master_url);
 define("IMAGE_PATH", "../user_profile/images/");
 define("IMAGE_URL", "user_profile/images/");
