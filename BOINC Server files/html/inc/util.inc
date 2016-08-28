@@ -152,21 +152,13 @@ function get_logged_in_user($must_be_logged_in=true) {
 
 function show_login_info($prefix="") {
     $user = get_logged_in_user(false);
-    echo "
-        <table width=\"100%\" cellpadding=0 cellspacing=0>
-        <tr><td align=right>
-    ";
     if ($user) {
         $url_tokens = url_tokens($user->authenticator);
         echo "<nobr>$user->name &middot; <a href=".$prefix."logout.php?$url_tokens>".tra("log out")."</a></nobr>";
     } else {
-        echo "<a href=".$prefix."login_form.php>".tra("log in")."</a>";
+        echo "<a href=\"login_form.php\"><button type=\"button\" class=\"btn btn-success\">Login</button></a><br/>
+              <a href=\"create_account_form.php\"><button type=\"button\" class=\"btn btn-info\">Register</button></a>";
     }
-    echo "
-        </td>
-        </tr>
-        </table>
-    ";
 }
 
 $cache_control_extra="";

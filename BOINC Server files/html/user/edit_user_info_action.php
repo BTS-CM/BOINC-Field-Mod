@@ -78,7 +78,24 @@ $omnilayer_address = BoincDb::escape_string($omnilayer_address);
 $counterparty_address = BoincDb::escape_string($counterparty_address);
 
 $result = $user->update(
-    "name='$name', url='$url', country='$country', postal_code='$postal_code', bitshares_account='$bitshares_account', steem_account='$steem_account', gridcoin_address='$gridcoin_address', ethereum_address='$ethereum_address', nxt_account_id='$nxt_account_id' "
+    "name='$name',
+     url='$url',
+     country='$country',
+     postal_code='$postal_code',
+     bitshares_account='$bitshares_account',
+     steem_account='$steem_account',
+     gridcoin_address='$gridcoin_address',
+     ethereum_address='$ethereum_address',
+     ethereum_classic_address='$ethereum_classic_address',
+     golem_address='$golem_address',
+     nxt_account_id='$nxt_account_id',
+     ardor_account_id='$ardor_account_id',
+     hyperledger_sawtooth_lake='$hyperledger_sawtooth_lake',
+     hyperledger_fabric='$hyperledger_fabric',
+     waves_address='$waves_address',
+     peershares_address='$peershares_address',
+     omnilayer_address='$omnilayer_address',
+     counterparty_address='$counterparty_address' "
 );
 if ($result) {
     Header("Location: home.php");

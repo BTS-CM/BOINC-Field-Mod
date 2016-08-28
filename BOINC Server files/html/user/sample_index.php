@@ -70,13 +70,13 @@ function show_nav() {
         </p>
         <h4>Why is cryptocurrency 'x/y/z' not included?</h4>
         <p>
-            Only '2nd gen' cryptocurrencies have been added, mainly those which allow the issuance of new crypto assets within their network (Bitshares/Ardor/Waves/etc). Gridcoin and Golem are directly related to distributed computing and Steem has the potential for raising funds for project-rain. Cryptocurrencies such as Bitcoin are not supported due to the fact their project-rain would be classed as 'dust' and would not be sufficient precipitation for a 'project rain' against tens of thousands of users.
+            Only '2nd gen' cryptocurrencies have been added, mainly those which allow the issuance of new crypto assets within their network (Bitshares/Ardor/Waves/etc).
         </p>
-        <h4>
-            Can you add cryptocurrency 'x/y/z'?
-        </h4>
         <p>
-            Negative, once this project is live the cryptocurrencies selected will be set in stone. If you wish to create 'Project Rain' capabilities for your cryptocurrency, you can fork the <a href='https://github.com/grctest/project-rain-site/'>Project-Rain Github repo</a> and create your own BOINC project. Alternatively, you could convert your cryptocurrency to Gridcoin/ETH/ETC/Steem/Bitshares assets to create a project rain on behalf of your cryptocurrency.
+            Gridcoin and Golem are directly related to distributed computing and Steem has the potential for raising funds for project-rain.
+        </p>
+        <p>
+            Once this project is live the cryptocurrencies selected will be set in stone. If you wish to create 'Project Rain' capabilities for your cryptocurrency, you can fork the <a href='https://github.com/grctest/project-rain-site/'>Project-Rain Github repo</a> and create your own BOINC project. Alternatively, you could convert your cryptocurrency to Gridcoin/ETH/ETC/Steem/Bitshares assets to create a project rain on behalf of your cryptocurrency.
         </p>
         </div>
     ";
@@ -134,8 +134,6 @@ function show_nav() {
             <li><a href=\"profile_menu.php\">".tra("Profiles")."</a></li>
         ";
     }
-    echo "
-    ";
     echo "
             <li>
                 <a href=\"user_search.php\">User search</a>
@@ -197,18 +195,21 @@ echo "
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-xs-6\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/><h2>".PROJECT."</h2></div>
-                <div class=\"col-xs-6\" style=\"padding-top:25px;\">
-                    <a href=\"login_form.php\"><button type=\"button\" class=\"btn btn-success\">Login</button></a><br/>
-                    <a href=\"create_account_form.php\"><button type=\"button\" class=\"btn btn-info\">Register</button></a>
+                <div class=\"col-xs-6\" style=\"padding-top:25px;\">";
+    
+                if (!$stopped) {
+                    get_logged_in_user(false);
+                    show_login_info();
+                }
+
+echo "
                 </div>
             </div>
-        </div>"
-;
+        </div>
+";
 
-if (!$stopped) {
-    get_logged_in_user(false);
-    //show_login_info();
-}
+
+
 
 echo "
     <table cellpadding=\"8\" cellspacing=\"4\" class=\"table table-bordered\">
