@@ -158,6 +158,16 @@ if ($authenticator) {
     exit;
 }
 
+//Catch incorrect captcha
+function show_error($str) {
+    page_head(tra("Can't login"));
+    echo "$str<br>\n";
+    echo BoincDb::error();
+    echo "<p>".tra("Click your browser's <b>Back</b> button to try again.")."\n</p>\n";
+    page_tail();
+    exit();
+}
+
 //Recaptcha functionality!
 $config = get_config();
 $privatekey = parse_config($config, "<recaptcha_private_key>");
