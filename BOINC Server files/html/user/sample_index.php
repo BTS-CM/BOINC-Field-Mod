@@ -195,7 +195,7 @@ echo "
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-xs-6\"><img src=\"img/project-rain.png\" alt=\"Project-Rain\" /><br/><h2>".PROJECT."</h2></div>
-                <div class=\"col-xs-6\" style=\"padding-top:25px;\">";
+                <div class=\"col-xs-6\" style=\"padding-top:50px;\">";
     
                 if (!$stopped) {
                     get_logged_in_user(false);

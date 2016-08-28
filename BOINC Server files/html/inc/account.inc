@@ -111,6 +111,16 @@ function login_form($next_url) {
         '<input type="checkbox" name="stay_logged_in" checked>'
     );
 
+    // Check if recaptcha is enabled - to prevent brute force login attack!
+    //
+    $publickey = parse_config(get_config(), "<recaptcha_public_key>");
+    if ($publickey) {
+        row2(
+            "",
+            boinc_recaptcha_get_html($publickey)
+        );
+    }
+
     row2("",
         "<input class=\"btn btn-default\" type=\"submit\" name=\"mode\" value=\"".tra("Log in")."\" tabindex=\"3\"><br><br>"
     );

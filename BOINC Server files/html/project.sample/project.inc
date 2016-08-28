@@ -10,7 +10,13 @@ require_once("../inc/util.inc");
 
 $master_url = parse_config(get_config(), "<master_url>");
 define("PROJECT", "Project-Rain");
+//Disable forums & prevent spam account creation
 define("DISABLE_FORUMS", true);
+define("USE_STOPFORUMSPAM", true);
+//No fun!
+define("DISABLE_BADGES", true);
+//Implement SSL
+define("SECURE_URL_BASE", "https://project-rain.co.uk/");
 define("URL_BASE", $master_url);
 define("IMAGE_PATH", "../user_profile/images/");
 define("IMAGE_URL", "user_profile/images/");
@@ -53,8 +59,8 @@ function make_php_mailer() {
         // OR: Put here the regular Gmail password if you are not using the
         // 2-Step Verification with your Gmail account.
         // See https://support.google.com/accounts/answer/185833?hl=en";
-    $mail->SetFrom('contact@project-rain.co.uk', 'CM');
-    $mail->AddReplyTo("contact@project-rain.co.uk", "CM");
+    $mail->SetFrom('contact@project-rain.co.uk', 'Project Admin');
+    $mail->AddReplyTo("contact@project-rain.co.uk", "Project Admin");
     $mail->From = "contact@project-rain.co.uk";
     return $mail;
 }
