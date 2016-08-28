@@ -205,9 +205,19 @@ echo "
 echo "
                 </div>
             </div>
+        </div>
 ";
 
-echo "<div class=\"row\">
+if ($stopped) {
+    echo "
+        <b>".PROJECT." is temporarily shut down for maintenance - if it's down for more than 6hrs please contact the site admin</b>.
+    ";
+} else {
+    show_nav();
+}
+
+echo "<div class=\"container\">
+<div class=\"row\">
         <div class=\"col-xs-12\">
             <table class=\"table table-bordered\">
 ";
@@ -239,14 +249,6 @@ echo "
     </div>
 </div>
 ";
-
-if ($stopped) {
-    echo "
-        <b>".PROJECT." is temporarily shut down for maintenance - if it's down for more than 6hrs please contact the site admin</b>.
-    ";
-} else {
-    show_nav();
-}
 
 page_tail_main();
 
