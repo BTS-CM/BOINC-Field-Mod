@@ -231,24 +231,6 @@ function show_user_info_private($user) {
             "<a href=\"weak_auth.php\">".tra("View")."</a>"
         );
     }
-    row1(tra("Cryptocurrency addresses/accounts"));
-    row2(tra("Bitshares account"), $user->bitshares_account);
-    row2(tra("Steem account"), $user->steem_account);
-    row2(tra("Gridcoin address"), $user->gridcoin_address);
-    row2(tra("Ethereum address"), $user->ethereum_address);
-    row2(tra("Ethereum Classic address"), $user->ethereum_classic_address);
-    row2(tra("Golem address"), $user->golem_address);
-    row2(tra("NXT account ID"), $user->nxt_account_id);
-    row2(tra("Ardor account ID"), $user->ardor_account_id);
-    row2(tra("Hyperledger Sawtooth Lake address"), $user->hyperledger_sawtooth_lake);
-    row2(tra("Hyperledger fabric address"), $user->hyperledger_fabric);
-    row2(tra("Waves address"), $user->waves_address);
-    row2(tra("Peershares address"), $user->peershares_address);
-    row2(tra("Omnilayer address"), $user->omnilayer_address);
-    row2(tra("Counterparty address"), $user->counterparty_address);
-        row2(tra("Change"),
-            "<a href=\"edit_user_info_form.php?$url_tokens\">".tra("Edit your cryptocurrency addresses/accounts")."</a>"
-        );
     row1("<a name=\"prefs\"></a>".tra("Preferences"));
     if (!no_computing()) {
         row2(
@@ -264,6 +246,27 @@ function show_user_info_private($user) {
             "<a href=\"prefs.php?subset=project\">".tra("%1 preferences", PROJECT)."</a>"
         );
     }
+}
+
+function show_project_rain_private($project_rain) {
+    row1(tra("Cryptocurrency addresses/accounts"));
+    row2(tra("Bitshares account"), $project_rain->bitshares_account);
+    row2(tra("Steem account"), $project_rain->steem_account);
+    row2(tra("Gridcoin address"), $project_rain->gridcoin_address);
+    row2(tra("Ethereum address"), $project_rain->ethereum_address);
+    row2(tra("Ethereum Classic address"), $project_rain->ethereum_classic_address);
+    row2(tra("Golem address"), $project_rain->golem_address);
+    row2(tra("NXT account ID"), $project_rain->nxt_account_id);
+    row2(tra("Ardor account ID"), $project_rain->ardor_account_id);
+    row2(tra("Hyperledger Sawtooth Lake address"), $project_rain->hyperledger_sawtooth_lake);
+    row2(tra("Hyperledger fabric address"), $project_rain->hyperledger_fabric);
+    row2(tra("Waves address"), $project_rain->waves_address);
+    row2(tra("Peershares address"), $project_rain->peershares_address);
+    row2(tra("Omnilayer address"), $project_rain->omnilayer_address);
+    row2(tra("Counterparty address"), $project_rain->counterparty_address);
+        row2(tra("Change"),
+            "<a href=\"edit_user_info_form.php?$url_tokens\">".tra("Edit your cryptocurrency addresses/accounts")."</a>"
+        );
 }
 
 function friend_links($user) {
@@ -507,7 +510,9 @@ function show_account_private($user) {
     if (!no_computing()) {
         show_user_stats_private($user);
     }
-
+    end_table();
+    start_table();
+    show_project_rain_private($project_rain);
     end_table();
     show_other_projects($user, true);
     project_user_page_private($user);
