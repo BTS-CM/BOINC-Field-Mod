@@ -93,7 +93,7 @@ function show_host_xml($host) {
 
 // $show_hosts is true only if $user is the logged-in user
 //
-function show_user_xml($user, $show_hosts) {
+function show_user_xml($user, $show_hosts, $project_rain) {
     $cpid = md5($user->cross_project_id.$user->email_addr);
     echo "<user>
     <id>$user->id</id>
@@ -101,20 +101,20 @@ function show_user_xml($user, $show_hosts) {
     <create_time>$user->create_time</create_time>
     <name>".htmlspecialchars($user->name)."</name>
     <country>$user->country</country>
-    <bitshares_account>$user->bitshares_account</bitshares_account>
-    <steem_account>$user->steem_account</steem_account>
-    <gridcoin_address>$user->gridcoin_address</gridcoin_address>
-    <ethereum_address>$user->ethereum_address</ethereum_address>
-    <ethereum_classic_address>$user->ethereum_classic_address</ethereum_classic_address>    
-    <golem_address>$user->golem_address</golem_address>
-    <nxt_account_id>$user->nxt_account_id</nxt_account_id>
-    <ardor_account_id>$user->ardor_account_id</ardor_account_id>
-    <hyperledger_sawtooth_lake>$user->hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
-    <hyperledger_fabric>$user->hyperledger_fabric</hyperledger_fabric>
-    <waves_address>$user->waves_address</waves_address>
-    <peershares_address>$user->peershares_address</peershares_address>
-    <omnilayer_address>$user->omnilayer_address</omnilayer_address>
-    <counterparty_address>$user->counterparty_address</counterparty_address>
+    <bitshares_account>$project_rain->bitshares_account</bitshares_account>
+    <steem_account>$project_rain->steem_account</steem_account>
+    <gridcoin_address>$project_rain->gridcoin_address</gridcoin_address>
+    <ethereum_address>$project_rain->ethereum_address</ethereum_address>
+    <ethereum_classic_address>$project_rain->ethereum_classic_address</ethereum_classic_address>    
+    <golem_address>$project_rain->golem_address</golem_address>
+    <nxt_account_id>$project_rain->nxt_account_id</nxt_account_id>
+    <ardor_account_id>$project_rain->ardor_account_id</ardor_account_id>
+    <hyperledger_sawtooth_lake>$project_rain->hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
+    <hyperledger_fabric>$project_rain->hyperledger_fabric</hyperledger_fabric>
+    <waves_address>$project_rain->waves_address</waves_address>
+    <peershares_address>$project_rain->peershares_address</peershares_address>
+    <omnilayer_address>$project_rain->omnilayer_address</omnilayer_address>
+    <counterparty_address>$project_rain->counterparty_address</counterparty_address>
     <total_credit>$user->total_credit</total_credit>
     <expavg_credit>$user->expavg_credit</expavg_credit>
     <expavg_time>$user->expavg_time</expavg_time>
@@ -133,7 +133,7 @@ echo"</user>
 ";
 }
 
-function show_team_member($user, $show_email, $creditonly = false) {
+function show_team_member($user, $show_email, $project_rain, $creditonly = false) {
     if ($creditonly && !$user->total_credit) { return; }
     $cpid = md5($user->cross_project_id.$user->email_addr);
     echo "<user>
@@ -149,20 +149,20 @@ function show_team_member($user, $show_email, $creditonly = false) {
         echo "    <create_time>$user->create_time</create_time>
     <name>".htmlspecialchars($user->name)."</name>
     <country>$user->country</country>
-    <bitshares_account>$user->bitshares_account</bitshares_account>
-    <steem_account>$user->steem_account</steem_account>
-    <gridcoin_address>$user->gridcoin_address</gridcoin_address>
-    <ethereum_address>$user->ethereum_address</ethereum_address>
-    <ethereum_classic_address>$user->ethereum_classic_address</ethereum_classic_address>    
-    <golem_address>$user->golem_address</golem_address>
-    <nxt_account_id>$user->nxt_account_id</nxt_account_id>
-    <ardor_account_id>$user->ardor_account_id</ardor_account_id>
-    <hyperledger_sawtooth_lake>$user->hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
-    <hyperledger_fabric>$user->hyperledger_fabric</hyperledger_fabric>
-    <waves_address>$user->waves_address</waves_address>
-    <peershares_address>$user->peershares_address</peershares_address>
-    <omnilayer_address>$user->omnilayer_address</omnilayer_address>
-    <counterparty_address>$user->counterparty_address</counterparty_address>
+    <bitshares_account>$project_rain->bitshares_account</bitshares_account>
+    <steem_account>$project_rain->steem_account</steem_account>
+    <gridcoin_address>$project_rain->gridcoin_address</gridcoin_address>
+    <ethereum_address>$project_rain->ethereum_address</ethereum_address>
+    <ethereum_classic_address>$project_rain->ethereum_classic_address</ethereum_classic_address>    
+    <golem_address>$project_rain->golem_address</golem_address>
+    <nxt_account_id>$project_rain->nxt_account_id</nxt_account_id>
+    <ardor_account_id>$project_rain->ardor_account_id</ardor_account_id>
+    <hyperledger_sawtooth_lake>$project_rain->hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
+    <hyperledger_fabric>$project_rain->hyperledger_fabric</hyperledger_fabric>
+    <waves_address>$project_rain->waves_address</waves_address>
+    <peershares_address>$project_rain->peershares_address</peershares_address>
+    <omnilayer_address>$project_rain->omnilayer_address</omnilayer_address>
+    <counterparty_address>$project_rain->counterparty_address</counterparty_address>
     <expavg_credit>$user->expavg_credit</expavg_credit>
     <expavg_time>$user->expavg_time</expavg_time>
     <url>".htmlspecialchars($user->url)."</url>

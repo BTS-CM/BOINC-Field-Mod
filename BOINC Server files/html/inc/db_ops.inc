@@ -1196,6 +1196,22 @@ function show_user($user) {
     row("OK to send Email?", $user->send_email);
     row("Country", $user->country);
     row("Postal code", $user->postal_code);
+    row("Total credit", $user->total_credit);
+    row("Average credit", $user->expavg_credit);
+    row("Last average time", time_str($user->expavg_time));
+    row("Default venue", $user->venue);
+    row("Hosts", "<a href=\"db_action.php?table=host&userid=$user->id&detail=low\">click</a>");
+    row("Cross project ID", $user->cross_project_id);
+    if(!in_rops()) {
+        row("Password Hash", $user->passwd_hash);
+    }
+    row("Donated", $user->donated);
+    end_table();
+}
+
+function show_project_rain($project_rain) {
+    start_table();
+    row("ID", $user->id);
     row("Bitshares account", $user->bitshares_account);
     row("Steem account", $user->steem_account);
     row("Gridcoin address", $user->gridcoin_address);
@@ -1210,16 +1226,6 @@ function show_user($user) {
     row("Peershares address", $user->peershares_address);
     row("Omnilayer address", $user->omnilayer_address);
     row("Counterparty address", $user->counterparty_address);
-    row("Total credit", $user->total_credit);
-    row("Average credit", $user->expavg_credit);
-    row("Last average time", time_str($user->expavg_time));
-    row("Default venue", $user->venue);
-    row("Hosts", "<a href=\"db_action.php?table=host&userid=$user->id&detail=low\">click</a>");
-    row("Cross project ID", $user->cross_project_id);
-    if(!in_rops()) {
-        row("Password Hash", $user->passwd_hash);
-    }
-    row("Donated", $user->donated);
     end_table();
 }
 

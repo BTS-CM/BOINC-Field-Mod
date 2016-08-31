@@ -431,18 +431,6 @@ function show_user_summary_public($user) {
             row2(tra("Computers"), tra("hidden"));
         }
     }
-    if ($user->donated == 1) { 
-        if (file_exists("../project/donations.inc")) {
-            require_once("../project/donations.inc");
-            row2(tra("Donor"), DONATION_LINK);
-        }
-    }
-    if ($user->donated == 2) {
-        if (file_exists("../project/donations.inc")) {
-            require_once("../project/donations.inc");
-            row2(tra("Donor"), DONATION_LINK_TWO);
-        }
-    }
 }
 
 // Returns a cacheable community links data object
@@ -520,12 +508,6 @@ function show_account_private($user) {
         show_user_stats_private($user);
     }
 
-    if (file_exists("../project/donations.inc")) {
-        require_once("../project/donations.inc");
-        if (function_exists('show_user_donations_private')) {
-            show_user_donations_private($user);
-        }
-    }
     end_table();
     show_other_projects($user, true);
     project_user_page_private($user);
