@@ -1211,21 +1211,21 @@ function show_user($user) {
 
 function show_project_rain($project_rain) {
     start_table();
-    row("ID", $user->id);
-    row("Bitshares account", $user->bitshares_account);
-    row("Steem account", $user->steem_account);
-    row("Gridcoin address", $user->gridcoin_address);
-    row("Ethereum address", $user->ethereum_address);
-    row("Ethereum Classic address", $user->ethereum_classic_address);
-    row("Golem address", $user->golem_address);
-    row("NXT account ID", $user->nxt_account_id);
-    row("Ardor account ID", $user->ardor_account_id);
-    row("Hyperledger Sawtooth Lake address", $user->hyperledger_sawtooth_lake);
-    row("Hyperledger fabric address", $user->hyperledger_fabric);
-    row("Waves address", $user->waves_address);
-    row("Peershares address", $user->peershares_address);
-    row("Omnilayer address", $user->omnilayer_address);
-    row("Counterparty address", $user->counterparty_address);
+    row("ID", $project_rain->id);
+    row("Bitshares account", $project_rain->bitshares_account);
+    row("Steem account", $project_rain->steem_account);
+    row("Gridcoin address", $project_rain->gridcoin_address);
+    row("Ethereum address", $project_rain->ethereum_address);
+    row("Ethereum Classic address", $project_rain->ethereum_classic_address);
+    row("Golem address", $project_rain->golem_address);
+    row("NXT account ID", $project_rain->nxt_account_id);
+    row("Ardor account ID", $project_rain->ardor_account_id);
+    row("Hyperledger Sawtooth Lake address", $project_rain->hyperledger_sawtooth_lake);
+    row("Hyperledger fabric address", $project_rain->hyperledger_fabric);
+    row("Waves address", $project_rain->waves_address);
+    row("Peershares address", $project_rain->peershares_address);
+    row("Omnilayer address", $project_rain->omnilayer_address);
+    row("Counterparty address", $project_rain->counterparty_address);
     end_table();
 }
 
