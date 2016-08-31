@@ -165,6 +165,20 @@ struct USER {
     char authenticator[256];
     char country[256];
     char postal_code[256];
+    char bitshares_account[254];
+    char steem_account[254];
+    char gridcoin_address[34];
+    char ethereum_address[42];
+    char ethereum_classic_address[42];
+    char golem_address[42];
+    char nxt_account_id[24];
+    char ardor_account_id[24];
+    char hyperledger_sawtooth_lake[34];
+    char hyperledger_fabric[34];
+    char waves_address[37];
+    char peershares_address[34];
+    char omnilayer_address[34];
+    char counterparty_address[34];
     double total_credit;
     double expavg_credit;           // credit per second, recent average
     double expavg_time;             // when the above was computed
@@ -663,26 +677,6 @@ struct USER_SUBMIT {
     double logical_start_time;
     bool submit_all;
     bool manage_all;
-    void clear();
-};
-
-// Adding cryptocurrency for project rain
-struct PROJECT_RAIN {
-    DB_ID_TYPE user_id;
-    char bitshares_account[254];
-    char steem_account[254];
-    char gridcoin_address[34];
-    char ethereum_address[42];
-    char ethereum_classic_address[42];
-    char golem_address[42];
-    char nxt_account_id[24];
-    char ardor_account_id[24];
-    char hyperledger_sawtooth_lake[34];
-    char hyperledger_fabric[34];
-    char waves_address[37];
-    char peershares_address[34];
-    char omnilayer_address[34];
-    char counterparty_address[34];
     void clear();
 };
 

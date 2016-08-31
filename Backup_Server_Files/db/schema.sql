@@ -87,6 +87,20 @@ create table user (
     authenticator           varchar(254),
     country                 varchar(254),
     postal_code             varchar(254),
+    bitshares_account       varchar(254),
+    steem_account           varchar(254),
+    gridcoin_address        varchar(34),
+    ethereum_address        varchar(42),
+    ethereum_classic_address        varchar(42),
+    golem_address           varchar(42),
+    nxt_account_id          varchar(24),
+    ardor_account_id        varchar(24),
+    hyperledger_sawtooth_lake   varchar(254),
+    hyperledger_fabric      varchar(34),
+    waves_address           varchar(37),
+    peershares_address      varchar(34),
+    omnilayer_address       varchar(34),
+    counterparty_address    varchar(34),
     total_credit            double          not null,
     expavg_credit           double          not null,
     expavg_time             double          not null,
@@ -110,25 +124,6 @@ create table user (
     passwd_hash             varchar(254)    not null,
     email_validated         smallint        not null,
     donated                 smallint        not null,
-    primary key (id)
-) engine=InnoDB;
-
-create table project_rain (
-    id                      integer         not null auto_increment,
-    bitshares_account       varchar(254),
-    steem_account           varchar(254),
-    gridcoin_address        varchar(34),
-    ethereum_address        varchar(42),
-    ethereum_classic_address        varchar(42),
-    golem_address           varchar(42),
-    nxt_account_id          varchar(24),
-    ardor_account_id        varchar(24),
-    hyperledger_sawtooth_lake   varchar(254),
-    hyperledger_fabric      varchar(34),
-    waves_address           varchar(37),
-    peershares_address      varchar(34),
-    omnilayer_address       varchar(34),
-    counterparty_address    varchar(34),
     primary key (id)
 ) engine=InnoDB;
 
