@@ -1509,7 +1509,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
         waves_address,
         peershares_address,
         omnilayer_address,
-        counterparty_address,
+        counterparty_address
     );
     UNESCAPE(bitshares_account);
     UNESCAPE(steem_account);
