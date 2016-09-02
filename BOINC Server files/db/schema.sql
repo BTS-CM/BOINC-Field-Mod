@@ -113,25 +113,6 @@ create table user (
     primary key (id)
 ) engine=InnoDB;
 
-create table project_rain (
-    id                      integer         not null auto_increment,
-    bitshares_account       varchar(254),
-    steem_account           varchar(254),
-    gridcoin_address        varchar(34),
-    ethereum_address        varchar(42),
-    ethereum_classic_address        varchar(42),
-    golem_address           varchar(42),
-    nxt_account_id          varchar(24),
-    ardor_account_id        varchar(24),
-    hyperledger_sawtooth_lake   varchar(254),
-    hyperledger_fabric      varchar(34),
-    waves_address           varchar(37),
-    peershares_address      varchar(34),
-    omnilayer_address       varchar(34),
-    counterparty_address    varchar(34),
-    primary key (id)
-) engine=InnoDB;
-
 create table team (
     id                      integer         not null auto_increment,
     create_time             integer         not null,
@@ -353,6 +334,25 @@ create table user_submit (
     max_jobs_in_progress    integer         not null,
     primary key (user_id)
 ) engine = InnoDB;
+
+create table project_rain (
+    user_id                      integer         not null auto_increment,
+    bitshares_account       varchar(254),
+    steem_account           varchar(254),
+    gridcoin_address        varchar(34),
+    ethereum_address        varchar(42),
+    ethereum_classic_address        varchar(42),
+    golem_address           varchar(42),
+    nxt_account_id          varchar(24),
+    ardor_account_id        varchar(24),
+    hyperledger_sawtooth_lake   varchar(254),
+    hyperledger_fabric      varchar(34),
+    waves_address           varchar(37),
+    peershares_address      varchar(34),
+    omnilayer_address       varchar(34),
+    counterparty_address    varchar(34),
+    primary key (user_id)
+) engine=InnoDB;
 
 -- (user, app) submit permissions
 -- The existence of the record implies permission to submit jobs
