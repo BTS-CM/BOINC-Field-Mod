@@ -184,7 +184,6 @@ DB_ID_TYPE DB_PLATFORM::get_id() {return id;}
 DB_ID_TYPE DB_APP::get_id() {return id;}
 DB_ID_TYPE DB_APP_VERSION::get_id() {return id;}
 DB_ID_TYPE DB_USER::get_id() {return id;}
-DB_ID_TYPE DB_PROJECT_RAIN::get_id() {return id;}
 DB_ID_TYPE DB_TEAM::get_id() {return id;}
 DB_ID_TYPE DB_HOST::get_id() {return id;}
 DB_ID_TYPE DB_WORKUNIT::get_id() {return id;}
@@ -1496,7 +1495,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
         "peershares_address='%s', "
         "omnilayer_address='%s', "
         "counterparty_address='%s' ",
-        id,
+        user_id,
         bitshares_account,
         steem_account,
         gridcoin_address,
@@ -1530,7 +1529,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
 void DB_PROJECT_RAIN::db_parse(MYSQL_ROW& r) {
     int i=0;
     clear();
-    id = atol(r[i++]);
+    user_id = atol(r[i++]);
     strcpy2(bitshares_account, r[i++]);
     strcpy2(steem_account, r[i++]);
     strcpy2(gridcoin_address, r[i++]);
