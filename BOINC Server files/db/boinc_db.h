@@ -87,15 +87,6 @@ struct DB_USER_SUBMIT : public DB_BASE, public USER_SUBMIT {
     void db_parse(MYSQL_ROW &row);
 };
 
-struct DB_PROJECT_RAIN : public DB_BASE, public PROJECT_RAIN {
-public:
-    DB_PROJECT_RAIN(DB_CONN* p=0);
-    DB_ID_TYPE get_id();
-    void db_print(char*);
-    void db_parse(MYSQL_ROW &row);
-    void operator=(PROJECT_RAIN& r) {PROJECT_RAIN::operator=(r);}
-};
-
 struct STATE_COUNTS {
     DB_ID_TYPE appid; 
     int last_update_time;   
@@ -159,6 +150,15 @@ public:
     void db_print(char*);
     void db_parse(MYSQL_ROW &row);
     void operator=(USER& r) {USER::operator=(r);}
+};
+
+struct DB_PROJECT_RAIN : public DB_BASE, public PROJECT_RAIN {
+public:
+    DB_PROJECT_RAIN(DB_CONN* p=0);
+    DB_ID_TYPE get_id();
+    void db_print(char*);
+    void db_parse(MYSQL_ROW &row);
+    void operator=(PROJECT_RAIN& r) {PROJECT_RAIN::operator=(r);}
 };
 
 class DB_TEAM : public DB_BASE, public TEAM {

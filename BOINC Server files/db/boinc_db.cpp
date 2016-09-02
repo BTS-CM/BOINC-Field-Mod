@@ -184,6 +184,7 @@ DB_ID_TYPE DB_PLATFORM::get_id() {return id;}
 DB_ID_TYPE DB_APP::get_id() {return id;}
 DB_ID_TYPE DB_APP_VERSION::get_id() {return id;}
 DB_ID_TYPE DB_USER::get_id() {return id;}
+DB_ID_TYPE DB_PROJECT_RAIN::get_id() {return id;}
 DB_ID_TYPE DB_TEAM::get_id() {return id;}
 DB_ID_TYPE DB_HOST::get_id() {return id;}
 DB_ID_TYPE DB_WORKUNIT::get_id() {return id;}
