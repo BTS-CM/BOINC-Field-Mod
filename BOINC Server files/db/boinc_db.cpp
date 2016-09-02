@@ -1496,7 +1496,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
         "peershares_address='%s', "
         "omnilayer_address='%s', "
         "counterparty_address='%s' ",
-        user_id,
+        id,
         bitshares_account,
         steem_account,
         gridcoin_address,
@@ -1530,7 +1530,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
 void DB_PROJECT_RAIN::db_parse(MYSQL_ROW& r) {
     int i=0;
     clear();
-    user_id = atol(r[i++]);
+    id = atol(r[i++]);
     strcpy2(bitshares_account, r[i++]);
     strcpy2(steem_account, r[i++]);
     strcpy2(gridcoin_address, r[i++]);
