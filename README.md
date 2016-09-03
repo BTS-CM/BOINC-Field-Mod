@@ -30,7 +30,7 @@ Think of Project Rain as a new share-dropping vector that doesn't require end-us
 What is exciting about project rain is that there are currently over 500,000 active BOINC users and 4 million total registered BOINC users to whom you could potentially distribute your choice of asset.
 
 ## What cryptocurrencies are currently supported?
-Gridcoin, Bitshares, STEEM, Ethereum (ETH), Ethereum Classic (ETC), NXT, Ardor, Hyperledger, Waves, Omnilayer and Counterparty.
+<a href="https://www.gridcoin.us">Gridcoin</a>, <a href="https://www.bitshares.org">Bitshares</a>, <a href="https://steemit.com/">STEEM</a>, <a href="https://www.ethereum.org/">Ethereum (ETH)</a>, <a href="https://ethereumclassic.github.io/">Ethereum Classic (ETC)</a>, <a href="https://nxt.org/">NXT</a>, <a href="https://ardorplatform.org/">Ardor</a>, <a href="https://www.hyperledger.org/">Hyperledger</a>, <a href="https://wavesplatform.com/">Waves</a>, <a href="http://www.omnilayer.org">Omnilayer</a> and <a href="https://counterparty.io">Counterparty</a>.
 
 ## Is there a mandatory team requirement?
 There is no mandatory team requirement for joining the website. Assets may be distributed by individuals to specific teams with full freedom of choice and no site interference.

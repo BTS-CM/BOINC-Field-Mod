@@ -129,8 +129,6 @@ DB_HOST_APP_VERSION::DB_HOST_APP_VERSION(DB_CONN* dc) :
     DB_BASE("host_app_version", dc?dc:&boinc_db){}
 DB_USER_SUBMIT::DB_USER_SUBMIT(DB_CONN* dc) :
     DB_BASE("user_submit", dc?dc:&boinc_db){}
-DB_PROJECT_RAIN::DB_PROJECT_RAIN(DB_CONN* dc) :
-    DB_BASE("project_rain", dc?dc:&boinc_db){}
 DB_STATE_COUNTS::DB_STATE_COUNTS(DB_CONN* dc) :
     DB_BASE("state_counts", dc?dc:&boinc_db){}
 DB_TRANSITIONER_ITEM_SET::DB_TRANSITIONER_ITEM_SET(DB_CONN* dc) :
