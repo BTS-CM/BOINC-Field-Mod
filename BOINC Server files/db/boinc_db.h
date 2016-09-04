@@ -158,6 +158,7 @@ public:
     DB_ID_TYPE get_id();
     void db_print(char*);
     void db_parse(MYSQL_ROW &row);
+    void operator=(PROJECT_RAIN& r) {PROJECT_RAIN::operator=(r);}
 };
 
 class DB_TEAM : public DB_BASE, public TEAM {

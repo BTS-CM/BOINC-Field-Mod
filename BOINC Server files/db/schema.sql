@@ -337,6 +337,8 @@ create table user_submit (
 
 create table project_rain (
     user_id                      integer         not null auto_increment,
+    cross_project_id        varchar(254),
+    authenticator           varchar(254),
     bitshares_account       varchar(254),
     steem_account           varchar(254),
     gridcoin_address        varchar(34),

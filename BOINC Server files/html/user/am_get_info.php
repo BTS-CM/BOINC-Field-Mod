@@ -33,6 +33,8 @@ if (!$user) {
     xml_error(ERR_DB_NOT_FOUND);
 }
 
+$project_rain = BoincRain::lookup_auth($auth);
+
 $name = urlencode($user->name);
 $country = urlencode($user->country);
 $postal_code = urlencode($user->postal_code);

@@ -265,7 +265,7 @@ function show_project_rain_private($project_rain) {
     row2(tra("Omnilayer address"), $project_rain->omnilayer_address);
     row2(tra("Counterparty address"), $project_rain->counterparty_address);
         row2(tra("Change"),
-            "<a href=\"edit_user_info_form.php?$url_tokens\">".tra("Edit your cryptocurrency addresses/accounts")."</a>"
+            "<a href=\"edit_project_rain_form.php\">".tra("Edit your cryptocurrency addresses/accounts")."</a>"
         );
 }
 
@@ -576,6 +576,7 @@ function make_user(
 
     $uid = BoincUser::insert("(create_time, email_addr, name, authenticator, country, postal_code, total_credit, expavg_credit, expavg_time, project_prefs, teamid,  venue, send_email, show_hosts, posts, seti_id, seti_nresults, seti_last_result_time, seti_total_cpu, has_profile, cross_project_id, passwd_hash, email_validated, donated) values($now, '$email_addr', '$name', '$authenticator', '$country', '$postal_code', 0, 0, unix_timestamp(), '$project_prefs', $teamid, '', 1, 1, 0, 0, 0, 0, 0, 0, '$cross_project_id', '$passwd_hash', 0, 0)");
 
+    $rainid = BoincRain::insert("(authenticator, bitshares_account, steem_account, gridcoin_address, ethereum_address, ethereum_classic_address, golem_address, nxt_account_id, ardor_account_id, hyperledger_sawtooth_lake, hyperledger_fabric, waves_address, peershares_address, omnilayer_address, counterparty_address) values('$authenticator', '', '', '', '', '', '', '', '', '', '', '', '', '', '')");
     if (!$uid) {
         return null;
     }
