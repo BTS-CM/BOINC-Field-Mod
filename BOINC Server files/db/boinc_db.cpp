@@ -109,8 +109,6 @@ DB_APP_VERSION::DB_APP_VERSION(DB_CONN* dc) :
     DB_BASE("app_version", dc?dc:&boinc_db){}
 DB_USER::DB_USER(DB_CONN* dc) :
     DB_BASE("user", dc?dc:&boinc_db){}
-DB_PROJECT_RAIN::DB_PROJECT_RAIN(DB_CONN* dc) :
-    DB_BASE("project_rain", dc?dc:&boinc_db){}
 DB_TEAM::DB_TEAM(DB_CONN* dc) :
     DB_BASE("team", dc?dc:&boinc_db){}
 DB_HOST::DB_HOST(DB_CONN* dc) :
