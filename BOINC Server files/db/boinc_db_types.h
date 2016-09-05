@@ -668,7 +668,7 @@ struct USER_SUBMIT {
 
 // Adding cryptocurrency for project rain
 struct PROJECT_RAIN {
-    DB_ID_TYPE user_id;
+    DB_ID_TYPE id;
     char bitshares_account[254];
     char steem_account[254];
     char gridcoin_address[34];

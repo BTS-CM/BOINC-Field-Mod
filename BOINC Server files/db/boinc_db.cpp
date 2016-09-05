@@ -109,6 +109,8 @@ DB_APP_VERSION::DB_APP_VERSION(DB_CONN* dc) :
     DB_BASE("app_version", dc?dc:&boinc_db){}
 DB_USER::DB_USER(DB_CONN* dc) :
     DB_BASE("user", dc?dc:&boinc_db){}
+DB_PROJECT_RAIN::DB_PROJECT_RAIN(DB_CONN* dc) :
+    DB_BASE("project_rain", dc?dc:&boinc_db){}
 DB_TEAM::DB_TEAM(DB_CONN* dc) :
     DB_BASE("team", dc?dc:&boinc_db){}
 DB_HOST::DB_HOST(DB_CONN* dc) :
@@ -1478,7 +1480,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
     ESCAPE(omnilayer_address);
     ESCAPE(counterparty_address);    
     sprintf(buf,
-        "user_id=%lu, "
+        "id=%lu, "
         "bitshares_account='%s', "
         "steem_account='%s', "
         "gridcoin_address='%s', "
@@ -1493,7 +1495,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
         "peershares_address='%s', "
         "omnilayer_address='%s', "
         "counterparty_address='%s' ",
-        user_id,
+        id,
         bitshares_account,
         steem_account,
         gridcoin_address,
@@ -1527,7 +1529,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
 void DB_PROJECT_RAIN::db_parse(MYSQL_ROW& r) {
     int i=0;
     clear();
-    user_id = atol(r[i++]);
+    id = atol(r[i++]);
     strcpy2(bitshares_account, r[i++]);
     strcpy2(steem_account, r[i++]);
     strcpy2(gridcoin_address, r[i++]);

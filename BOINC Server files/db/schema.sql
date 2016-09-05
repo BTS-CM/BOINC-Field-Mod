@@ -336,7 +336,7 @@ create table user_submit (
 ) engine = InnoDB;
 
 create table project_rain (
-    user_id                      integer         not null auto_increment,
+    id                      integer         not null,
     cross_project_id        varchar(254),
     authenticator           varchar(254),
     bitshares_account       varchar(254),
@@ -353,7 +353,7 @@ create table project_rain (
     peershares_address      varchar(34),
     omnilayer_address       varchar(34),
     counterparty_address    varchar(34),
-    primary key (user_id)
+    primary key (id)
 ) engine=InnoDB;
 
 -- (user, app) submit permissions
