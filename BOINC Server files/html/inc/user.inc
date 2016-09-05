@@ -502,7 +502,9 @@ function show_profile_link($user) {
     }
 }
 
-function show_account_private($user) {
+$project_rain = BoincRain::lookup("authenticator='$auth'");
+
+function show_account_private($user, $project_rain) {
     start_table_noborder();
     echo "<tr><td valign=top>";
     start_table();
