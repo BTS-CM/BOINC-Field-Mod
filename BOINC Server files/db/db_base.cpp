@@ -38,7 +38,7 @@ DB_CONN::DB_CONN() {
 }
 
 int DB_CONN::open(
-    char* db_name, char* db_host, char* db_user, char* db_project_rain, char* dbpassword
+    char* db_name, char* db_host, char* db_user, char* dbpassword
 ) {
     mysql = mysql_init(0);
     if (!mysql) return ERR_DB_CANT_INIT;
@@ -86,7 +86,7 @@ int DB_CONN::open(
     // is the # matched by the where, rather than the # actually changed
     //
     mysql = mysql_real_connect(
-        mysql, host, db_user, db_project_rain, dbpassword, db_name, port, 0, CLIENT_FOUND_ROWS
+        mysql, host, db_user, dbpassword, db_name, port, 0, CLIENT_FOUND_ROWS
     );
     if (mysql == 0) return ERR_DB_CANT_CONNECT;
 
