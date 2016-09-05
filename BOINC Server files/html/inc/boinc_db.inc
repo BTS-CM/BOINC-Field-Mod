@@ -166,6 +166,87 @@ class BoincDb extends DbConn {
     }
 }
 
+class BoincUser {
+    static $cache;
+    static function lookup($clause) {
+        $db = BoincDb::get();
+        return $db->lookup('user', 'BoincUser', $clause);
+    }
+
+    static function lookup_id_nocache($id) {
+        $db = BoincDb::get();
+        return $db->lookup_id($id, 'user', 'BoincUser');
+    }
+    static function lookup_id($id) {
+        if (!isset(self::$cache[$id])) {
+            self::$cache[$id] = self::lookup_id_nocache($id);
+        }
+        return self::$cache[$id];
+    }
+    static function lookup_auth($auth) {
+        $db = BoincDb::get();
+        $auth = BoincDb::escape_string($auth);
+        return self::lookup("authenticator='$auth'");
+    }
+    static function lookup_email_addr($email_addr) {
+        $db = BoincDb::get();
+        $email_addr = BoincDb::escape_string($email_addr);
+        return self::lookup("email_addr='$email_addr'");
+    }
+    static function lookup_name($name) {
+        $name = BoincDb::escape_string($name);
+        $users = BoincUser::enum("name='$name'");
+        switch (sizeof($users)) {
+        case 1:
+            return $users[0];
+        case 0:
+            return null;
+        }
+        return -1;
+    }
+    static function count($clause) {
+        $db = BoincDb::get();
+        return $db->count('user', $clause);
+    }
+    static function max($field) {
+        $db = BoincDb::get();
+        return $db->max('user', $field);
+    }
+    function update($clause) {
+        $db = BoincDb::get();
+        return $db->update($this, 'user', $clause);
+    }
+    static function enum($where_clause, $order_clause=null) {
+        $db = BoincDb::get();
+        return $db->enum('user', 'BoincUser', $where_clause, $order_clause);
+    }
+    static function enum_fields($fields, $where_clause, $order_clause=null) {
+        $db = BoincDb::get();
+        return $db->enum_fields(
+            'user', 'BoincUser', $fields, $where_clause, $order_clause
+        );
+    }
+    static function insert($clause) {
+        $db = BoincDb::get();
+        $ret = $db->insert('user', $clause);
+        if (!$ret) return 0;
+        return $db->insert_id();
+    }
+    function delete() {
+        $db = BoincDb::get();
+        $db->delete_aux('profile', "userid=$this->id");
+        return $db->delete($this, 'user');
+    }
+    static function sum($field) {
+        $db = BoincDb::get();
+        return $db->sum('user', $field);
+    }
+    static function percentile($field, $clause, $pct) {
+        $db = BoincDb::get();
+        return $db->percentile('user', $field, $clause, $pct);
+    }
+}
+
 class BoincRain {
     static $cache;
     static function lookup($clause) {
