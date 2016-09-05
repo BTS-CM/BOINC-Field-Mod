@@ -150,6 +150,39 @@ function get_logged_in_user($must_be_logged_in=true) {
     return $g_logged_in_user;
 }
 
+$g_project_rain_details = null;
+$got_project_rain_details = false;
+
+function get_project_rain_details($must_be_logged_in=true) {
+    global $g_project_rain_details, $got_project_rain_details;
+    if ($got_project_rain_details) return $g_project_rain_details;
+
+    check_web_stopped();
+    $authenticator = null;
+    if (isset($_COOKIE['auth'])) $authenticator = $_COOKIE['auth'];
+
+    $authenticator = BoincDb::escape_string($authenticator);
+    if ($authenticator) {
+        $g_project_rain_details = BoincRain::lookup("authenticator='$authenticator'");
+    }
+
+    if ($must_be_logged_in && !$g_project_rain_details) {
+        $next_url = '';
+        if (array_key_exists('REQUEST_URI', $_SERVER)) {
+            $next_url = $_SERVER['REQUEST_URI'];
+            $n = strrpos($next_url, "/");
+            if ($n) {
+                $next_url = substr($next_url, $n+1);
+            }
+        }
+        $next_url = urlencode($next_url);
+        Header("Location: login_form.php?next_url=$next_url");
+        exit;
+    }
+    $got_project_rain_details = true;
+    return $g_project_rain_details;
+}
+
 function show_login_info($prefix="") {
     $user = get_logged_in_user(false);
     if ($user) {

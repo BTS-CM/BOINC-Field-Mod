@@ -23,6 +23,7 @@ check_get_args(array("tnow", "ttok"));
 
 $user = get_logged_in_user();
 check_tokens($user->authenticator);
+$project_rain = get_project_rain_details();
 
 page_head(tra("Edit project rain information"));
 

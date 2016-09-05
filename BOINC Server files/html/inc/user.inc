@@ -502,9 +502,7 @@ function show_profile_link($user) {
     }
 }
 
-$project_rain = BoincRain::lookup("authenticator='$auth'");
-
-function show_account_private($user, $project_rain) {
+function show_account_private($user) {
     start_table_noborder();
     echo "<tr><td valign=top>";
     start_table();
@@ -512,9 +510,6 @@ function show_account_private($user, $project_rain) {
     if (!no_computing()) {
         show_user_stats_private($user);
     }
-    end_table();
-    start_table();
-    show_project_rain_private($project_rain);
     end_table();
     show_other_projects($user, true);
     project_user_page_private($user);
@@ -524,6 +519,15 @@ function show_account_private($user, $project_rain) {
     show_community_private($user);
     end_table();
 
+    echo "</td></tr></table>";
+}
+
+function show_rain_private($project_rain) {
+    start_table_noborder();
+    echo "<tr><td valign=top>";
+    start_table();
+    show_project_rain_private($project_rain);
+    end_table();
     echo "</td></tr></table>";
 }
 
