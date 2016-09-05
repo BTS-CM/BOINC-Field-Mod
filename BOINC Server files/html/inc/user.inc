@@ -264,8 +264,9 @@ function show_project_rain_private($project_rain) {
     row2(tra("Peershares address"), $project_rain->peershares_address);
     row2(tra("Omnilayer address"), $project_rain->omnilayer_address);
     row2(tra("Counterparty address"), $project_rain->counterparty_address);
+    $url_tokens = url_tokens($project_rain->authenticator);
         row2(tra("Change"),
-            "<a href=\"edit_project_rain_form.php\">".tra("Edit your cryptocurrency addresses/accounts")."</a>"
+            "<a href=\"edit_project_rain_form.php?$url_tokens\">".tra("Edit your cryptocurrency addresses/accounts")."</a>"
         );
 }
 
