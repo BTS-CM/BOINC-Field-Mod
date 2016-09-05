@@ -336,7 +336,7 @@ create table user_submit (
 ) engine = InnoDB;
 
 create table project_rain (
-    id                      integer         not null,
+    id                      integer         not null auto_increment,
     cross_project_id        varchar(254),
     authenticator           varchar(254),
     bitshares_account       varchar(254),
