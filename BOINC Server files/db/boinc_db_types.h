@@ -697,12 +697,12 @@ struct PROJECT_RAIN {
     char peershares[34];
     char omnilayer[34];
     char counterparty[34];
-    char echo[254],
-    char tox[72],
-    char retroshare[1024],
-    char wickr[254],
-    char ring[40],
-    char pgp[4096]
+    char echo[254];
+    char tox[72];
+    char retroshare[1024];
+    char wickr[254];
+    char ring[40];
+    char pgp[4096];
     void clear();
 };
 
