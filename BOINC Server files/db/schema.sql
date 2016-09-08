@@ -372,7 +372,7 @@ create table project_rain (
     retroshare              varchar(1024),
     wickr                   varchar(254),
     ring                    varchar(40),
-    pgp                     varchar(4096)
+    pgp                     varchar(5)
     primary key (id)
 ) engine=InnoDB;
 
