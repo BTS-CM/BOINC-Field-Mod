@@ -287,7 +287,7 @@ function show_project_rain_private($project_rain) {
     row2(tra("retroshare"), $project_rain->retroshare);
     row2(tra("wickr"), $project_rain->wickr);
     row2(tra("ring"), $project_rain->ring);
-    row2(tra("pgp"), $project_rain->pgp);
+    row2(tra("pgp"), '<textarea name="textarea" style="width:350px;height:150px;">'$project_rain->pgp'</textarea>');
     $url_tokens = url_tokens($project_rain->authenticator);
         row2(tra("Change"),
             "<a href=\"edit_project_rain_form.php?$url_tokens\">".tra("Edit your cryptocurrency addresses/accounts")."</a>"
