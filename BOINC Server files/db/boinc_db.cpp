@@ -1533,7 +1533,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
         "retroshare='%s', "
         "wickr='%s', "
         "ring='%s', "
-        "pgp='%s' "
+        "pgp='%s' ",
         id,
         bitshares,
         steem,
