@@ -250,20 +250,44 @@ function show_user_info_private($user) {
 
 function show_project_rain_private($project_rain) {
     row1(tra("Cryptocurrency addresses/accounts"));
-    row2(tra("Bitshares account"), $project_rain->bitshares_account);
-    row2(tra("Steem account"), $project_rain->steem_account);
-    row2(tra("Gridcoin address"), $project_rain->gridcoin_address);
-    row2(tra("Ethereum address"), $project_rain->ethereum_address);
-    row2(tra("Ethereum Classic address"), $project_rain->ethereum_classic_address);
-    row2(tra("Golem address"), $project_rain->golem_address);
-    row2(tra("NXT account ID"), $project_rain->nxt_account_id);
-    row2(tra("Ardor account ID"), $project_rain->ardor_account_id);
-    row2(tra("Hyperledger Sawtooth Lake address"), $project_rain->hyperledger_sawtooth_lake);
-    row2(tra("Hyperledger fabric address"), $project_rain->hyperledger_fabric);
-    row2(tra("Waves address"), $project_rain->waves_address);
-    row2(tra("Peershares address"), $project_rain->peershares_address);
-    row2(tra("Omnilayer address"), $project_rain->omnilayer_address);
-    row2(tra("Counterparty address"), $project_rain->counterparty_address);
+    row2(tra("<a href='https://bitshares.org'>Bitshares</a>"), $project_rain->bitshares);
+    row2(tra("Gridcoin"), $project_rain->gridcoin);
+    row2(tra("Peerplays"), $project_rain->peerplays);
+    row2(tra("Golem"), $project_rain->golem);
+    row2(tra("Storj"), $project_rain->storj);
+    row2(tra("NXT"), $project_rain->nxt);
+    row2(tra("Ardor"), $project_rain->ardor);
+    row2(tra("NEM"), $project_rain->nem);
+    row2(tra("Ethereum"), $project_rain->ethereum);
+    row2(tra("Ethereum Classic"), $project_rain->ethereum_classic);
+    row2(tra("Expanse"), $project_rain->expanse);
+    row2(tra("Hyperledger Sawtooth Lake"), $project_rain->hyperledger_sawtooth_lake);
+    row2(tra("Hyperledger fabric"), $project_rain->hyperledger_fabric);
+    row2(tra("IBM Bluemix blockchain"), $project_rain->ibm_bluemix_blockchain);
+    row2(tra("Waves"), $project_rain->waves);
+    row2(tra("Peershares"), $project_rain->peershares);
+    row2(tra("Omnilayer"), $project_rain->omnilayer);
+    row2(tra("Counterparty"), $project_rain->counterparty);
+    row2(tra("Colored Coins"), $project_rain->coloredcoins);
+    row2(tra("Antshares"), $project_rain->antshares);
+    row2(tra("Lisk"), $project_rain->lisk);
+    row2(tra("Steem"), $project_rain->steem);
+    row2(tra("Decent"), $project_rain->decent);
+    row2(tra("Synereo"), $project_rain->synereo);
+    row2(tra("LBRY"), $project_rain->lbry);
+    //
+    row1(tra("DAC/DAO platforms"));
+    row2(tra("Wings"), $project_rain->wings);
+    row2(tra("Hong"), $project_rain->hong);
+    row2(tra("BoardRoom"), $project_rain->boardroom);
+    //
+    row1(tra("Secure messaging"));
+    row2(tra("echo"), $project_rain->echo);
+    row2(tra("tox"), $project_rain->tox);
+    row2(tra("retroshare"), $project_rain->retroshare);
+    row2(tra("wickr"), $project_rain->wickr);
+    row2(tra("ring"), $project_rain->ring);
+    row2(tra("pgp"), $project_rain->pgp);
     $url_tokens = url_tokens($project_rain->authenticator);
         row2(tra("Change"),
             "<a href=\"edit_project_rain_form.php?$url_tokens\">".tra("Edit your cryptocurrency addresses/accounts")."</a>"
@@ -583,7 +607,7 @@ function make_user(
 
     $uid = BoincUser::insert("(create_time, email_addr, name, authenticator, country, postal_code, total_credit, expavg_credit, expavg_time, project_prefs, teamid,  venue, send_email, show_hosts, posts, seti_id, seti_nresults, seti_last_result_time, seti_total_cpu, has_profile, cross_project_id, passwd_hash, email_validated, donated) values($now, '$email_addr', '$name', '$authenticator', '$country', '$postal_code', 0, 0, unix_timestamp(), '$project_prefs', $teamid, '', 1, 1, 0, 0, 0, 0, 0, 0, '$cross_project_id', '$passwd_hash', 0, 0)");
 
-    $rainid = BoincRain::insert("(authenticator, bitshares_account, steem_account, gridcoin_address, ethereum_address, ethereum_classic_address, golem_address, nxt_account_id, ardor_account_id, hyperledger_sawtooth_lake, hyperledger_fabric, waves_address, peershares_address, omnilayer_address, counterparty_address) values('$authenticator', '', '', '', '', '', '', '', '', '', '', '', '', '', '')");
+    $rainid = BoincRain::insert("(authenticator, bitshares, steem, peerplays, storj, nem, ibm_bluemix_blockchain, coloredcoins, antshares, lisk, decent, synereo, lbry, wings, hong, boardroom, gridcoin, ethereum, ethereum_classic, expanse, golem, nxt, ardor, hyperledger_sawtooth_lake, hyperledger_fabric, waves, peershares, omnilayer, counterparty, echo, tox, retroshare, wickr, ring, pgp) values('$authenticator', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '')");
     if (!$uid) {
         return null;
     }

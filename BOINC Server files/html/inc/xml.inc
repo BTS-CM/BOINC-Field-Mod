@@ -101,20 +101,40 @@ function show_user_xml($user, $show_hosts, $project_rain) {
     <create_time>$user->create_time</create_time>
     <name>".htmlspecialchars($user->name)."</name>
     <country>$user->country</country>
-    <bitshares_account>$project_rain->bitshares_account</bitshares_account>
-    <steem_account>$project_rain->steem_account</steem_account>
-    <gridcoin_address>$project_rain->gridcoin_address</gridcoin_address>
-    <ethereum_address>$project_rain->ethereum_address</ethereum_address>
-    <ethereum_classic_address>$project_rain->ethereum_classic_address</ethereum_classic_address>    
-    <golem_address>$project_rain->golem_address</golem_address>
-    <nxt_account_id>$project_rain->nxt_account_id</nxt_account_id>
-    <ardor_account_id>$project_rain->ardor_account_id</ardor_account_id>
+    <bitshares>$project_rain->bitshares</bitshares>
+    <steem>$project_rain->steem</steem>
+    <gridcoin>$project_rain->gridcoin</gridcoin>
+    <ethereum>$project_rain->ethereum</ethereum>
+    <ethereum_classic>$project_rain->ethereum_classic</ethereum_classic>    
+    <golem>$project_rain->golem</golem>
+    <nxt>$project_rain->nxt</nxt>
+    <ardor>$project_rain->ardor</ardor>
     <hyperledger_sawtooth_lake>$project_rain->hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
     <hyperledger_fabric>$project_rain->hyperledger_fabric</hyperledger_fabric>
-    <waves_address>$project_rain->waves_address</waves_address>
-    <peershares_address>$project_rain->peershares_address</peershares_address>
-    <omnilayer_address>$project_rain->omnilayer_address</omnilayer_address>
-    <counterparty_address>$project_rain->counterparty_address</counterparty_address>
+    <waves>$project_rain->waves</waves>
+    <peershares>$project_rain->peershares</peershares>
+    <omnilayer>$project_rain->omnilayer</omnilayer>
+    <counterparty>$project_rain->counterparty</counterparty>
+    <peerplays>$project_rain->peerplays</peerplays>
+    <storj>$project_rain->storj</storj>
+    <nem>$project_rain->nem</nem>
+    <ibm_bluemix_blockchain>$project_rain->ibm_bluemix_blockchain</ibm_bluemix_blockchain>
+    <coloredcoins>$project_rain->coloredcoins</coloredcoins>
+    <antshares>$project_rain->antshares</antshares>
+    <lisk>$project_rain->lisk</lisk>
+    <decent>$project_rain->decent</decent>
+    <synereo>$project_rain->synereo</synereo>
+    <lbry>$project_rain->lbry</lbry>
+    <wings>$project_rain->wings</wings>
+    <hong>$project_rain->hong</hong>
+    <boardroom>$project_rain->boardroom</boardroom>
+    <expanse>$project_rain->expanse</expanse>
+    <echo>$project_rain->echo</echo>
+    <tox>$project_rain->tox</tox>
+    <retroshare>$project_rain->retroshare</retroshare>
+    <wickr>$project_rain->wickr</wickr>
+    <ring>$project_rain->ring</ring>
+    <pgp>$project_rain->pgp</pgp>
     <total_credit>$user->total_credit</total_credit>
     <expavg_credit>$user->expavg_credit</expavg_credit>
     <expavg_time>$user->expavg_time</expavg_time>
@@ -149,20 +169,40 @@ function show_team_member($user, $show_email, $project_rain, $creditonly = false
         echo "    <create_time>$user->create_time</create_time>
     <name>".htmlspecialchars($user->name)."</name>
     <country>$user->country</country>
-    <bitshares_account>$project_rain->bitshares_account</bitshares_account>
-    <steem_account>$project_rain->steem_account</steem_account>
-    <gridcoin_address>$project_rain->gridcoin_address</gridcoin_address>
-    <ethereum_address>$project_rain->ethereum_address</ethereum_address>
-    <ethereum_classic_address>$project_rain->ethereum_classic_address</ethereum_classic_address>    
-    <golem_address>$project_rain->golem_address</golem_address>
-    <nxt_account_id>$project_rain->nxt_account_id</nxt_account_id>
-    <ardor_account_id>$project_rain->ardor_account_id</ardor_account_id>
+    <bitshares>$project_rain->bitshares</bitshares>
+    <steem>$project_rain->steem</steem>
+    <gridcoin>$project_rain->gridcoin</gridcoin>
+    <ethereum>$project_rain->ethereum</ethereum>
+    <ethereum_classic>$project_rain->ethereum_classic</ethereum_classic>    
+    <golem>$project_rain->golem</golem>
+    <nxt>$project_rain->nxt</nxt>
+    <ardor>$project_rain->ardor</ardor>
     <hyperledger_sawtooth_lake>$project_rain->hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
     <hyperledger_fabric>$project_rain->hyperledger_fabric</hyperledger_fabric>
-    <waves_address>$project_rain->waves_address</waves_address>
-    <peershares_address>$project_rain->peershares_address</peershares_address>
-    <omnilayer_address>$project_rain->omnilayer_address</omnilayer_address>
-    <counterparty_address>$project_rain->counterparty_address</counterparty_address>
+    <waves>$project_rain->waves</waves>
+    <peershares>$project_rain->peershares</peershares>
+    <omnilayer>$project_rain->omnilayer</omnilayer>
+    <counterparty>$project_rain->counterparty</counterparty>
+    <peerplays>$project_rain->peerplays</peerplays>
+    <storj>$project_rain->storj</storj>
+    <nem>$project_rain->nem</nem>
+    <ibm_bluemix_blockchain>$project_rain->ibm_bluemix_blockchain</ibm_bluemix_blockchain>
+    <coloredcoins>$project_rain->coloredcoins</coloredcoins>
+    <antshares>$project_rain->antshares</antshares>
+    <lisk>$project_rain->lisk</lisk>
+    <decent>$project_rain->decent</decent>
+    <synereo>$project_rain->synereo</synereo>
+    <lbry>$project_rain->lbry</lbry>
+    <wings>$project_rain->wings</wings>
+    <hong>$project_rain->hong</hong>
+    <boardroom>$project_rain->boardroom</boardroom>
+    <expanse>$project_rain->expanse</expanse>
+    <echo>$project_rain->echo</echo>
+    <tox>$project_rain->tox</tox>
+    <retroshare>$project_rain->retroshare</retroshare>
+    <wickr>$project_rain->wickr</wickr>
+    <ring>$project_rain->ring</ring>
+    <pgp>$project_rain->pgp</pgp>
     <expavg_credit>$user->expavg_credit</expavg_credit>
     <expavg_time>$user->expavg_time</expavg_time>
     <url>".htmlspecialchars($user->url)."</url>

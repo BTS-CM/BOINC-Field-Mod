@@ -669,20 +669,40 @@ struct USER_SUBMIT {
 // Adding cryptocurrency for project rain
 struct PROJECT_RAIN {
     DB_ID_TYPE id;
-    char bitshares_account[254];
-    char steem_account[254];
-    char gridcoin_address[34];
-    char ethereum_address[42];
-    char ethereum_classic_address[42];
-    char golem_address[42];
-    char nxt_account_id[24];
-    char ardor_account_id[24];
+    char bitshares[254];
+    char steem[254];
+    char peerplays[254];
+    char storj[34];
+    char nem[46];
+    char ibm_bluemix_blockchain[254];
+    char coloredcoins[34];
+    char antshares[34];
+    char lisk[21];
+    char decent[254];
+    char synereo[34];
+    char lbry[34];
+    char wings[254];
+    char hong[254];
+    char boardroom[254];
+    char gridcoin[34];
+    char ethereum[42];
+    char ethereum_classic[42];
+    char expanse[42];
+    char golem[42];
+    char nxt[24];
+    char ardor[24];
     char hyperledger_sawtooth_lake[34];
     char hyperledger_fabric[34];
-    char waves_address[37];
-    char peershares_address[34];
-    char omnilayer_address[34];
-    char counterparty_address[34];
+    char waves[37];
+    char peershares[34];
+    char omnilayer[34];
+    char counterparty[34];
+    char echo[254],
+    char tox[72],
+    char retroshare[1024],
+    char wickr[254],
+    char ring[40],
+    char pgp[4096]
     void clear();
 };
 

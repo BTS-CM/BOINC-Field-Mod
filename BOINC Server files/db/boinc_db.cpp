@@ -1463,84 +1463,185 @@ void DB_USER_SUBMIT::db_parse(MYSQL_ROW& r) {
 }
 
 void DB_PROJECT_RAIN::db_print(char* buf) {
-    ESCAPE(bitshares_account);
-    ESCAPE(steem_account);
-    ESCAPE(gridcoin_address);
-    ESCAPE(ethereum_address);
-    ESCAPE(ethereum_classic_address);
-    ESCAPE(golem_address);
-    ESCAPE(nxt_account_id);
-    ESCAPE(ardor_account_id);
+    ESCAPE(bitshares);
+    ESCAPE(steem);
+    ESCAPE(peerplays);
+    ESCAPE(storj);
+    ESCAPE(nem);
+    ESCAPE(ibm_bluemix_blockchain);
+    ESCAPE(coloredcoins);
+    ESCAPE(antshares);
+    ESCAPE(lisk);
+    ESCAPE(decent);
+    ESCAPE(synereo);
+    ESCAPE(lbry);
+    ESCAPE(wings);
+    ESCAPE(hong);
+    ESCAPE(boardroom);
+    ESCAPE(gridcoin);
+    ESCAPE(ethereum);
+    ESCAPE(ethereum_classic);
+    ESCAPE(expanse);
+    ESCAPE(golem);
+    ESCAPE(nxt);
+    ESCAPE(ardor);
     ESCAPE(hyperledger_sawtooth_lake);
     ESCAPE(hyperledger_fabric);
-    ESCAPE(waves_address);
-    ESCAPE(peershares_address);
-    ESCAPE(omnilayer_address);
-    ESCAPE(counterparty_address);    
+    ESCAPE(waves);
+    ESCAPE(peershares);
+    ESCAPE(omnilayer);
+    ESCAPE(counterparty);
+    //Chat
+    ESCAPE(echo);
+    ESCAPE(tox);
+    ESCAPE(retroshare);
+    ESCAPE(wickr);
+    ESCAPE(ring);
+    ESCAPE(pgp);
     sprintf(buf,
         "id=%lu, "
-        "bitshares_account='%s', "
-        "steem_account='%s', "
-        "gridcoin_address='%s', "
-        "ethereum_address='%s', "
-        "ethereum_classic_address='%s', "
-        "golem_address='%s', "
-        "nxt_account_id='%s', "
-        "ardor_account_id='%s', "
+        "bitshares='%s', "
+        "steem='%s', "
+        "peerplays='%s', "
+        "storj='%s', "
+        "nem='%s', "
+        "ibm_bluemix_blockchain='%s', "
+        "coloredcoins='%s', "
+        "antshares='%s', "
+        "lisk='%s', "
+        "decent='%s', "
+        "synereo='%s', "
+        "lbry='%s', "
+        "wings='%s', "
+        "hong='%s', "
+        "boardroom='%s', "
+        "gridcoin='%s', "
+        "ethereum='%s', "
+        "ethereum_classic='%s', "
+        "expanse='%s', "
+        "golem='%s', "
+        "nxt='%s', "
+        "ardor='%s', "
         "hyperledger_sawtooth_lake='%s', "
         "hyperledger_fabric='%s', "
-        "waves_address='%s', "
-        "peershares_address='%s', "
-        "omnilayer_address='%s', "
-        "counterparty_address='%s' ",
+        "waves='%s', "
+        "peershares='%s', "
+        "omnilayer='%s', "
+        "counterparty='%s', "
+        "echo='%s', "
+        "tox='%s', "
+        "retroshare='%s', "
+        "wickr='%s', "
+        "ring='%s', "
+        "pgp='%s' "
         id,
-        bitshares_account,
-        steem_account,
-        gridcoin_address,
-        ethereum_address,
-        ethereum_classic_address,
-        golem_address,
-        nxt_account_id,
-        ardor_account_id,
+        bitshares,
+        steem,
+        peerplays,
+        storj,
+        nem,
+        ibm_bluemix_blockchain,
+        coloredcoins,
+        antshares,
+        lisk,
+        decent,
+        synereo,
+        lbry,
+        wings,
+        hong,
+        boardroom,
+        gridcoin,
+        ethereum,
+        ethereum_classic,
+        expanse,
+        golem,
+        nxt,
+        ardor,
         hyperledger_sawtooth_lake,
         hyperledger_fabric,
-        waves_address,
-        peershares_address,
-        omnilayer_address,
-        counterparty_address
+        waves,
+        peershares,
+        omnilayer,
+        counterparty,
+        echo,
+        tox,
+        retroshare,
+        wickr,
+        ring,
+        pgp
     );
-    UNESCAPE(bitshares_account);
-    UNESCAPE(steem_account);
-    UNESCAPE(gridcoin_address);
-    UNESCAPE(ethereum_address);
-    UNESCAPE(ethereum_classic_address);
-    UNESCAPE(nxt_account_id);
-    UNESCAPE(ardor_account_id);
+    UNESCAPE(bitshares);
+    UNESCAPE(steem);
+    UNESCAPE(peerplays);
+    UNESCAPE(storj);
+    UNESCAPE(nem);
+    UNESCAPE(ibm_bluemix_blockchain);
+    UNESCAPE(coloredcoins);
+    UNESCAPE(antshares);
+    UNESCAPE(lisk);
+    UNESCAPE(decent);
+    UNESCAPE(synereo);
+    UNESCAPE(lbry);
+    UNESCAPE(wings);
+    UNESCAPE(hong);
+    UNESCAPE(boardroom);
+    UNESCAPE(gridcoin);
+    UNESCAPE(ethereum);
+    UNESCAPE(ethereum_classic);
+    UNESCAPE(expanse);
+    UNESCAPE(nxt);
+    UNESCAPE(ardor);
     UNESCAPE(hyperledger_sawtooth_lake);
     UNESCAPE(hyperledger_fabric);
-    UNESCAPE(waves_address);
-    UNESCAPE(peershares_address);
-    UNESCAPE(omnilayer_address);
-    UNESCAPE(counterparty_address);
+    UNESCAPE(waves);
+    UNESCAPE(peershares);
+    UNESCAPE(omnilayer);
+    UNESCAPE(counterparty);
+    UNESCAPE(echo);
+    UNESCAPE(tox);
+    UNESCAPE(retroshare);
+    UNESCAPE(wickr);
+    UNESCAPE(ring);
+    UNESCAPE(pgp);
 }
 
 void DB_PROJECT_RAIN::db_parse(MYSQL_ROW& r) {
     int i=0;
     clear();
     id = atol(r[i++]);
-    strcpy2(bitshares_account, r[i++]);
-    strcpy2(steem_account, r[i++]);
-    strcpy2(gridcoin_address, r[i++]);
-    strcpy2(ethereum_address, r[i++]);
-    strcpy2(ethereum_classic_address, r[i++]);
-    strcpy2(nxt_account_id, r[i++]);    
-    strcpy2(ardor_account_id, r[i++]);    
+    strcpy2(bitshares, r[i++]);
+    strcpy2(steem, r[i++]);
+    strcpy2(peerplays, r[i++]);
+    strcpy2(storj, r[i++]);
+    strcpy2(nem, r[i++]);
+    strcpy2(ibm_bluemix_blockchain, r[i++]);
+    strcpy2(coloredcoins, r[i++]);
+    strcpy2(antshares, r[i++]);
+    strcpy2(lisk, r[i++]);
+    strcpy2(decent, r[i++]);
+    strcpy2(synereo, r[i++]);
+    strcpy2(lbry, r[i++]);
+    strcpy2(wings, r[i++]);
+    strcpy2(hong, r[i++]);
+    strcpy2(boardroom, r[i++]);
+    strcpy2(gridcoin, r[i++]);
+    strcpy2(ethereum, r[i++]);
+    strcpy2(ethereum_classic, r[i++]);
+    strcpy2(expanse, r[i++]);
+    strcpy2(nxt, r[i++]);    
+    strcpy2(ardor, r[i++]);    
     strcpy2(hyperledger_sawtooth_lake, r[i++]);    
     strcpy2(hyperledger_fabric, r[i++]);    
-    strcpy2(waves_address, r[i++]);    
-    strcpy2(peershares_address, r[i++]);    
-    strcpy2(omnilayer_address, r[i++]);    
-    strcpy2(counterparty_address, r[i++]); 
+    strcpy2(waves, r[i++]);    
+    strcpy2(peershares, r[i++]);    
+    strcpy2(omnilayer, r[i++]);    
+    strcpy2(counterparty, r[i++]); 
+    strcpy2(echo, r[i++]); 
+    strcpy2(tox, r[i++]); 
+    strcpy2(retroshare, r[i++]); 
+    strcpy2(wickr, r[i++]); 
+    strcpy2(ring, r[i++]); 
+    strcpy2(pgp, r[i++]); 
 }
 
 void DB_STATE_COUNTS::db_print(char* buf) {

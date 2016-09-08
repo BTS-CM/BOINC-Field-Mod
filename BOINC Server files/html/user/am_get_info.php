@@ -38,20 +38,40 @@ $project_rain = BoincRain::lookup_auth($auth);
 $name = urlencode($user->name);
 $country = urlencode($user->country);
 $postal_code = urlencode($user->postal_code);
-$bitshares_account = urlencode($project_rain->bitshares_account);
-$steem_account = urlencode($project_rain->steem_account);
-$gridcoin_address = urlencode($project_rain->gridcoin_address);
-$ethereum_address = urlencode($project_rain->ethereum_address);
-$ethereum_classic_address = urlencode($project_rain->ethereum_classic_address);
-$golem_address = urlencode($project_rain->golem_address);
-$nxt_account_id = urlencode($project_rain->nxt_account_id);
-$ardor_account_id = urlencode($project_rain->ardor_account_id);
+$bitshares = urlencode($project_rain->bitshares);
+$steem = urlencode($project_rain->steem);
+$gridcoin = urlencode($project_rain->gridcoin);
+$ethereum = urlencode($project_rain->ethereum);
+$ethereum_classic = urlencode($project_rain->ethereum_classic);
+$golem = urlencode($project_rain->golem);
+$nxt = urlencode($project_rain->nxt);
+$ardor = urlencode($project_rain->ardor);
 $hyperledger_sawtooth_lake = urlencode($project_rain->hyperledger_sawtooth_lake);
 $hyperledger_fabric = urlencode($project_rain->hyperledger_fabric);
-$waves_address = urlencode($project_rain->waves_address);
-$peershares_address = urlencode($project_rain->peershares_address);
-$omnilayer_address = urlencode($project_rain->omnilayer_address);
-$counterparty_address = urlencode($project_rain->counterparty_address);
+$waves = urlencode($project_rain->waves);
+$peershares = urlencode($project_rain->peershares);
+$omnilayer = urlencode($project_rain->omnilayer);
+$counterparty = urlencode($project_rain->counterparty);
+$peerplays = urlencode($project_rain->peerplays);
+$storj = urlencode($project_rain->storj);
+$nem = urlencode($project_rain->nem);
+$ibm_bluemix_blockchain = urlencode($project_rain->ibm_bluemix_blockchain);
+$coloredcoins = urlencode($project_rain->coloredcoins);
+$antshares = urlencode($project_rain->antshares);
+$lisk = urlencode($project_rain->lisk);
+$decent = urlencode($project_rain->decent);
+$synereo = urlencode($project_rain->synereo);
+$lbry = urlencode($project_rain->lbry);
+$wings = urlencode($project_rain->wings);
+$hong = urlencode($project_rain->hong);
+$boardroom = urlencode($project_rain->boardroom);
+$expanse = urlencode($project_rain->expanse);
+$echo = urlencode($project_rain->echo);
+$tox = urlencode($project_rain->tox);
+$retroshare = urlencode($project_rain->retroshare);
+$wickr = urlencode($project_rain->wickr);
+$ring = urlencode($project_rain->ring);
+$pgp = urlencode($project_rain->pgp);
 $url = urlencode($user->url);
 $weak_auth = weak_auth($user);
 $cpid = md5($user->cross_project_id.$user->email_addr);
@@ -61,20 +81,40 @@ $ret = "<id>$user->id</id>
 <country>$country</country>
 <weak_auth>$weak_auth</weak_auth>
 <postal_code>$postal_code</postal_code>
-<bitshares_account>$bitshares_account</bitshares_account>
-<steem_account>$steem_account</steem_account>
-<gridcoin_address>$gridcoin_address</gridcoin_address>
-<ethereum_address>$ethereum_address</ethereum_address>
-<ethereum_classic_address>$ethereum_classic_address</ethereum_classic_address>    
-<golem_address>$golem_address</golem_address>
-<nxt_account_id>$nxt_account_id</nxt_account_id>
-<ardor_account_id>$ardor_account_id</ardor_account_id>
-<hyperledger_sawtooth_lake>$hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
-<hyperledger_fabric>$hyperledger_fabric</hyperledger_fabric>
-<waves_address>$waves_address</waves_address>
-<peershares_address>$peershares_address</peershares_address>
-<omnilayer_address>$omnilayer_address</omnilayer_address>
-<counterparty_address>$counterparty_address</counterparty_address>
+    <bitshares>$bitshares</bitshares>
+    <steem>$steem</steem>
+    <gridcoin>$gridcoin</gridcoin>
+    <ethereum>$ethereum</ethereum>
+    <ethereum_classic>$ethereum_classic</ethereum_classic>    
+    <golem>$golem</golem>
+    <nxt>$nxt</nxt>
+    <ardor>$ardor</ardor>
+    <hyperledger_sawtooth_lake>$hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
+    <hyperledger_fabric>$hyperledger_fabric</hyperledger_fabric>
+    <waves>$waves</waves>
+    <peershares>$peershares</peershares>
+    <omnilayer>$omnilayer</omnilayer>
+    <counterparty>$counterparty</counterparty>
+    <peerplays>$peerplays</peerplays>
+    <storj>$storj</storj>
+    <nem>$nem</nem>
+    <ibm_bluemix_blockchain>$ibm_bluemix_blockchain</ibm_bluemix_blockchain>
+    <coloredcoins>$coloredcoins</coloredcoins>
+    <antshares>$antshares</antshares>
+    <lisk>$lisk</lisk>
+    <decent>$decent</decent>
+    <synereo>$synereo</synereo>
+    <lbry>$lbry</lbry>
+    <wings>$wings</wings>
+    <hong>$hong</hong>
+    <boardroom>$boardroom</boardroom>
+    <expanse>$expanse</expanse>
+    <echo>$echo</echo>
+    <tox>$tox</tox>
+    <retroshare>$retroshare</retroshare>
+    <wickr>$wickr</wickr>
+    <ring>$ring</ring>
+    <pgp>$pgp</pgp>
 <cpid>$cpid</cpid>
 <has_profile>$user->has_profile</has_profile>
 <create_time>$user->create_time</create_time>
