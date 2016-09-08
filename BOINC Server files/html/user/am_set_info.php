@@ -57,19 +57,41 @@ if ($auth) {
     $name = post_str("name", true);
     $country = post_str("country", true);
     $postal_code = post_str("postal_code", true);
-    $bitshares_account = post_str("bitshares_account", true);
-    $steem_account = post_str("steem_account", true);
-    $gridcoin_address = post_str("gridcoin_address", true);
-    $ethereum_address = post_str("ethereum_address", true);
-    $golem_address = post_str("golem_address", true);
-    $nxt_account_id = post_str("nxt_account_id", true);
-    $ardor_account_id = post_str("ardor_account_id", true);
+    //
+    $bitshares = post_str("bitshares", true);
+    $steem = post_str("steem", true);
+    $gridcoin = post_str("gridcoin", true);
+    $ethereum = post_str("ethereum", true);
+    $golem = post_str("golem", true);
+    $nxt = post_str("nxt", true);
+    $ardor = post_str("ardor", true);
     $hyperledger_sawtooth_lake = post_str("hyperledger_sawtooth_lake", true);
     $hyperledger_fabric = post_str("hyperledger_fabric", true);
-    $waves_address = post_str("waves_address", true);
-    $peershares_address = post_str("peershares_address", true);
-    $omnilayer_address = post_str("omnilayer_address", true);
-    $counterparty_address = post_str("counterparty_address", true);
+    $waves = post_str("waves", true);
+    $peershares = post_str("peershares", true);
+    $omnilayer = post_str("omnilayer", true);
+    $counterparty = post_str("counterparty", true);
+    $peerplays = post_str("peerplays", true);
+    $storj = post_str("storj", true);
+    $nem = post_str("nem", true);
+    $ibm_bluemix_blockchain = post_str("ibm_bluemix_blockchain", true);
+    $coloredcoins = post_str("coloredcoins", true);
+    $antshares = post_str("antshares", true);
+    $lisk = post_str("lisk", true);
+    $decent = post_str("decent", true);
+    $synereo = post_str("synereo", true);
+    $lbry = post_str("lbry", true);
+    $wings = post_str("wings", true);
+    $hong = post_str("hong", true);
+    $boardroom = post_str("boardroom", true);
+    $expanse = post_str("expanse", true);
+    $echo = post_str("echo", true);
+    $tox = post_str("tox", true);
+    $retroshare = post_str("retroshare", true);
+    $wickr = post_str("wickr", true);
+    $ring = post_str("ring", true);
+    $pgp = post_str("pgp", true);
+    //
     $global_prefs = post_str("global_prefs", true);
     $project_prefs = post_str("project_prefs", true);
     $url = post_str("url", true);
@@ -84,20 +106,42 @@ if ($auth) {
     $name = get_str("name", true);
     $country = get_str("country", true);
     $postal_code = get_str("postal_code", true);
-    $bitshares_account = get_str("bitshares_account", true);
-    $steem_account = get_str("steem_account", true);
-    $gridcoin_address = get_str("gridcoin_address", true);
-    $ethereum_address = get_str("ethereum_address", true);
-    $ethereum_classic_address = get_str("ethereum_classic_address", true);
-    $golem_address = get_str("golem_address", true);
-    $nxt_account_id = get_str("nxt_account_id", true);
-    $ardor_account_id = get_str("ardor_account_id", true);
+    //
+    $bitshares = get_str("bitshares", true);
+    $steem = get_str("steem", true);
+    $gridcoin = get_str("gridcoin", true);
+    $ethereum = get_str("ethereum", true);
+    $ethereum_classic = get_str("ethereum_classic", true);
+    $golem = get_str("golem", true);
+    $nxt = get_str("nxt", true);
+    $ardor = get_str("ardor", true);
     $hyperledger_sawtooth_lake = get_str("hyperledger_sawtooth_lake", true);
     $hyperledger_fabric = get_str("hyperledger_fabric", true);
-    $waves_address = get_str("waves_address", true);
-    $peershares_address = get_str("peershares_address", true);
-    $omnilayer_address = get_str("omnilayer_address", true);
-    $counterparty_address = get_str("counterparty_address", true);
+    $waves = get_str("waves", true);
+    $peershares = get_str("peershares", true);
+    $omnilayer = get_str("omnilayer", true);
+    $counterparty = get_str("counterparty", true);
+    $peerplays = get_str("peerplays", true);
+    $storj = get_str("storj", true);
+    $nem = get_str("nem", true);
+    $ibm_bluemix_blockchain = get_str("ibm_bluemix_blockchain", true);
+    $coloredcoins = get_str("coloredcoins", true);
+    $antshares = get_str("antshares", true);
+    $lisk = get_str("lisk", true);
+    $decent = get_str("decent", true);
+    $synereo = get_str("synereo", true);
+    $lbry = get_str("lbry", true);
+    $wings = get_str("wings", true);
+    $hong = get_str("hong", true);
+    $boardroom = get_str("boardroom", true);
+    $expanse = get_str("expanse", true);
+    $echo = get_str("echo", true);
+    $tox = get_str("tox", true);
+    $retroshare = get_str("retroshare", true);
+    $wickr = get_str("wickr", true);
+    $ring = get_str("ring", true);
+    $pgp = get_str("pgp", true);
+    //
     $global_prefs = get_str("global_prefs", true);
     $project_prefs = get_str("project_prefs", true);
     $url = get_str("url", true);
@@ -120,20 +164,42 @@ if ($country && !is_valid_country($country)) {
 }
 $country = BoincDb::escape_string($country);
 $postal_code = BoincDb::escape_string($postal_code);
-$bitshares_account = BoincDb::escape_string($bitshares_account);
-$steem_account = BoincDb::escape_string($steem_account);
-$gridcoin_address = BoincDb::escape_string($gridcoin_address);
-$ethereum_address = BoincDb::escape_string($ethereum_address);
-$ethereum_classic_address = BoincDb::escape_string($ethereum_classic_address);
-$golem_address = BoincDb::escape_string($golem_address);
-$nxt_account_id = BoincDb::escape_string($nxt_account_id);
-$ardor_account_id = BoincDb::escape_string($ardor_account_id);
+//
+$bitshares = BoincDb::escape_string($bitshares);
+$steem = BoincDb::escape_string($steem);
+$gridcoin = BoincDb::escape_string($gridcoin);
+$ethereum = BoincDb::escape_string($ethereum);
+$ethereum_classic = BoincDb::escape_string($ethereum_classic);
+$golem = BoincDb::escape_string($golem);
+$nxt = BoincDb::escape_string($nxt);
+$ardor = BoincDb::escape_string($ardor);
 $hyperledger_sawtooth_lake = BoincDb::escape_string($hyperledger_sawtooth_lake);
 $hyperledger_fabric = BoincDb::escape_string($hyperledger_fabric);
-$waves_address = BoincDb::escape_string($waves_address);
-$peershares_address = BoincDb::escape_string($peershares_address);
-$omnilayer_address = BoincDb::escape_string($omnilayer_address);
-$counterparty_address = BoincDb::escape_string($counterparty_address);
+$waves = BoincDb::escape_string($waves);
+$peershares = BoincDb::escape_string($peershares);
+$omnilayer = BoincDb::escape_string($omnilayer);
+$counterparty = BoincDb::escape_string($counterparty);
+$peerplays = BoincDb::escape_string($peerplays);
+$storj = BoincDb::escape_string($storj);
+$nem = BoincDb::escape_string($nem);
+$ibm_bluemix_blockchain = BoincDb::escape_string($ibm_bluemix_blockchain);
+$coloredcoins = BoincDb::escape_string($coloredcoins);
+$antshares = BoincDb::escape_string($antshares);
+$lisk = BoincDb::escape_string($lisk);
+$decent = BoincDb::escape_string($decent);
+$synereo = BoincDb::escape_string($synereo);
+$lbry = BoincDb::escape_string($lbry);
+$wings = BoincDb::escape_string($wings);
+$hong = BoincDb::escape_string($hong);
+$boardroom = BoincDb::escape_string($boardroom);
+$expanse = BoincDb::escape_string($expanse);
+$echo = BoincDb::escape_string($echo);
+$tox = BoincDb::escape_string($tox);
+$retroshare = BoincDb::escape_string($retroshare);
+$wickr = BoincDb::escape_string($wickr);
+$ring = BoincDb::escape_string($ring);
+$pgp = BoincDb::escape_string($pgp);
+//
 $global_prefs = BoincDb::escape_string($global_prefs);
 $project_prefs = BoincDb::escape_string($project_prefs);
 
@@ -172,29 +238,29 @@ if ($country) {
 if ($postal_code) {
     $query .= " postal_code='$postal_code', ";
 }
-if ($bitshares_account) {
-    $query .= " bitshares_account='$bitshares_account', ";
+if ($bitshares) {
+    $query .= " bitshares='$bitshares', ";
 }
-if ($steem_account) {
-    $query .= " steem_account='$steem_account', ";
+if ($steem) {
+    $query .= " steem='$steem', ";
 }
-if ($gridcoin_address) {
-    $query .= " gridcoin_address='$gridcoin_address', ";
+if ($gridcoin) {
+    $query .= " gridcoin='$gridcoin', ";
 }
-if ($ethereum_address) {
-    $query .= " ethereum_address='$ethereum_address', ";
+if ($ethereum) {
+    $query .= " ethereum='$ethereum', ";
 }
-if ($ethereum_classic_address) {
-    $query .= " ethereum_classic_address='$ethereum_classic_address', ";
+if ($ethereum_classic) {
+    $query .= " ethereum_classic='$ethereum_classic', ";
 }
-if ($golem_address) {
-    $query .= " golem_address='$golem_address', ";
+if ($golem) {
+    $query .= " golem='$golem', ";
 }
-if ($nxt_account_id) {
-    $query .= " nxt_account_id='$nxt_account_id', ";
+if ($nxt) {
+    $query .= " nxt='$nxt', ";
 }
-if ($ardor_account_id) {
-    $query .= " ardor_account_id='$ardor_account_id', ";
+if ($ardor) {
+    $query .= " ardor='$ardor', ";
 }
 if ($hyperledger_sawtooth_lake) {
     $query .= " hyperledger_sawtooth_lake='$hyperledger_sawtooth_lake', ";
@@ -202,17 +268,77 @@ if ($hyperledger_sawtooth_lake) {
 if ($hyperledger_fabric) {
     $query .= " hyperledger_fabric='$hyperledger_fabric', ";
 }
-if ($waves_address) {
-    $query .= " waves_address='$waves_address', ";
+if ($waves) {
+    $query .= " waves='$waves', ";
 }
-if ($peershares_address) {
-    $query .= " peershares_address='$peershares_address', ";
+if ($peershares) {
+    $query .= " peershares='$peershares', ";
 }
-if ($omnilayer_address) {
-    $query .= " omnilayer_address='$omnilayer_address', ";
+if ($omnilayer) {
+    $query .= " omnilayer='$omnilayer', ";
 }
-if ($counterparty_address) {
-    $query .= " counterparty_address='$counterparty_address', ";
+if ($counterparty) {
+    $query .= " counterparty='$counterparty', ";
+}
+if ($peerplays) {
+    $query .= " peerplays='$peerplays', ";
+}
+if ($storj) {
+    $query .= " storj='$storj', ";
+}
+if ($nem) {
+    $query .= " nem='$nem', ";
+}
+if ($ibm_bluemix_blockchain) {
+    $query .= " ibm_bluemix_blockchain='$ibm_bluemix_blockchain', ";
+}
+if ($coloredcoins) {
+    $query .= " coloredcoins='$coloredcoins', ";
+}
+if ($antshares) {
+    $query .= " antshares='$antshares', ";
+}
+if ($lisk) {
+    $query .= " lisk='$lisk', ";
+}
+if ($decent) {
+    $query .= " decent='$decent', ";
+}
+if ($synereo) {
+    $query .= " synereo='$synereo', ";
+}
+if ($lbry) {
+    $query .= " lbry='$lbry', ";
+}
+if ($wings) {
+    $query .= " wings='$wings', ";
+}
+if ($hong) {
+    $query .= " hong='$hong', ";
+}
+if ($boardroom) {
+    $query .= " boardroom='$boardroom', ";
+}
+if ($expanse) {
+    $query .= " expanse='$expanse', ";
+}
+if ($echo) {
+    $query .= " echo='$echo', ";
+}
+if ($tox) {
+    $query .= " tox='$tox', ";
+}
+if ($retroshare) {
+    $query .= " retroshare='$retroshare', ";
+}
+if ($wickr) {
+    $query .= " wickr='$wickr', ";
+}
+if ($ring) {
+    $query .= " ring='$ring', ";
+}
+if ($pgp) {
+    $query .= " pgp='$pgp', ";
 }
 
 if ($global_prefs) {

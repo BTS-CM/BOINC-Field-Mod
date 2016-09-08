@@ -30,29 +30,30 @@ page_head(tra("Edit project rain information"));
 echo "<form method=post action=edit_project_rain_action.php>";
 echo form_tokens($user->authenticator);
 start_table();
-row2(tra("Bitshares account %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=bitshares_account type=text size=20 value='$project_rain->bitshares_account'>"
+row1(tra("Cryptocurrency addresses/accounts"));
+row2(tra("Bitshares %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=bitshares type=text size=20 value='$project_rain->bitshares'>"
 );
-row2(tra("Steem account %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=steem_account type=text size=20 value='$project_rain->steem_account'>"
+row2(tra("Steem %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=steem type=text size=20 value='$project_rain->steem'>"
 );
-row2(tra("Gridcoin address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=gridcoin_address type=text size=20 value='$project_rain->gridcoin_address'>"
+row2(tra("Gridcoin %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=gridcoin type=text size=20 value='$project_rain->gridcoin'>"
 );
-row2(tra("Ethereum address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=ethereum_address type=text size=20 value='$project_rain->ethereum_address'>"
+row2(tra("Ethereum %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=ethereum type=text size=20 value='$project_rain->ethereum'>"
 );
-row2(tra("Ethereum Classic address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=ethereum_classic_address type=text size=20 value='$project_rain->ethereum_classic_address'>"
+row2(tra("Ethereum Classic %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=ethereum_classic type=text size=20 value='$project_rain->ethereum_classic'>"
 );
-row2(tra("Golem address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=golem_address type=text size=20 value='$project_rain->golem_address'>"
+row2(tra("Golem %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=golem type=text size=20 value='$project_rain->golem'>"
 );
-row2(tra("NXT account ID %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=nxt_account_id type=text size=20 value='$project_rain->nxt_account_id'>"
+row2(tra("NXT %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=nxt type=text size=20 value='$project_rain->nxt'>"
 );
-row2(tra("Ardor account ID %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=ardor_account_id type=text size=20 value='$project_rain->ardor_account_id'>"
+row2(tra("Ardor %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=ardor type=text size=20 value='$project_rain->ardor'>"
 );
 row2(tra("Hyperledger Sawtooth Lake %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=hyperledger_sawtooth_lake type=text size=20 value='$project_rain->hyperledger_sawtooth_lake'>"
@@ -60,17 +61,79 @@ row2(tra("Hyperledger Sawtooth Lake %1 Optional%2", "<br><p class=\"text-muted\"
 row2(tra("Hyperledger Fabric %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=hyperledger_fabric type=text size=20 value='$project_rain->hyperledger_fabric'>"
 );
-row2(tra("Waves address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=waves_address type=text size=20 value='$project_rain->waves_address'>"
+row2(tra("Waves %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=waves type=text size=20 value='$project_rain->waves'>"
 );
-row2(tra("Peershares address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=peershares_address type=text size=20 value='$project_rain->peershares_address'>"
+row2(tra("Peershares %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=peershares type=text size=20 value='$project_rain->peershares'>"
 );
-row2(tra("Omnilayer address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=omnilayer_address type=text size=20 value='$project_rain->omnilayer_address'>"
+row2(tra("Omnilayer %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=omnilayer type=text size=20 value='$project_rain->omnilayer'>"
 );
-row2(tra("CounterParty Address %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=counterparty_address type=text size=20 value='$project_rain->counterparty_address'>"
+row2(tra("CounterParty %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=counterparty type=text size=20 value='$project_rain->counterparty'>"
+);
+row2(tra("Peerplays %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=peerplays type=text size=20 value='$project_rain->peerplays'>"
+);
+row2(tra("Storj %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=storj type=text size=20 value='$project_rain->storj'>"
+);
+row2(tra("NEM %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=nem type=text size=20 value='$project_rain->nem'>"
+);
+row2(tra("IBM Bluemix blockchain %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=ibm_bluemix_blockchain type=text size=20 value='$project_rain->ibm_bluemix_blockchain'>"
+);
+row2(tra("Coloredcoins %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=coloredcoins type=text size=20 value='$project_rain->coloredcoins'>"
+);
+row2(tra("Antshares %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=antshares type=text size=20 value='$project_rain->antshares'>"
+);
+row2(tra("Lisk %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=lisk type=text size=20 value='$project_rain->lisk'>"
+);
+row2(tra("Decent %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=decent type=text size=20 value='$project_rain->decent'>"
+);
+row2(tra("Synereo %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=synereo type=text size=20 value='$project_rain->synereo'>"
+);
+row2(tra("LBRY %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=lbry type=text size=20 value='$project_rain->lbry'>"
+);
+row1(tra("DAC/DAO platforms"));
+row2(tra("Wings %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=wings type=text size=20 value='$project_rain->wings'>"
+);
+row2(tra("Hong %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=hong type=text size=20 value='$project_rain->hong'>"
+);
+row2(tra("Boardroom %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=boardroom type=text size=20 value='$project_rain->boardroom'>"
+);
+row2(tra("Expanse %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=expanse type=text size=20 value='$project_rain->expanse'>"
+);
+row2(tra("Echo %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=echo type=text size=20 value='$project_rain->echo'>"
+);
+row1(tra("Secure messaging"));
+row2(tra("TOX %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=tox type=text size=20 value='$project_rain->tox'>"
+);
+row2(tra("Retroshare %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=retroshare type=text size=20 value='$project_rain->retroshare'>"
+);
+row2(tra("Wickr %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=wickr type=text size=20 value='$project_rain->wickr'>"
+);
+row2(tra("Ring %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=ring type=text size=20 value='$project_rain->ring'>"
+);
+row2(tra("PGP %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=pgp type=text size=20 value='$project_rain->pgp'>"
 );
 row2("", "<input class=\"btn btn-default\" type=submit value='".tra("Update info")."'>");
 end_table();
