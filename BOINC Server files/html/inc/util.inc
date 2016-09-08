@@ -425,6 +425,19 @@ function row2($x, $y, $show_error=false) {
     echo "<tr><td width=\"40%\" class=$class1>$x</td><td class=$class2>$y</td></tr>\n";
 }
 
+function pgpfield($x, $y, $show_error=false) {
+    if ($x=="") $x="<br>";
+    if ($y==="") $y="<br>";
+    if ($show_error) {
+        $class1 = 'fieldname_error';
+        $class2 = 'fieldvalue_error';
+    } else {
+        $class1 = 'fieldname';
+        $class2 = 'fieldvalue';
+    }
+    echo "<tr><td width=\"40%\" class=$class1>$x</td><td class=$class2><textarea name=\"textarea\" style=\"width:350px;height:150px;\">$y</textarea></td></tr>\n";
+}
+
 function row2_init($x, $y) {
     echo "<tr><td class=fieldname width=\"40%\">$x</td><td class=fieldvalue>$y\n";
 }
