@@ -702,7 +702,7 @@ struct PROJECT_RAIN {
     char retroshare[1024];
     char wickr[254];
     char ring[40];
-    char pgp[5];
+    char pgp[4096];
     void clear();
 };
 
