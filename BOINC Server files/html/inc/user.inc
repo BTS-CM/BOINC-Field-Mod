@@ -275,19 +275,6 @@ function show_project_rain_crypto_private($project_rain) {
     row2(tra("<a href='http://decent.ch/'>Decent</a>"), $project_rain->decent);
     row2(tra("<a href='https://www.synereo.com/'>Synereo</a>"), $project_rain->synereo);
     row2(tra("<a href='https://lbry.io/'>LBRY</a>"), $project_rain->lbry);
-    //
-    row1(tra("DAC/DAO platforms"));
-    row2(tra("<a href='https://wings.ai/'>Wings</a>"), $project_rain->wings);
-    row2(tra("<a href='http://www.hongcoin.org/'>Hong</a>"), $project_rain->hong);
-    row2(tra("<a href='http://boardroom.to/'>BoardRoom</a>"), $project_rain->boardroom);
-    //
-    row1(tra("Secure messaging"));
-    row2(tra("<a href='https://my-echo.com/'>Echo</a>"), $project_rain->echo);
-    row2(tra("<a href='https://tox.chat/'>TOX</a>"), $project_rain->tox);
-    row2(tra("<a href='https://retroshare.github.io/index.html'>RetroShare</a>"), $project_rain->retroshare);
-    row2(tra("<a href='https://www.wickr.com/'>Wickr</a>"), $project_rain->wickr);
-    row2(tra("<a href='https://ring.cx/'>Ring</a>"), $project_rain->ring);
-    pgpfield(tra("<a href='https://ssd.eff.org/en/module/introduction-public-key-cryptography-and-pgp'>PGP</a>"), $project_rain->pgp);
     $url_tokens = url_tokens($project_rain->authenticator);
         row2(tra("Change"),
             "<a href=\"edit_project_rain_form.php?$url_tokens\">".tra("Edit your cryptocurrency addresses/accounts")."</a>"
