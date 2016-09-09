@@ -248,7 +248,7 @@ function show_user_info_private($user) {
     }
 }
 
-function show_project_rain_private($project_rain) {
+function show_project_rain_crypto_private($project_rain) {
     row1(tra("Cryptocurrency addresses/accounts"));
     row2(tra("<a href='https://bitshares.org'>Bitshares</a>"), $project_rain->bitshares);
     row2(tra("<a href='https://gridcoin.us/'>Gridcoin</a>"), $project_rain->gridcoin);
@@ -294,6 +294,24 @@ function show_project_rain_private($project_rain) {
         );
 }
 
+function show_project_rain_dao_message_private($project_rain) {
+    row1(tra("DAC/DAO platforms"));
+    row2(tra("<a href='https://wings.ai/'>Wings</a>"), $project_rain->wings);
+    row2(tra("<a href='http://www.hongcoin.org/'>Hong</a>"), $project_rain->hong);
+    row2(tra("<a href='http://boardroom.to/'>BoardRoom</a>"), $project_rain->boardroom);
+    //
+    row1(tra("Secure messaging"));
+    row2(tra("<a href='https://my-echo.com/'>Echo</a>"), $project_rain->echo);
+    row2(tra("<a href='https://tox.chat/'>TOX</a>"), $project_rain->tox);
+    row2(tra("<a href='https://retroshare.github.io/index.html'>RetroShare</a>"), $project_rain->retroshare);
+    row2(tra("<a href='https://www.wickr.com/'>Wickr</a>"), $project_rain->wickr);
+    row2(tra("<a href='https://ring.cx/'>Ring</a>"), $project_rain->ring);
+    pgpfield(tra("<a href='https://ssd.eff.org/en/module/introduction-public-key-cryptography-and-pgp'>PGP</a>"), $project_rain->pgp);
+    $url_tokens = url_tokens($project_rain->authenticator);
+        row2(tra("Change"),
+            "<a href=\"edit_project_rain_form.php?$url_tokens\">".tra("Edit your cryptocurrency addresses/accounts")."</a>"
+        );
+}
 function friend_links($user) {
     if (is_banished($user)) {
         return "";
@@ -551,7 +569,11 @@ function show_rain_private($project_rain) {
     start_table_noborder();
     echo "<tr><td valign=top>";
     start_table();
-    show_project_rain_private($project_rain);
+    show_project_rain_crypto_private($project_rain);
+    end_table();
+    echo "</td><td valign=top>";
+    start_table();
+    show_project_rain_dao_message_private($project_rain);
     end_table();
     echo "</td></tr></table>";
 }
