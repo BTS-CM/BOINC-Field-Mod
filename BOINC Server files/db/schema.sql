@@ -367,6 +367,7 @@ create table project_rain (
     peershares              varchar(34),
     omnilayer               varchar(34),
     counterparty            varchar(34),
+    heat_ledger            varchar(34),
     echo                    varchar(254),
     tox                     varchar(72),
     retroshare              varchar(1024),

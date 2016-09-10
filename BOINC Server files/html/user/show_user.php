@@ -53,7 +53,7 @@ if ($format=="xml"){
     }
     if (!$user) xml_error(ERR_DB_NOT_FOUND);
 
-    show_user_xml($user, $show_hosts);
+    show_user_xml($user, $show_hosts, $project_rain);
 } else {
     // The page may be presented in many different languages,
     // so here we cache the data instead
@@ -103,6 +103,10 @@ if ($format=="xml"){
     community_links($community_links, $logged_in_user);
     end_table();
     echo "</td></tr></table>";
+    if ($auth) {
+        $project_rain = get_project_rain_details();
+        show_rain_private($project_rain);
+    }
     page_tail(true);
 }
 

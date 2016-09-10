@@ -427,7 +427,7 @@ function row2($x, $y, $show_error=false) {
 
 function pgpfield($x, $y, $show_error=false) {
     if ($x=="") $x="<br>";
-    if ($y==="") $y="<br>";
+    if ($y==="") $y="";
     if ($show_error) {
         $class1 = 'fieldname_error';
         $class2 = 'fieldvalue_error';

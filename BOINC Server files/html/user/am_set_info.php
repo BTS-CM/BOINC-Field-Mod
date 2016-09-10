@@ -71,6 +71,7 @@ if ($auth) {
     $peershares = post_str("peershares", true);
     $omnilayer = post_str("omnilayer", true);
     $counterparty = post_str("counterparty", true);
+    $heat_ledger = post_str("heat_ledger", true);
     $peerplays = post_str("peerplays", true);
     $storj = post_str("storj", true);
     $nem = post_str("nem", true);
@@ -81,10 +82,12 @@ if ($auth) {
     $decent = post_str("decent", true);
     $synereo = post_str("synereo", true);
     $lbry = post_str("lbry", true);
+    $expanse = post_str("expanse", true);
+    //
     $wings = post_str("wings", true);
     $hong = post_str("hong", true);
     $boardroom = post_str("boardroom", true);
-    $expanse = post_str("expanse", true);
+    //
     $echo = post_str("echo", true);
     $tox = post_str("tox", true);
     $retroshare = post_str("retroshare", true);
@@ -121,6 +124,7 @@ if ($auth) {
     $peershares = get_str("peershares", true);
     $omnilayer = get_str("omnilayer", true);
     $counterparty = get_str("counterparty", true);
+    $heat_ledger = get_str("heat_ledger", true);
     $peerplays = get_str("peerplays", true);
     $storj = get_str("storj", true);
     $nem = get_str("nem", true);
@@ -179,6 +183,7 @@ $waves = BoincDb::escape_string($waves);
 $peershares = BoincDb::escape_string($peershares);
 $omnilayer = BoincDb::escape_string($omnilayer);
 $counterparty = BoincDb::escape_string($counterparty);
+$heat_ledger = BoincDb::escape_string($heat_ledger);
 $peerplays = BoincDb::escape_string($peerplays);
 $storj = BoincDb::escape_string($storj);
 $nem = BoincDb::escape_string($nem);
@@ -279,6 +284,9 @@ if ($omnilayer) {
 }
 if ($counterparty) {
     $query .= " counterparty='$counterparty', ";
+}
+if ($heat_ledger) {
+    $query .= " heat_ledger='$heat_ledger', ";
 }
 if ($peerplays) {
     $query .= " peerplays='$peerplays', ";

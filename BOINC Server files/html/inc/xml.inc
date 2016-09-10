@@ -120,6 +120,7 @@ function show_user_xml($user, $show_hosts, $project_rain) {
     <nem>$project_rain->nem</nem>
     <ibm_bluemix_blockchain>$project_rain->ibm_bluemix_blockchain</ibm_bluemix_blockchain>
     <coloredcoins>$project_rain->coloredcoins</coloredcoins>
+    <heat_ledger>$project_rain->heat_ledger</heat_ledger>
     <antshares>$project_rain->antshares</antshares>
     <lisk>$project_rain->lisk</lisk>
     <decent>$project_rain->decent</decent>
@@ -183,6 +184,7 @@ function show_team_member($user, $show_email, $project_rain, $creditonly = false
     <peershares>$project_rain->peershares</peershares>
     <omnilayer>$project_rain->omnilayer</omnilayer>
     <counterparty>$project_rain->counterparty</counterparty>
+    <heat_ledger>$project_rain->heat_ledger</heat_ledger>
     <peerplays>$project_rain->peerplays</peerplays>
     <storj>$project_rain->storj</storj>
     <nem>$project_rain->nem</nem>

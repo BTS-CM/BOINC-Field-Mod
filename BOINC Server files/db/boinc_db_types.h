@@ -697,6 +697,7 @@ struct PROJECT_RAIN {
     char peershares[34];
     char omnilayer[34];
     char counterparty[34];
+    char heat_ledger[254];
     char echo[254];
     char tox[72];
     char retroshare[1024];

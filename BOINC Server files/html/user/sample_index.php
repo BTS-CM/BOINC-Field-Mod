@@ -45,38 +45,31 @@ function show_nav() {
     ";
     if ($no_computing) {
         echo "
-            Project-Rain matches BOINC user's CPID to multiple cryptocurrency accounts/addresses to extend 'Project Rain' (tipping BOINC users) to multiple cryptocurrency networks & all BOINC teams.
+            Project-Rain matches registered BOINC user's CPID to multiple cryptocurrency accounts/addresses to extend 'Project Rain' (tipping BOINC users) to multiple cryptocurrency networks & all BOINC teams.
         ";
     } else {
         echo "
-            Project-Rain matches BOINC user's CPID to multiple cryptocurrency accounts/addresses to extend 'Project Rain' (tipping BOINC users) to multiple cryptocurrency networks & all BOINC teams.
+            Project-Rain matches registered BOINC user's CPID to multiple cryptocurrency accounts/addresses to extend 'Project Rain' (tipping BOINC users) to multiple cryptocurrency networks & all BOINC teams.
         ";
     }
     echo "
         <p>
-            Project-Rain is hosted on <a href='https://www.digitalocean.com/?refcode=b86d3e55f889'>DigitalOcean</a>, and run by CM from the <a href='https://www.gridcoin.us'>Gridcoin</a> community.
-        </p>
-            <a href='https://steemit.com/boinc/@cm-steem/project-rain-distributing-crypto-assets-to-boinc-users-based-on-their-verified-boinc-computation'>Project-Rain Steem post</a>.
-        <p>
-            <a href='https://steemit.com/steem/@cm-steem/gauging-interest-would-you-be-interested-being-able-to-tip-boinc-users-your-crypto-asset-of-choice'>Initial Steem post regarding the concept of 'project rain'</a>
+            Project-Rain is hosted on <a href='https://www.digitalocean.com/?refcode=b86d3e55f889'>DigitalOcean</a>, and run by <a href='https://steemit.com/@cm-steem/'>CM</a> from the <a href='https://www.gridcoin.us'>Gridcoin</a> community.
         </p>
         <p>
             Do you have an idea for a BOINC project? <a href='https://steemit.com/gridcoin/@cm-steem/brainstorming-new-boinc-projects-anyone-can-create-a-project-and-reward-their-users-with-gridcoin'>Post your ideas in the Brainstorming thread</a> on Steem!
         </p>
         
-        <h4>Currently supported cryptocurrencies:</h4>
+        <h4>Currently supported cryptocurrencies</h4>
         <p>
-            <a href='https://www.gridcoin.us'>Gridcoin</a>, <a href='https://www.bitshares.org'>Bitshares</a>, <a href='https://steemit.com/'>STEEM</a>, <a href='https://www.ethereum.org/'>Ethereum (ETH)</a>, <a href='https://ethereumclassic.github.io/'>Ethereum Classic (ETC)</a>, <a href='http://www.golemproject.net/'>Golem</a>, <a href='https://nxt.org/'>NXT</a>, <a href='https://ardorplatform.org/'>Ardor</a>, <a href='https://intelledger.github.io/introduction.html'>Hyperledger: Sawtooth Lake (Intel)</a>, <a href='https://hyperledger-fabric.readthedocs.io/en/latest/'>Hyperledger: Fabric (IBM)</a>, <a href='https://wavesplatform.com/'>Waves</a>, <a href='www.peershares.net'>Peershares</a>, <a href='http://www.omnilayer.org'>Omnilayer</a> and <a href='https://counterparty.io'>Counterparty</a>.
-        </p>
-        <h4>Why is cryptocurrency 'x/y/z' not included?</h4>
-        <p>
-            Only '2nd gen' cryptocurrencies have been added, mainly those which allow the issuance of new crypto assets within their network (Bitshares/Ardor/Waves/etc).
+            <a href='https://gridcoin.us'>Gridcoin</a>, <a href='https://steemit.com'>Steem</a>, <a href='https://Bitshares.org'>Bitshares</a>, <a href='http://www.peerplays.com/'>Peerplays</a>, <a href='https://storj.io/'>Storj</a>, <a href='http://nem.io/'>NEM</a>, <a href='https://www.ibm.com/blockchain/bluemix.html'>IBM Bluemix Blockchain</a>, <a href='http://coloredcoins.org/'>ColoredCoins</a>, <a href='https://www.antshares.org/'>Antshares</a>, <a href='https://lisk.io/'>Lisk</a>, <a href='http://decent.ch/'>Decent</a>, <a href='https://www.synereo.com/'>Synereo</a>, <a href='https://lbry.io/'>LBRY</a>, <a href='https://wings.ai/'>Wings</a>, <a href='http://www.hongcoin.org/'>Hong</a>, <a href='http://boardroom.to/'>BoardRoom</a>, <a href='https://www.ethereum.org/'>Ethereum</a>, <a href='https://ethereumclassic.github.io/'>Ethereum Classic</a>, <a href='http://www.expanse.tech/'>Expanse</a>, <a href='http://golemproject.net/'>Golem</a>, <a href='https://nxt.org/'>NXT</a>, <a href='https://ardorplatform.org/'>Ardor</a>, <a href='https://github.com/intelledger'>Hyperledger Sawtooth Lake (Intel)</a>, <a href='https://github.com/hyperledger/fabric'>Hyperledger Fabric (IBM)</a>, <a href='https://wavesplatform.com/'>Waves</a>, <a href='http://peershares.net/'>Peershares</a>, <a href='http://www.omnilayer.org/'>Omnilayer</a>, <a href='http://counterparty.io/'>CounterParty</a>.
         </p>
         <p>
-            Gridcoin and Golem are directly related to distributed computing and Steem has the potential for raising funds for project-rain.
+            Once this project is live the cryptocurrencies selected will be set in stone. If you wish to create 'Project Rain' capabilities for your cryptocurrency, you can fork the <a href='https://github.com/grctest/project-rain-site/'>Project-Rain Github repo</a> and create your own BOINC project. Alternatively, you could convert your unsupported cryptocurrency to a supported cryptocurrency & rain that on the BOINC users.
         </p>
+        <h4>Supported secure chat applications</h4>
         <p>
-            Once this project is live the cryptocurrencies selected will be set in stone. If you wish to create 'Project Rain' capabilities for your cryptocurrency, you can fork the <a href='https://github.com/grctest/project-rain-site/'>Project-Rain Github repo</a> and create your own BOINC project. Alternatively, you could convert your cryptocurrency to Gridcoin/ETH/ETC/Steem/Bitshares assets to create a project rain on behalf of your cryptocurrency.
+            <a href='https://ring.cx/'>Ring</a>, <a href='https://ssd.eff.org/en/module/introduction-public-key-cryptography-and-pgp'>PGP</a>, <a href='https://my-echo.com/'>Echo</a>, <a href='https://tox.chat/'>TOX</a>, <a href='RetroShare'>https://retroshare.github.io/index.html</a>, <a href='https://www.wickr.com/'>Wickr</a>.
         </p>
         </div>
     ";
@@ -93,7 +86,7 @@ function show_nav() {
         <div class=\"mainnav col-xs-12 col-sm-12 col-md-6\" style=\"padding:10px;\">
             <h2 class=headline>Join the project today!</h2>
             <p>
-                Want to potentially recieve 'project rain' across multiple crypto networks? <a href=\"create_account_form.php\">Create an account today</a>!
+                Want to potentially recieve 'project rain'? <a href=\"create_account_form.php\">Create an account today</a>!
             </p>
             <p>
                 In order for your Project-Rain <a href=\"http://boincfaq.mundayweb.com/index.php?view=192\">CPID</a> to match your BOINC project <a href=\"http://boincfaq.mundayweb.com/index.php?view=192\">CPID</a>s, you <b>must</b> add the Project-Rain BOINC project to your BOINC manager client alongside your other active BOINC projects, otherwise your CPIDs will not merge & you will be skipped for project rain! It's not our fault if you do not follow this step and miss out on a project rain.

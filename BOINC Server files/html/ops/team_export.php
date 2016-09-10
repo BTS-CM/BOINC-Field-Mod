@@ -103,6 +103,7 @@ function handle_team($team, $f) {
      <user_peershares>".escape($project_rain->peershares)."</user_peershares>
      <user_omnilayer>".escape($project_rain->omnilayer)."</user_omnilayer>
      <user_counterparty>".escape($project_rain->counterparty)."</user_counterparty>
+     <user_heat_ledger>".escape($project_rain->heat_ledger)."</user_heat_ledger>
      <user_peerplays>".escape($project_rain->peerplays)."</user_peerplays>
      <user_storj>".escape($project_rain->storj)."</user_storj>
      <user_nem>".escape($project_rain->nem)."</user_nem>

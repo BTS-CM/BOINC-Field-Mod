@@ -275,6 +275,7 @@ function show_project_rain_crypto_private($project_rain) {
     row2(tra("<a href='http://decent.ch/'>Decent</a>"), $project_rain->decent);
     row2(tra("<a href='https://www.synereo.com/'>Synereo</a>"), $project_rain->synereo);
     row2(tra("<a href='https://lbry.io/'>LBRY</a>"), $project_rain->lbry);
+    row2(tra("<a href='http://heatledger.com/'>Heat Ledger</a>"), $project_rain->heat_ledger);
     $url_tokens = url_tokens($project_rain->authenticator);
         row2(tra("Change"),
             "<a href=\"edit_project_rain_form.php?$url_tokens\">".tra("Edit your cryptocurrency addresses/accounts")."</a>"
@@ -616,7 +617,7 @@ function make_user(
 
     $uid = BoincUser::insert("(create_time, email_addr, name, authenticator, country, postal_code, total_credit, expavg_credit, expavg_time, project_prefs, teamid,  venue, send_email, show_hosts, posts, seti_id, seti_nresults, seti_last_result_time, seti_total_cpu, has_profile, cross_project_id, passwd_hash, email_validated, donated) values($now, '$email_addr', '$name', '$authenticator', '$country', '$postal_code', 0, 0, unix_timestamp(), '$project_prefs', $teamid, '', 1, 1, 0, 0, 0, 0, 0, 0, '$cross_project_id', '$passwd_hash', 0, 0)");
 
-    $rainid = BoincRain::insert("(authenticator, bitshares, steem, peerplays, storj, nem, ibm_bluemix_blockchain, coloredcoins, antshares, lisk, decent, synereo, lbry, wings, hong, boardroom, gridcoin, ethereum, ethereum_classic, expanse, golem, nxt, ardor, hyperledger_sawtooth_lake, hyperledger_fabric, waves, peershares, omnilayer, counterparty, echo, tox, retroshare, wickr, ring, pgp) values('$authenticator', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '')");
+    $rainid = BoincRain::insert("(authenticator, bitshares, steem, peerplays, storj, nem, ibm_bluemix_blockchain, coloredcoins, antshares, lisk, decent, synereo, lbry, wings, hong, boardroom, gridcoin, ethereum, ethereum_classic, expanse, golem, nxt, ardor, hyperledger_sawtooth_lake, hyperledger_fabric, waves, peershares, omnilayer, counterparty, heat_ledger, echo, tox, retroshare, wickr, ring, pgp) values('$authenticator', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '')");
     if (!$uid) {
         return null;
     }

@@ -1491,6 +1491,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
     ESCAPE(peershares);
     ESCAPE(omnilayer);
     ESCAPE(counterparty);
+    ESCAPE(head_ledger);
     //Chat
     ESCAPE(echo);
     ESCAPE(tox);
@@ -1528,6 +1529,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
         "peershares='%s', "
         "omnilayer='%s', "
         "counterparty='%s', "
+        "heat_ledger='%s', "
         "echo='%s', "
         "tox='%s', "
         "retroshare='%s', "
@@ -1563,6 +1565,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
         peershares,
         omnilayer,
         counterparty,
+        heat_ledger,
         echo,
         tox,
         retroshare,
@@ -1597,6 +1600,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
     UNESCAPE(peershares);
     UNESCAPE(omnilayer);
     UNESCAPE(counterparty);
+    UNESCAPE(heat_ledger);
     UNESCAPE(echo);
     UNESCAPE(tox);
     UNESCAPE(retroshare);
@@ -1635,7 +1639,8 @@ void DB_PROJECT_RAIN::db_parse(MYSQL_ROW& r) {
     strcpy2(waves, r[i++]);    
     strcpy2(peershares, r[i++]);    
     strcpy2(omnilayer, r[i++]);    
-    strcpy2(counterparty, r[i++]); 
+    strcpy2(counterparty, r[i++]);
+    strcpy2(heat_ledger, r[i++]);    
     strcpy2(echo, r[i++]); 
     strcpy2(tox, r[i++]); 
     strcpy2(retroshare, r[i++]); 

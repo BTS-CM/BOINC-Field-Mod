@@ -73,6 +73,9 @@ row2(tra("Omnilayer %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
 row2(tra("CounterParty %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=counterparty type=text size=20 value='$project_rain->counterparty'>"
 );
+row2(tra("Heat Ledger %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=heat_ledger type=text size=20 value='$project_rain->heat_ledger'>"
+);
 row2(tra("Peerplays %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=peerplays type=text size=20 value='$project_rain->peerplays'>"
 );

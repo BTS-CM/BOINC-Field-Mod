@@ -52,6 +52,7 @@ $waves = urlencode($project_rain->waves);
 $peershares = urlencode($project_rain->peershares);
 $omnilayer = urlencode($project_rain->omnilayer);
 $counterparty = urlencode($project_rain->counterparty);
+$heat_ledger = urlencode($project_rain->heat_ledger);
 $peerplays = urlencode($project_rain->peerplays);
 $storj = urlencode($project_rain->storj);
 $nem = urlencode($project_rain->nem);
@@ -95,6 +96,7 @@ $ret = "<id>$user->id</id>
     <peershares>$peershares</peershares>
     <omnilayer>$omnilayer</omnilayer>
     <counterparty>$counterparty</counterparty>
+    <heat_ledger>$heat_ledger</heat_ledger>
     <peerplays>$peerplays</peerplays>
     <storj>$storj</storj>
     <nem>$nem</nem>
