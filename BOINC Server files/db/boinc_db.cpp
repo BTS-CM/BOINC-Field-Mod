@@ -1491,7 +1491,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
     ESCAPE(peershares);
     ESCAPE(omnilayer);
     ESCAPE(counterparty);
-    ESCAPE(head_ledger);
+    ESCAPE(heat_ledger);
     //Chat
     ESCAPE(echo);
     ESCAPE(tox);
