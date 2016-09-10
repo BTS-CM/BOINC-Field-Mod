@@ -38,6 +38,7 @@ if (!$auth) {
     $id = get_int("userid");
 }
 $format = get_str("format", true);
+$project_rain = get_project_rain_details();
 
 if ($format=="xml"){
     // don't do caching for XML
@@ -52,7 +53,6 @@ if ($format=="xml"){
         $show_hosts = false;
     }
     if (!$user) xml_error(ERR_DB_NOT_FOUND);
-
     show_user_xml($user, $show_hosts, $project_rain);
 } else {
     // The page may be presented in many different languages,
@@ -104,7 +104,6 @@ if ($format=="xml"){
     end_table();
     echo "</td></tr></table>";
     if ($auth) {
-        $project_rain = get_project_rain_details();
         show_rain_private($project_rain);
     }
     page_tail(true);
