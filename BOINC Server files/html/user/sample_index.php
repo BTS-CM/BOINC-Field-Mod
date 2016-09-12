@@ -41,7 +41,7 @@ function show_nav() {
     echo "<div class=\"container\">
     <div class=\"row\">
     <div class=\"mainnav col-xs-12 col-sm-12 col-md-6\" style=\"padding:10px;\">
-        <h2 class=headline>About ".PROJECT."</h2>
+        <h3 class=headline>About ".PROJECT."</h3>
     ";
     if ($no_computing) {
         echo "<p>

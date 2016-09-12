@@ -67,6 +67,7 @@ if ($auth) {
     $ardor = post_str("ardor", true);
     $hyperledger_sawtooth_lake = post_str("hyperledger_sawtooth_lake", true);
     $hyperledger_fabric = post_str("hyperledger_fabric", true);
+    $hyperledger_misc = post_str("hyperledger_misc", true);
     $waves = post_str("waves", true);
     $peershares = post_str("peershares", true);
     $omnilayer = post_str("omnilayer", true);
@@ -83,6 +84,11 @@ if ($auth) {
     $synereo = post_str("synereo", true);
     $lbry = post_str("lbry", true);
     $expanse = post_str("expanse", true);
+    $akasha = post_str("akasha", true);
+    $cosmos = post_str("cosmos", true);
+    $metaverse = post_str("metaverse", true);
+    $zcash = post_str("zcash", true);
+    $stratis = post_str("stratis", true);
     //
     $wings = post_str("wings", true);
     $hong = post_str("hong", true);
@@ -120,6 +126,7 @@ if ($auth) {
     $ardor = get_str("ardor", true);
     $hyperledger_sawtooth_lake = get_str("hyperledger_sawtooth_lake", true);
     $hyperledger_fabric = get_str("hyperledger_fabric", true);
+    $hyperledger_misc = get_str("hyperledger_misc", true);
     $waves = get_str("waves", true);
     $peershares = get_str("peershares", true);
     $omnilayer = get_str("omnilayer", true);
@@ -139,6 +146,12 @@ if ($auth) {
     $hong = get_str("hong", true);
     $boardroom = get_str("boardroom", true);
     $expanse = get_str("expanse", true);
+    $akasha = get_str("akasha", true);
+    $cosmos = get_str("cosmos", true);
+    $metaverse = get_str("metaverse", true);
+    $zcash = get_str("zcash", true);
+    $stratis = get_str("stratis", true);
+    //
     $echo = get_str("echo", true);
     $tox = get_str("tox", true);
     $retroshare = get_str("retroshare", true);
@@ -179,6 +192,7 @@ $nxt = BoincDb::escape_string($nxt);
 $ardor = BoincDb::escape_string($ardor);
 $hyperledger_sawtooth_lake = BoincDb::escape_string($hyperledger_sawtooth_lake);
 $hyperledger_fabric = BoincDb::escape_string($hyperledger_fabric);
+$hyperledger_misc = BoincDb::escape_string($hyperledger_misc);
 $waves = BoincDb::escape_string($waves);
 $peershares = BoincDb::escape_string($peershares);
 $omnilayer = BoincDb::escape_string($omnilayer);
@@ -198,6 +212,12 @@ $wings = BoincDb::escape_string($wings);
 $hong = BoincDb::escape_string($hong);
 $boardroom = BoincDb::escape_string($boardroom);
 $expanse = BoincDb::escape_string($expanse);
+$akasha = BoincDb::escape_string($akasha);
+$cosmos = BoincDb::escape_string($cosmos);
+$metaverse = BoincDb::escape_string($metaverse);
+$zcash = BoincDb::escape_string($zcash);
+$stratis = BoincDb::escape_string($stratis);
+//
 $echo = BoincDb::escape_string($echo);
 $tox = BoincDb::escape_string($tox);
 $retroshare = BoincDb::escape_string($retroshare);
@@ -273,6 +293,9 @@ if ($hyperledger_sawtooth_lake) {
 if ($hyperledger_fabric) {
     $query .= " hyperledger_fabric='$hyperledger_fabric', ";
 }
+if ($hyperledger_misc) {
+    $query .= " hyperledger_misc='$hyperledger_misc', ";
+}
 if ($waves) {
     $query .= " waves='$waves', ";
 }
@@ -329,6 +352,21 @@ if ($boardroom) {
 }
 if ($expanse) {
     $query .= " expanse='$expanse', ";
+}
+if ($akasha) {
+    $query .= " akasha='$akasha', ";
+}
+if ($cosmos) {
+    $query .= " cosmos='$cosmos', ";
+}
+if ($metaverse) {
+    $query .= " metaverse='$metaverse', ";
+}
+if ($zcash) {
+    $query .= " zcash='$zcash', ";
+}
+if ($stratis) {
+    $query .= " stratis='$stratis', ";
 }
 if ($echo) {
     $query .= " echo='$echo', ";

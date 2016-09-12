@@ -48,6 +48,7 @@ $nxt = urlencode($project_rain->nxt);
 $ardor = urlencode($project_rain->ardor);
 $hyperledger_sawtooth_lake = urlencode($project_rain->hyperledger_sawtooth_lake);
 $hyperledger_fabric = urlencode($project_rain->hyperledger_fabric);
+$hyperledger_misc = urlencode($project_rain->hyperledger_misc);
 $waves = urlencode($project_rain->waves);
 $peershares = urlencode($project_rain->peershares);
 $omnilayer = urlencode($project_rain->omnilayer);
@@ -67,6 +68,11 @@ $wings = urlencode($project_rain->wings);
 $hong = urlencode($project_rain->hong);
 $boardroom = urlencode($project_rain->boardroom);
 $expanse = urlencode($project_rain->expanse);
+$akasha = urlencode($project_rain->akasha);
+$cosmos = urlencode($project_rain->cosmos);
+$metaverse = urlencode($project_rain->metaverse);
+$zcash = urlencode($project_rain->zcash);
+$stratis = urlencode($project_rain->stratis);
 $echo = urlencode($project_rain->echo);
 $tox = urlencode($project_rain->tox);
 $retroshare = urlencode($project_rain->retroshare);
@@ -92,6 +98,7 @@ $ret = "<id>$user->id</id>
     <ardor>$ardor</ardor>
     <hyperledger_sawtooth_lake>$hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
     <hyperledger_fabric>$hyperledger_fabric</hyperledger_fabric>
+    <hyperledger_misc>$hyperledger_misc</hyperledger_misc>
     <waves>$waves</waves>
     <peershares>$peershares</peershares>
     <omnilayer>$omnilayer</omnilayer>
@@ -111,6 +118,11 @@ $ret = "<id>$user->id</id>
     <hong>$hong</hong>
     <boardroom>$boardroom</boardroom>
     <expanse>$expanse</expanse>
+    <akasha>$akasha</akasha>
+    <cosmos>$cosmos</cosmos>
+    <metaverse>$metaverse</metaverse>
+    <zcash>$zcash</zcash>
+    <stratis>$stratis</stratis>
     <echo>$echo</echo>
     <tox>$tox</tox>
     <retroshare>$retroshare</retroshare>

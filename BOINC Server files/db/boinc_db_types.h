@@ -693,11 +693,19 @@ struct PROJECT_RAIN {
     char ardor[24];
     char hyperledger_sawtooth_lake[34];
     char hyperledger_fabric[34];
+    char hyperledger_misc[254];
     char waves[37];
     char peershares[34];
     char omnilayer[34];
     char counterparty[34];
     char heat_ledger[254];
+    //
+    char akasha[254];
+    char cosmos[254];
+    char metaverse[254];
+    char zcash[95];
+    char stratis[34];
+    //
     char echo[254];
     char tox[72];
     char retroshare[1024];

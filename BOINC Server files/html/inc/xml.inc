@@ -111,6 +111,7 @@ function show_user_xml($user, $show_hosts, $project_rain) {
     <ardor>$project_rain->ardor</ardor>
     <hyperledger_sawtooth_lake>$project_rain->hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
     <hyperledger_fabric>$project_rain->hyperledger_fabric</hyperledger_fabric>
+    <hyperledger_misc>$project_rain->hyperledger_misc</hyperledger_misc>
     <waves>$project_rain->waves</waves>
     <peershares>$project_rain->peershares</peershares>
     <omnilayer>$project_rain->omnilayer</omnilayer>
@@ -130,6 +131,11 @@ function show_user_xml($user, $show_hosts, $project_rain) {
     <hong>$project_rain->hong</hong>
     <boardroom>$project_rain->boardroom</boardroom>
     <expanse>$project_rain->expanse</expanse>
+    <akasha>$project_rain->akasha</akasha>
+    <cosmos>$project_rain->cosmos</cosmos>
+    <metaverse>$project_rain->metaverse</metaverse>
+    <zcash>$project_rain->zcash</zcash>
+    <stratis>$project_rain->stratis</stratis>
     <echo>$project_rain->echo</echo>
     <tox>$project_rain->tox</tox>
     <retroshare>$project_rain->retroshare</retroshare>
@@ -180,6 +186,7 @@ function show_team_member($user, $show_email, $project_rain, $creditonly = false
     <ardor>$project_rain->ardor</ardor>
     <hyperledger_sawtooth_lake>$project_rain->hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
     <hyperledger_fabric>$project_rain->hyperledger_fabric</hyperledger_fabric>
+    <hyperledger_misc>$project_rain->hyperledger_misc</hyperledger_misc>
     <waves>$project_rain->waves</waves>
     <peershares>$project_rain->peershares</peershares>
     <omnilayer>$project_rain->omnilayer</omnilayer>
@@ -199,6 +206,11 @@ function show_team_member($user, $show_email, $project_rain, $creditonly = false
     <hong>$project_rain->hong</hong>
     <boardroom>$project_rain->boardroom</boardroom>
     <expanse>$project_rain->expanse</expanse>
+    <akasha>$project_rain->akasha</akasha>
+    <cosmos>$project_rain->cosmos</cosmos>
+    <metaverse>$project_rain->metaverse</metaverse>
+    <zcash>$project_rain->zcash</zcash>
+    <stratis>$project_rain->stratis</stratis>
     <echo>$project_rain->echo</echo>
     <tox>$project_rain->tox</tox>
     <retroshare>$project_rain->retroshare</retroshare>

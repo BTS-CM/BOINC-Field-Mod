@@ -99,6 +99,7 @@ function handle_team($team, $f) {
      <user_ardor>".escape($project_rain->ardor)."</user_ardor>
      <user_hyperledger_sawtooth_lake>".escape($project_rain->hyperledger_sawtooth_lake)."</user_hyperledger_sawtooth_lake>
      <user_hyperledger_fabric>".escape($project_rain->hyperledger_fabric)."</user_hyperledger_fabric>
+     <user_hyperledger_misc>".escape($project_rain->hyperledger_misc)."</user_hyperledger_misc>
      <user_waves>".escape($project_rain->waves)."</user_waves>
      <user_peershares>".escape($project_rain->peershares)."</user_peershares>
      <user_omnilayer>".escape($project_rain->omnilayer)."</user_omnilayer>
@@ -118,6 +119,11 @@ function handle_team($team, $f) {
      <user_hong>".escape($project_rain->hong)."</user_hong>
      <user_boardroom>".escape($project_rain->boardroom)."</user_boardroom>
      <user_expanse>".escape($project_rain->expanse)."</user_expanse>
+     <user_akasha>".escape($project_rain->akasha)."</user_akasha>
+     <user_cosmos>".escape($project_rain->cosmos)."</user_cosmos>
+     <user_metaverse>".escape($project_rain->metaverse)."</user_metaverse>
+     <user_zcash>".escape($project_rain->zcash)."</user_zcash>
+     <user_stratis>".escape($project_rain->stratis)."</user_stratis>
      <user_echo>".escape($project_rain->echo)."</user_echo>
      <user_tox>".escape($project_rain->tox)."</user_tox>
      <user_retroshare>".escape($project_rain->retroshare)."</user_retroshare>

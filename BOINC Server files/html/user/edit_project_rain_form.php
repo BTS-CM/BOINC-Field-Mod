@@ -34,9 +34,6 @@ row1(tra("Cryptocurrency addresses/accounts"));
 row2(tra("Bitshares %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=bitshares type=text size=20 value='$project_rain->bitshares'>"
 );
-row2(tra("Steem %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=steem type=text size=20 value='$project_rain->steem'>"
-);
 row2(tra("Gridcoin %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=gridcoin type=text size=20 value='$project_rain->gridcoin'>"
 );
@@ -60,6 +57,9 @@ row2(tra("Hyperledger Sawtooth Lake %1 Optional%2", "<br><p class=\"text-muted\"
 );
 row2(tra("Hyperledger Fabric %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=hyperledger_fabric type=text size=20 value='$project_rain->hyperledger_fabric'>"
+);
+row2(tra("Hyperledger MISC %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=hyperledger_misc type=text size=20 value='$project_rain->hyperledger_misc'>"
 );
 row2(tra("Waves %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=waves type=text size=20 value='$project_rain->waves'>"
@@ -97,6 +97,25 @@ row2(tra("Antshares %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
 row2(tra("Lisk %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=lisk type=text size=20 value='$project_rain->lisk'>"
 );
+row2(tra("Expanse %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=expanse type=text size=20 value='$project_rain->expanse'>"
+);
+row2(tra("Cosmos %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=cosmos type=text size=20 value='$project_rain->cosmos'>"
+);
+row2(tra("Metaverse %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=metaverse type=text size=20 value='$project_rain->metaverse'>"
+);
+row2(tra("Zcash %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=zcash type=text size=20 value='$project_rain->zcash'>"
+);
+row2(tra("Stratis %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=stratis type=text size=20 value='$project_rain->stratis'>"
+);
+row1(tra("Crypto Media"));
+row2(tra("Akasha %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=akasha type=text size=20 value='$project_rain->akasha'>"
+);
 row2(tra("Decent %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=decent type=text size=20 value='$project_rain->decent'>"
 );
@@ -105,6 +124,9 @@ row2(tra("Synereo %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
 );
 row2(tra("LBRY %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=lbry type=text size=20 value='$project_rain->lbry'>"
+);
+row2(tra("Steem %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=steem type=text size=20 value='$project_rain->steem'>"
 );
 row1(tra("DAC/DAO platforms"));
 row2(tra("Wings %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
@@ -116,13 +138,10 @@ row2(tra("Hong %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
 row2(tra("Boardroom %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=boardroom type=text size=20 value='$project_rain->boardroom'>"
 );
-row2(tra("Expanse %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
-    "<input name=expanse type=text size=20 value='$project_rain->expanse'>"
-);
+row1(tra("Secure messaging"));
 row2(tra("Echo %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=echo type=text size=20 value='$project_rain->echo'>"
 );
-row1(tra("Secure messaging"));
 row2(tra("TOX %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=tox type=text size=20 value='$project_rain->tox'>"
 );

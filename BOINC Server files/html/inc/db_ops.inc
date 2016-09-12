@@ -1221,7 +1221,8 @@ function show_project_rain($project_rain) {
     row("NXT", $project_rain->nxt);
     row("Ardor", $project_rain->ardor);
     row("Hyperledger Sawtooth Lake", $project_rain->hyperledger_sawtooth_lake);
-    row("Hyperledger fabric", $project_rain->hyperledger_fabric);
+    row("Hyperledger Fabric", $project_rain->hyperledger_fabric);
+    row("Hyperledger MISC", $project_rain->hyperledger_fabric);
     row("Waves", $project_rain->waves);
     row("Peershares", $project_rain->peershares);
     row("Omnilayer", $project_rain->omnilayer);
@@ -1241,6 +1242,14 @@ function show_project_rain($project_rain) {
     row("Hong", $project_rain->hong);
     row("BoardRoom", $project_rain->boardroom);
     row("Expanse", $project_rain->expanse);
+    row("Expanse", $project_rain->expanse);
+    //
+    row("Akasha", $project_rain->akasha);
+    row("Cosmos", $project_rain->);
+    row("Metaverse", $project_rain->);
+    row("Zcash", $project_rain->);
+    row("Stratis", $project_rain->);
+    //
     row("Echo", $project_rain->echo);
     row("TOX", $project_rain->tox);
     row("RetroShare", $project_rain->retroshare);

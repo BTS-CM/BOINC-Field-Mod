@@ -1487,11 +1487,16 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
     ESCAPE(ardor);
     ESCAPE(hyperledger_sawtooth_lake);
     ESCAPE(hyperledger_fabric);
+    ESCAPE(hyperledger_misc);
     ESCAPE(waves);
     ESCAPE(peershares);
     ESCAPE(omnilayer);
     ESCAPE(counterparty);
     ESCAPE(heat_ledger);
+    ESCAPE(akasha);
+    ESCAPE(cosmos);
+    ESCAPE(metaverse);
+    ESCAPE(zcash);
     //Chat
     ESCAPE(echo);
     ESCAPE(tox);
@@ -1530,6 +1535,12 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
         "omnilayer='%s', "
         "counterparty='%s', "
         "heat_ledger='%s', "
+        "akasha='%s', "
+        "cosmos='%s', "
+        "metaverse='%s', "
+        "zcash='%s', "
+        "stratis='%s', "
+        "hyperledger_misc='%s', "
         "echo='%s', "
         "tox='%s', "
         "retroshare='%s', "
@@ -1566,6 +1577,12 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
         omnilayer,
         counterparty,
         heat_ledger,
+        akasha,
+        cosmos,
+        metaverse,
+        zcash,
+        stratis,
+        hyperledger_misc,
         echo,
         tox,
         retroshare,
@@ -1596,6 +1613,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
     UNESCAPE(ardor);
     UNESCAPE(hyperledger_sawtooth_lake);
     UNESCAPE(hyperledger_fabric);
+    UNESCAPE(hyperledger_misc);
     UNESCAPE(waves);
     UNESCAPE(peershares);
     UNESCAPE(omnilayer);
@@ -1607,6 +1625,10 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
     UNESCAPE(wickr);
     UNESCAPE(ring);
     UNESCAPE(pgp);
+    UNESCAPE(akasha);
+    UNESCAPE(cosmos);
+    UNESCAPE(metaverse);
+    UNESCAPE(zcash);
 }
 
 void DB_PROJECT_RAIN::db_parse(MYSQL_ROW& r) {
@@ -1636,11 +1658,17 @@ void DB_PROJECT_RAIN::db_parse(MYSQL_ROW& r) {
     strcpy2(ardor, r[i++]);    
     strcpy2(hyperledger_sawtooth_lake, r[i++]);    
     strcpy2(hyperledger_fabric, r[i++]);    
+    strcpy2(hyperledger_misc, r[i++]);    
     strcpy2(waves, r[i++]);    
     strcpy2(peershares, r[i++]);    
     strcpy2(omnilayer, r[i++]);    
     strcpy2(counterparty, r[i++]);
     strcpy2(heat_ledger, r[i++]);    
+    strcpy2(akasha, r[i++]); 
+    strcpy2(cosmos, r[i++]); 
+    strcpy2(metaverse, r[i++]); 
+    strcpy2(zcash, r[i++]); 
+    strcpy2(stratis, r[i++]); 
     strcpy2(echo, r[i++]); 
     strcpy2(tox, r[i++]); 
     strcpy2(retroshare, r[i++]); 
