@@ -44,22 +44,19 @@ function show_nav() {
         <h2 class=headline>About ".PROJECT."</h2>
     ";
     if ($no_computing) {
-        echo "
+        echo "<p>
             Project-Rain matches registered BOINC user's CPID to multiple cryptocurrency accounts/addresses to extend 'Project Rain' (tipping BOINC users) to multiple cryptocurrency networks & all BOINC teams.
-        ";
+        </p>";
     } else {
-        echo "
+        echo "<p>
             Project-Rain matches registered BOINC user's CPID to multiple cryptocurrency accounts/addresses to extend 'Project Rain' (tipping BOINC users) to multiple cryptocurrency networks & all BOINC teams.
-        ";
+        </p>";
     }
     echo "
         <p>
             Project-Rain is hosted on <a href='https://www.digitalocean.com/?refcode=b86d3e55f889'>DigitalOcean</a>, and run by <a href='https://steemit.com/@cm-steem/'>CM</a> from the <a href='https://www.gridcoin.us'>Gridcoin</a> community.
         </p>
-        <p>
-            Do you have an idea for a BOINC project? <a href='https://steemit.com/gridcoin/@cm-steem/brainstorming-new-boinc-projects-anyone-can-create-a-project-and-reward-their-users-with-gridcoin'>Post your ideas in the Brainstorming thread</a> on Steem!
-        </p>
-        
+       
         <h4>Currently supported cryptocurrencies</h4>
         <p>
             <a href='https://gridcoin.us'>Gridcoin</a>, <a href='https://steemit.com'>Steem</a>, <a href='https://Bitshares.org'>Bitshares</a>, <a href='http://www.peerplays.com/'>Peerplays</a>, <a href='https://storj.io/'>Storj</a>, <a href='http://nem.io/'>NEM</a>, <a href='https://www.ibm.com/blockchain/bluemix.html'>IBM Bluemix Blockchain</a>, <a href='http://coloredcoins.org/'>ColoredCoins</a>, <a href='https://www.antshares.org/'>Antshares</a>, <a href='https://lisk.io/'>Lisk</a>, <a href='http://decent.ch/'>Decent</a>, <a href='https://www.synereo.com/'>Synereo</a>, <a href='https://lbry.io/'>LBRY</a>, <a href='https://wings.ai/'>Wings</a>, <a href='http://www.hongcoin.org/'>Hong</a>, <a href='http://boardroom.to/'>BoardRoom</a>, <a href='https://www.ethereum.org/'>Ethereum</a>, <a href='https://ethereumclassic.github.io/'>Ethereum Classic</a>, <a href='http://www.expanse.tech/'>Expanse</a>, <a href='http://golemproject.net/'>Golem</a>, <a href='https://nxt.org/'>NXT</a>, <a href='https://ardorplatform.org/'>Ardor</a>, <a href='https://github.com/intelledger'>Hyperledger Sawtooth Lake (Intel)</a>, <a href='https://github.com/hyperledger/fabric'>Hyperledger Fabric (IBM)</a>, <a href='https://wavesplatform.com/'>Waves</a>, <a href='http://peershares.net/'>Peershares</a>, <a href='http://www.omnilayer.org/'>Omnilayer</a>, <a href='http://counterparty.io/'>CounterParty</a>.
@@ -156,7 +153,7 @@ $rsslink = url_base() . "rss_main.php";
 
 header("Content-type: text/html; charset=utf-8");
 
-echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">";
+echo "<!DOCTYPE html>";
 
 echo "<html>
     <head>
