@@ -196,13 +196,7 @@ class BoincUser {
     static function lookup_name($name) {
         $name = BoincDb::escape_string($name);
         $users = BoincUser::enum("name='$name'");
-        switch (sizeof($users)) {
-        case 1:
-            return $users[0];
-        case 0:
-            return null;
-        }
-        return -1;
+        return $users;
     }
     static function count($clause) {
         $db = BoincDb::get();

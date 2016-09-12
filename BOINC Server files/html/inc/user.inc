@@ -262,8 +262,8 @@ function show_project_rain_crypto_private($project_rain) {
     row2(tra("<a href='https://ethereumclassic.github.io/'>Ethereum Classic</a>"), $project_rain->ethereum_classic);
     row2(tra("<a href='http://www.expanse.tech/'>Expanse</a>"), $project_rain->expanse);
     row2(tra("<a href='https://github.com/intelledger'>Hyperledger Sawtooth Lake</a>"), $project_rain->hyperledger_sawtooth_lake);
-    row2(tra("<a href='https://github.com/hyperledger/fabric'>Hyperledger fabric</a>"), $project_rain->hyperledger_fabric);
-    row2(tra("<a href='https://www.ibm.com/blockchain/bluemix.html'>IBM Bluemix blockchain</a>"), $project_rain->ibm_bluemix_blockchain);
+    row2(tra("<a href='https://github.com/hyperledger/fabric'>Hyperledger Fabric</a>"), $project_rain->hyperledger_fabric);
+    row2(tra("<a href='https://www.ibm.com/blockchain/bluemix.html'>IBM Bluemix Blockchain</a>"), $project_rain->ibm_bluemix_blockchain);
     row2(tra("<a href='https://wavesplatform.com/'>Waves</a>"), $project_rain->waves);
     row2(tra("<a href='http://peershares.net/'>Peershares</a>"), $project_rain->peershares);
     row2(tra("<a href='http://www.omnilayer.org/'>Omnilayer</a>"), $project_rain->omnilayer);

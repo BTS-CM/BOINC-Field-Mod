@@ -104,8 +104,10 @@ if ($format=="xml"){
     end_table();
     echo "</td></tr></table>";
     if ($auth) {
-        show_rain_private($project_rain);
-    }
+            start_table();
+            show_rain_private($project_rain);
+            end_table();
+        }
     page_tail(true);
 }
 
