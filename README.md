@@ -8,6 +8,10 @@ MariaDB - SQL for raining process.
 
 BOINC Server files - Overwrite these files onto git cloned BOINC folder.
 
+---------
+
+![BOINC](https://i.imgur.com/Wy4UOYL.png)
+
 ## What is BOINC?
 BOINC (Berkeley Open Infrastructure for Network Computing) is an open-source volunteer oriented computing grid that combines the processing power of all individual users for the purposes of scientific research.
 
@@ -26,6 +30,8 @@ If you have concerns regarding the whitelist or wish to have your project whitel
 Due to the nature of this BOINC project, there's nothing stopping you from ignoring the whitelist and distributing your crypto assets against non-whitelisted projects but you do so at your own risk (and potentially at the risk of your own crypto community).
 
 ----------
+
+![Project Rain](https://i.imgur.com/wTQKNRh.png)
 
 ## What is Project Rain?
 'Project Rain' is the practice of distributing crypto assets to BOINC users based on their verified BOINC computation; it was initially devised within the Gridcoin network and has been expanded to multiple cryptocurrencies and all BOINC teams through this BOINC project.
