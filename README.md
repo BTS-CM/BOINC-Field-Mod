@@ -1,8 +1,11 @@
 # Project Rain website
 Website for project-rain
 
+## Repo Components
 Source - Middleman front page code.
-MariaDB - SQL for raining process
+
+MariaDB - SQL for raining process.
+
 BOINC Server files - Overwrite these files onto git cloned BOINC folder.
 
 ## What is BOINC?
@@ -45,8 +48,13 @@ The individual wishing to 'rain' an asset is fully responsible for picking the p
 ## Are 'rained' assets endorsed by 'Project Rain'?
 Assets distributed via the ‘project rain’ share-dropping vector are not by default officially endorsed by this website unless otherwise stated.
 
+## Are supported cryptocurrencies endorsed by 'Project Rain'?
+Project Rain has provided the ability for users to match their BOINC CPID to multiple cryptocurrency addresses/accounts, but this does not constitute financial advice nor endorsement of supported cryptocurrencies. 
+
+Several of the supported cryptocurrencies are yet to be released, are in development or are planning ICO phases - be very careful & don't invest money you can't afford to lose (cryptocurrencies are incredibly volatile). Seriously consider consulting with financial advisors before making financial decisions.
+
 ## Are fees charged for this service?
-The Project Rain website does not charge fees. You'll likely have to pay a large fee to distribute your asset on your cryptocurrency platform of choice to handle the scale of the Project Rain distribution (thousands of receipients).
+The Project Rain website does not charge fees. You'll likely have to pay a large fee to distribute your asset on your cryptocurrency platform of choice to handle the scale of the Project Rain distribution (thousands of receipients). Please do consider donating to help cover server costs.
 
 ------------------
 
