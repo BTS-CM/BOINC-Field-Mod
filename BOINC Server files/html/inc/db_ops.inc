@@ -1244,13 +1244,11 @@ function show_project_rain($project_rain) {
     row("BoardRoom", $project_rain->boardroom);
     row("Expanse", $project_rain->expanse);
     row("Expanse", $project_rain->expanse);
-    //
     row("Akasha", $project_rain->akasha);
     row("Cosmos", $project_rain->);
     row("Metaverse", $project_rain->);
     row("Zcash", $project_rain->);
     row("Stratis", $project_rain->);
-    //
     row("Echo", $project_rain->echo);
     row("TOX", $project_rain->tox);
     row("RetroShare", $project_rain->retroshare);
