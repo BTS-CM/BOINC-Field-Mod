@@ -2,7 +2,7 @@
 Website for project-rain
 
 ## Repo Components
-Source - Middleman front page code.
+Middleman - Middleman front page code.
 
 MariaDB - SQL for raining process.
 
