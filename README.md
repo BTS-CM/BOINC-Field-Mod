@@ -13,7 +13,7 @@ BOINC Server files - Overwrite these files onto git cloned BOINC folder.
 ![BOINC](https://i.imgur.com/Wy4UOYL.png)
 
 ## What is BOINC?
-BOINC (Berkeley Open Infrastructure for Network Computing) is an open-source volunteer oriented computing grid that combines the processing power of all individual users for the purposes of scientific research.
+[BOINC](https://boinc.berkeley.edu/) (Berkeley Open Infrastructure for Network Computing) is an open-source volunteer oriented computing grid that combines the processing power of all individual users for the purposes of scientific research.
 
 Berkeley Open Infrastructure for Network Computing (BOINC) is an open-source middleware system which supports volunteer and grid computing. Originally developed to support the SETI@home project, it became generalized as a platform for other distributed applications in areas as diverse as mathematics, linguistics, medicine, molecular biology, climatology, environmental science, and astrophysics, among others. BOINC aims to enable researchers to tap into the enormous processing resources of multiple personal computers around the world.
 
@@ -23,7 +23,7 @@ Anyone can create a BOINC project, there's no centralised authority that you are
 If you've got an idea for a distributed computing project, head on over to the [BOINC project brainstorming thread on STEEM](https://steemit.com/gridcoin/@cm-steem/brainstorming-new-boinc-projects-anyone-can-create-a-project-and-reward-their-users-with-gridcoin) to get an idea of possible BOINC projects.
 
 ## What's this talk of a whitelist?
-The BOINC project whitelist is a voted upon list of projects rewarded within the Gridcoin network. We don't reward all projects because some projects are inactive/dead or are insecure & a risk to our users.
+The [BOINC project whitelist](https://www.gridcoin.us/Guides/whitelist.htm) is a voted upon list of projects rewarded within the [Gridcoin network](https://www.gridcoin.us). The Gridcoin network doesn't distribute rewards to all existing BOINC projects because some projects are inactive/dead or are insecure & pose a potential risk to our users.
 
 If you have concerns regarding the whitelist or wish to have your project whitelisted then speak up in the <a href="https://cryptocointalk.com/topic/29841-discussion-boinc-whitelist-monitoring/">Gridcoin whitelist thread</a>.
 
