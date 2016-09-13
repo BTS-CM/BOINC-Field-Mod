@@ -72,7 +72,7 @@ if ($plain) {
     page_head(tra("%1 Email List", $team->name));
     start_table();
     table_header(array(tra("Member list of %1", $team->name), "colspan=\"6\""));
-    table_header(tra("Name"), tra("Email address"), tra("Total credit"), tra("Recent average credit"), tra("Country"));
+    table_header(tra("Name"), tra("Total credit"), tra("Recent average credit"), tra("Country"));
 }
 $users = BoincUser::enum_fields("id, email_addr, send_email, name, total_credit, expavg_credit, has_profile, donated, country, cross_project_id, create_time, url", "teamid=$team->id");
 foreach($users as $user) {

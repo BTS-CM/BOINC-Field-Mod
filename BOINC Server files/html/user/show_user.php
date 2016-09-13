@@ -103,11 +103,9 @@ if ($format=="xml"){
     community_links($community_links, $logged_in_user);
     end_table();
     echo "</td></tr></table>";
-    if ($auth) {
-            start_table();
-            show_rain_private($project_rain);
-            end_table();
-        }
+    start_table();
+    show_rain_private($project_rain);
+    end_table();
     page_tail(true);
 }
 
