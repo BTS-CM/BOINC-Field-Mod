@@ -1504,6 +1504,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
     ESCAPE(wickr);
     ESCAPE(ring);
     ESCAPE(pgp);
+    ESCAPE(borg);
     sprintf(buf,
         "id=%lu, "
         "bitshares='%s', "
@@ -1546,6 +1547,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
         "retroshare='%s', "
         "wickr='%s', "
         "ring='%s', "
+        "borg='%s', "
         "pgp='%s' ",
         id,
         bitshares,
@@ -1588,6 +1590,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
         retroshare,
         wickr,
         ring,
+        borg,
         pgp
     );
     UNESCAPE(bitshares);
@@ -1629,6 +1632,7 @@ void DB_PROJECT_RAIN::db_print(char* buf) {
     UNESCAPE(cosmos);
     UNESCAPE(metaverse);
     UNESCAPE(zcash);
+    UNESCAPE(borg);
 }
 
 void DB_PROJECT_RAIN::db_parse(MYSQL_ROW& r) {
@@ -1669,6 +1673,7 @@ void DB_PROJECT_RAIN::db_parse(MYSQL_ROW& r) {
     strcpy2(metaverse, r[i++]); 
     strcpy2(zcash, r[i++]); 
     strcpy2(stratis, r[i++]); 
+    strcpy2(borg, r[i++]); 
     strcpy2(echo, r[i++]); 
     strcpy2(tox, r[i++]); 
     strcpy2(retroshare, r[i++]); 

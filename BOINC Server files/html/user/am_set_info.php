@@ -92,6 +92,7 @@ if ($auth) {
     //
     $wings = post_str("wings", true);
     $hong = post_str("hong", true);
+    $borg = post_str("borg", true);
     $boardroom = post_str("boardroom", true);
     //
     $echo = post_str("echo", true);
@@ -144,6 +145,7 @@ if ($auth) {
     $lbry = get_str("lbry", true);
     $wings = get_str("wings", true);
     $hong = get_str("hong", true);
+    $borg = get_str("borg", true);    
     $boardroom = get_str("boardroom", true);
     $expanse = get_str("expanse", true);
     $akasha = get_str("akasha", true);
@@ -210,6 +212,7 @@ $synereo = BoincDb::escape_string($synereo);
 $lbry = BoincDb::escape_string($lbry);
 $wings = BoincDb::escape_string($wings);
 $hong = BoincDb::escape_string($hong);
+$borg = BoincDb::escape_string($borg);
 $boardroom = BoincDb::escape_string($boardroom);
 $expanse = BoincDb::escape_string($expanse);
 $akasha = BoincDb::escape_string($akasha);
@@ -346,6 +349,9 @@ if ($wings) {
 }
 if ($hong) {
     $query .= " hong='$hong', ";
+}
+if ($borg) {
+    $query .= " borg='$borg', ";
 }
 if ($boardroom) {
     $query .= " boardroom='$boardroom', ";

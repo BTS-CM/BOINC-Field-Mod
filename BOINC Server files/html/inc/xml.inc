@@ -129,6 +129,7 @@ function show_user_xml($user, $show_hosts, $project_rain) {
     <lbry>$project_rain->lbry</lbry>
     <wings>$project_rain->wings</wings>
     <hong>$project_rain->hong</hong>
+    <borg>$project_rain->borg</borg>
     <boardroom>$project_rain->boardroom</boardroom>
     <expanse>$project_rain->expanse</expanse>
     <akasha>$project_rain->akasha</akasha>
@@ -204,6 +205,7 @@ function show_team_member($user, $show_email, $project_rain, $creditonly = false
     <lbry>$project_rain->lbry</lbry>
     <wings>$project_rain->wings</wings>
     <hong>$project_rain->hong</hong>
+    <borg>$project_rain->borg</borg>
     <boardroom>$project_rain->boardroom</boardroom>
     <expanse>$project_rain->expanse</expanse>
     <akasha>$project_rain->akasha</akasha>

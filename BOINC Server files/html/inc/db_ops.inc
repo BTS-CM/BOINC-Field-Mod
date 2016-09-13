@@ -1240,6 +1240,7 @@ function show_project_rain($project_rain) {
     row("LBRY", $project_rain->lbry);
     row("Wings", $project_rain->wings);
     row("Hong", $project_rain->hong);
+    row("Borg", $project_rain->borg);
     row("BoardRoom", $project_rain->boardroom);
     row("Expanse", $project_rain->expanse);
     row("Expanse", $project_rain->expanse);

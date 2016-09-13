@@ -374,6 +374,7 @@ create table project_rain (
     metaverse               varchar(254),
     zcash                   varchar(95),
     stratis                 varchar(34),
+    borg                 varchar(42),
     echo                    varchar(254),
     tox                     varchar(72),
     retroshare              varchar(1024),

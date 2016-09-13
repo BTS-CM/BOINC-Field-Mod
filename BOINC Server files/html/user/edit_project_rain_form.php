@@ -135,6 +135,9 @@ row2(tra("Wings %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
 row2(tra("Hong %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=hong type=text size=20 value='$project_rain->hong'>"
 );
+row2(tra("Borg %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
+    "<input name=borg type=text size=20 value='$project_rain->borg'>"
+);
 row2(tra("Boardroom %1 Optional%2", "<br><p class=\"text-muted\">", "</p>"),
     "<input name=boardroom type=text size=20 value='$project_rain->boardroom'>"
 );

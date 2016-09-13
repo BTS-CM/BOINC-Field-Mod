@@ -117,6 +117,7 @@ function handle_team($team, $f) {
      <user_lbry>".escape($project_rain->lbry)."</user_lbry>
      <user_wings>".escape($project_rain->wings)."</user_wings>
      <user_hong>".escape($project_rain->hong)."</user_hong>
+     <user_borg>".escape($project_rain->borg)."</user_borg>
      <user_boardroom>".escape($project_rain->boardroom)."</user_boardroom>
      <user_expanse>".escape($project_rain->expanse)."</user_expanse>
      <user_akasha>".escape($project_rain->akasha)."</user_akasha>

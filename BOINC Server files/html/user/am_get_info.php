@@ -66,6 +66,7 @@ $synereo = urlencode($project_rain->synereo);
 $lbry = urlencode($project_rain->lbry);
 $wings = urlencode($project_rain->wings);
 $hong = urlencode($project_rain->hong);
+$borg = urlencode($project_rain->borg);
 $boardroom = urlencode($project_rain->boardroom);
 $expanse = urlencode($project_rain->expanse);
 $akasha = urlencode($project_rain->akasha);
@@ -116,6 +117,7 @@ $ret = "<id>$user->id</id>
     <lbry>$lbry</lbry>
     <wings>$wings</wings>
     <hong>$hong</hong>
+    <borg>$borg</borg>
     <boardroom>$boardroom</boardroom>
     <expanse>$expanse</expanse>
     <akasha>$akasha</akasha>

@@ -699,6 +699,7 @@ struct PROJECT_RAIN {
     char omnilayer[34];
     char counterparty[34];
     char heat_ledger[254];
+    char borg[42];
     //
     char akasha[254];
     char cosmos[254];
