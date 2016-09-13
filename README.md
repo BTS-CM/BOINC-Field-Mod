@@ -40,18 +40,19 @@ What is exciting about project rain is that there are currently over 500,000 act
 <a href="https://gridcoin.us">Gridcoin</a>, <a href="https://steemit.com">Steem</a>, <a href="https://Bitshares.org">Bitshares</a>, <a href="http://www.peerplays.com/">Peerplays</a>, <a href="https://storj.io/">Storj</a>, <a href="http://nem.io/">NEM</a>, <a href="https://www.ibm.com/blockchain/bluemix.html">IBM Bluemix Blockchain</a>, <a href="http://coloredcoins.org/">ColoredCoins</a>, <a href="https://www.antshares.org/">Antshares</a>, <a href="https://lisk.io/">Lisk</a>, <a href="http://decent.ch/">Decent</a>, <a href="https://www.synereo.com/">Synereo</a>, <a href="https://lbry.io/">LBRY</a>, <a href="https://wings.ai/">Wings</a>, <a href="http://www.hongcoin.org/">Hong</a>, <a href="http://boardroom.to/">BoardRoom</a>, <a href="https://www.ethereum.org/">Ethereum</a>, <a href="https://ethereumclassic.github.io/">Ethereum Classic</a>, <a href="http://www.expanse.tech/">Expanse</a>, <a href="http://golemproject.net/">Golem</a>, <a href="https://nxt.org/">NXT</a>, <a href="https://ardorplatform.org/">Ardor</a>, <a href="https://github.com/intelledger">Hyperledger Sawtooth Lake (Intel)</a>, <a href="https://github.com/hyperledger/fabric">Hyperledger Fabric (IBM)</a>, <a href="https://wavesplatform.com/">Waves</a>, <a href="http://peershares.net/">Peershares</a>, <a href="http://www.omnilayer.org/">Omnilayer</a>, <a href="http://counterparty.io/">CounterParty</a>, <a href="https://www.hyperledger.org/">Hyperledger (MISC)</a>, <a href="http://stratisplatform.com/">Stratis</a>, <a href="http://borgdao.org/">BORG</a>, <a href="http://ico-en.viewfin.com/index-en.html">Metaverse</a>, <a href="http://cosmos.network/">Cosmos</a>, <a href="http://stratisplatform.com/">Stratis</a>, <a href="https://z.cash/">Zcash</a>.
 
 ## Is there a mandatory team requirement?
-There is no mandatory team requirement for joining the website. Assets may be distributed by individuals to specific teams with full freedom of choice and no site interference.
+There is no mandatory team requirement for joining the website, all BOINC teams/users are welcome to join!
+Assets may however be distributed by rain makers to specific teams since they have full freedom of choice to do so & there's no site interference on the matter.
 
 ## Who decides upon asset distribution details?
-The individual wishing to 'rain' an asset is fully responsible for picking the projects and/or teams to target as well as the desired 'rain weight' for each project. The 'Project-Rain' BOINC project admin has no input on who/what gets 'rained' upon; 'project rain' targets and asset platforms are entirely the rain maker's choice.
-
-## Are 'rained' assets endorsed by 'Project Rain'?
-Assets distributed via the ‘project rain’ share-dropping vector are not by default officially endorsed by this website unless otherwise stated.
+The 'rain maker' planning on 'raining' an asset is fully responsible for picking the projects and/or teams to target as well as the desired 'rain weight' for each project. The 'Project-Rain' BOINC project admin has no input on who/what gets 'rained' upon.
 
 ## Are supported cryptocurrencies endorsed by 'Project Rain'?
 Project Rain has provided the ability for users to match their BOINC CPID to multiple cryptocurrency addresses/accounts, but this does not constitute financial advice nor endorsement of supported cryptocurrencies. 
 
 Several of the supported cryptocurrencies are yet to be released, are in development or are planning ICO phases - be very careful & don't invest money you can't afford to lose (cryptocurrencies are incredibly volatile). Seriously consider consulting with financial advisors before making financial decisions.
+
+## Are 'rained' assets endorsed by 'Project Rain'?
+Assets distributed via the ‘project rain’ share-dropping vector are not by default officially endorsed by this website unless otherwise stated.
 
 ## Are fees charged for this service?
 The Project Rain website does not charge fees. You'll likely have to pay a large fee to distribute your asset on your cryptocurrency platform of choice to handle the scale of the Project Rain distribution (thousands of receipients). Please do consider donating to help cover server costs.
@@ -63,4 +64,8 @@ Yes, you certainly can! https://github.com/grctest/project-rain-site
 
 I would really appreciate help finishing the 'rain tutorial' page: https://github.com/grctest/project-rain-site/blob/master/source/rain-tutorial.html.erb (I need specific info for how to create the equivalent of a 'sendmany' transaction to potentially tens of thousands of BOINC users on your crypto network platform).
 
-I would also appreciate input on address validation for the planned supported cryptocurrencies, some which do not have completed documentation I have provided 254 field length despite likely requiring far less.
+I would also appreciate input on address validation for the planned supported cryptocurrencies, some which do not have completed documentation I have provided 254 field length despite likely requiring far less (or perhaps may require larger fields):
+
+https://github.com/grctest/project-rain-site/blob/master/BOINC%20Server%20files/db/schema.sql#L338
+
+https://github.com/grctest/project-rain-site/blob/master/BOINC%20Server%20files/db/boinc_db_types.h#L670
