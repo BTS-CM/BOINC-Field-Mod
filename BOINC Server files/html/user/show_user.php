@@ -104,15 +104,10 @@ if ($format=="xml"){
     end_table();
     echo "</td></tr></table>";
 
-    $pageuser = get_logged_in_user();
-    //check_tokens($pageuser->authenticator);
-    check_get_args(array("tnow", "ttok"));
-
-    if (valid_tokens($pageuser->authenticator)) {
-        start_table();
-        show_rain_public($project_rain);
-        end_table();
-    }
+    start_table();
+    show_rain_public($project_rain);
+    end_table();
+        
     page_tail(true);
 }
 
