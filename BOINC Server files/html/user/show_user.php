@@ -106,6 +106,7 @@ if ($format=="xml"){
 
     $pageuser = get_logged_in_user();
     //check_tokens($pageuser->authenticator);
+    check_get_args(array("tnow", "ttok"));
 
     if (valid_tokens($pageuser->authenticator)) {
         start_table();
