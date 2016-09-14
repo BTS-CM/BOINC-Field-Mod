@@ -3,7 +3,8 @@
 * Change /boincserver/ to /rain/
 * Upon going live, implement SSL (Redirecting all HTTP traffic to HTTPS too), Recaptcha and block malicious IP addresses.
 * Fix private-messaging
-* Partially implement message boards
+* Partially implement message boards (for news feed).
+* Disable team message boards.
 * Email config/setup/verification.
 * Improve password hashing mechanism from (md5+email salt) to becrypt.
  * Will changing password hashing mechanisms break compatability with the BOINC client?
