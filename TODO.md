@@ -13,3 +13,4 @@
 * "Send Many" transaction generation improvement.
 * Fix the Gridcoin NN Rain table script!
 * Community outreach to get equivellant of 'send many' instructions for 30+ cryptocurrencies!
+* Create a docker work unit using python - either a test/hello-world program, or an actual work unit that would compliment project rain (open to suggestions).
