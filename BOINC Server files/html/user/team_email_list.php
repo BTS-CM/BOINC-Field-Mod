@@ -71,17 +71,15 @@ if ($plain) {
 } else {
     page_head(tra("%1 Email List", $team->name));
     start_table();
-    table_header(array(tra("Member list of %1", $team->name), "colspan=\"6\""));
+    table_header(array(tra("Member list of %1", $team->name), "colspan=\"5\""));
     table_header(tra("Name"), tra("Total credit"), tra("Recent average credit"), tra("Country"));
 }
-$users = BoincUser::enum_fields("id, email_addr, send_email, name, total_credit, expavg_credit, has_profile, donated, country, cross_project_id, create_time, url", "teamid=$team->id");
+$users = BoincUser::enum_fields("id, name, total_credit, expavg_credit, has_profile, donated, country, cross_project_id, create_time, url", "teamid=$team->id");
 foreach($users as $user) {
     if ($plain) {
-        $e = $user->send_email?"<$user->email_addr>":"";
-        echo "$user->name $e\n";
+        echo "$user->name \n";
     } else {
-        $e = $user->send_email?"$user->email_addr":"";
-        table_row(user_links($user, BADGE_HEIGHT_MEDIUM), $e, format_credit($user->total_credit), format_credit($user->expavg_credit), $user->country);
+        table_row(user_links($user, BADGE_HEIGHT_MEDIUM), format_credit($user->total_credit), format_credit($user->expavg_credit), $user->country);
     }
 }
 if (!$plain) {
