@@ -8,6 +8,9 @@ MariaDB - SQL for raining process.
 
 BOINC Server files - Overwrite these files onto git cloned BOINC folder.
 
+## Dependancies
+https://github.com/marius311/boinc-server-docker/
+
 ---------
 
 ![BOINC](https://i.imgur.com/Wy4UOYL.png)
