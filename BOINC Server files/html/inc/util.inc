@@ -435,7 +435,7 @@ function pgpfield($x, $y, $show_error=false) {
         $class1 = 'fieldname';
         $class2 = 'fieldvalue';
     }
-    echo "<tr><td width=\"40%\" class=$class1>$x</td><td class=$class2><textarea name=\"textarea\" style=\"width:350px;height:150px;\">$y</textarea></td></tr>\n";
+    echo "<tr><td width=\"40%\" class=$class1>$x</td><td class=$class2><textarea readonly name=\"textarea\" style=\"width:350px;height:150px;\">$y</textarea></td></tr>\n";
 }
 
 function row2_init($x, $y) {
