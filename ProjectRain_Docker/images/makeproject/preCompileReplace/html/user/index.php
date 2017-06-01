@@ -66,22 +66,18 @@ function left(){
             global $no_computing, $no_web_account_creation, $master_url;
             if ($no_computing) {
                 echo "
-                    DBC is a BOINC project which utilizes volunteer computing power to do perform research regarding air pollution.
+                     Project-Rain Blurb.
                 ";
             } else {
                 echo "
                     <p>
-                    DBC aims to calculate levels of air pollution in a hope of minimizing exposure to harmful pollutants.<br/>
-                    The DBC distributes Docker containers which run within VirtualBox on Linux, Windows and OSX.<br/>
-                    The BOINC project has implemented project rain, supporting many cryptocurrency projects.
+                    Project-Rain Blurb.
                     </p>
                 ";
             }
             echo "
                 <ul>
-                <li> <a href=\"https://thedatalab.com\">DataLabs</a>
-                <li> <a href=\"https://gla.ac.uk\">Glasgow University</a>
-                <li> <a href=\"https://uws.ac.uk\">Paisley University</a>
+                <li> <a href=\"https://github.com/grctest/project-rain-site\">Project-Rain</a>
                 </ul>
             ";
             echo "</ul>";
