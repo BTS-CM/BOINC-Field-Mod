@@ -1,0 +1,62 @@
+FROM debian:jessie
+
+MAINTAINER Marius Millea <mariusmillea@gmail.com>
+
+# install necessary packages
+RUN apt-get update && apt-get install -y \
+        curl \
+        dh-autoreconf \
+        git \
+        libcurl4-gnutls-dev \
+        libmysqlclient-dev \
+        unzip \
+        libssl-dev \
+        m4 \
+        make \
+        php5-cli \
+        php5-mysql \
+        pkg-config \
+        python \
+        python-mysqldb \
+        python-yaml \
+        wget
+
+# get source and compile server
+COPY boinc /root/boinc
+RUN cd /root/boinc && ./_autosetup && ./configure --disable-client --disable-manager && make
+
+# build configuration
+ENV USER=root PROJHOME=/root/project
+
+# make project
+RUN cd /root/boinc/tools \
+    && ./make_project --url_base http://192.168.56.10 \
+                      --project_host boincserver \
+                      --db_host mysql \
+                      --db_user root \
+                      --no_db \
+                      --no_query \
+                      --project_root $PROJHOME \
+                      boincserver \
+    && sed -i -e 's/Deny from all/Require all denied/g' \
+           -e 's/Allow from all/Require all granted/g' \
+           -e '/Order/d' $PROJHOME/boincserver.httpd.conf \
+    && echo "admin:oiwjfwjefwiuefgwoeufsknf398475983" > $PROJHOME/html/ops/.htpasswd \
+    && rm -r $PROJHOME/log_boincserver
+
+# create boinc2docker app
+COPY boinc2docker /root/boinc2docker
+ENV PATH=/root/boinc2docker:$PATH
+# the vboxwrapper/iso/appver installed will be taken from boinc2docker/boinc2docker.yml
+RUN boinc2docker_create_app
+
+# project files
+RUN mkdir $PROJHOME/html/stats_archive
+COPY db_dump_spec.xml $PROJHOME/
+COPY html $PROJHOME/html
+COPY bin $PROJHOME/bin
+
+# finish up 
+WORKDIR $PROJHOME
+COPY postbuild.py /root/
+CMD /root/postbuild.py
