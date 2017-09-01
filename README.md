@@ -579,3 +579,19 @@ void write_rain(RAIN& rain, FILE* f, bool /*detail*/) {
     }
 }
 ```
+
+---
+
+# /sched/db_dump_spec.xml
+
+Added the following:
+
+```
+    <enumeration>
+        <table>rain</table>
+        <filename>rain</filename>
+        <output>
+            <compression>gzip</compression>
+        </output>
+    </enumeration>
+```
