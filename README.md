@@ -384,6 +384,18 @@ $retval = $user->update("email_addr='$x', authenticator='$x', name='', country='
 
 # /html/user/show_user.php
 
+```
+$project_rain = get_project_rain_details();
+```
+
+```
+show_user_xml($user, $show_hosts, $project_rain);
+```
+
+```
+show_rain_public($project_rain);
+```
+
 # Custom files (no need to edit existing files)
 
 * /html/user/edit_project_rain_action.php
