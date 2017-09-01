@@ -152,7 +152,7 @@ public:
     void operator=(USER& r) {USER::operator=(r);}
 };
 
-struct DB_PROJECT_RAIN : public DB_BASE, public PROJECT_RAIN {
+struct DB_USER_ : public DB_BASE, public PROJECT_RAIN {
 public:
     DB_PROJECT_RAIN(DB_CONN* p=0);
     DB_ID_TYPE get_id();

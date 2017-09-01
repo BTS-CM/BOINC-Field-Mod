@@ -102,46 +102,6 @@ function show_user_xml($user, $show_hosts, $project_rain) {
     <name>".htmlspecialchars($user->name)."</name>
     <country>$user->country</country>
     <bitshares>$project_rain->bitshares</bitshares>
-    <steem>$project_rain->steem</steem>
-    <gridcoin>$project_rain->gridcoin</gridcoin>
-    <ethereum>$project_rain->ethereum</ethereum>
-    <ethereum_classic>$project_rain->ethereum_classic</ethereum_classic>    
-    <golem>$project_rain->golem</golem>
-    <nxt>$project_rain->nxt</nxt>
-    <ardor>$project_rain->ardor</ardor>
-    <hyperledger_sawtooth_lake>$project_rain->hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
-    <hyperledger_fabric>$project_rain->hyperledger_fabric</hyperledger_fabric>
-    <hyperledger_misc>$project_rain->hyperledger_misc</hyperledger_misc>
-    <waves>$project_rain->waves</waves>
-    <peershares>$project_rain->peershares</peershares>
-    <omnilayer>$project_rain->omnilayer</omnilayer>
-    <counterparty>$project_rain->counterparty</counterparty>
-    <peerplays>$project_rain->peerplays</peerplays>
-    <storj>$project_rain->storj</storj>
-    <nem>$project_rain->nem</nem>
-    <ibm_bluemix_blockchain>$project_rain->ibm_bluemix_blockchain</ibm_bluemix_blockchain>
-    <coloredcoins>$project_rain->coloredcoins</coloredcoins>
-    <heat_ledger>$project_rain->heat_ledger</heat_ledger>
-    <antshares>$project_rain->antshares</antshares>
-    <lisk>$project_rain->lisk</lisk>
-    <decent>$project_rain->decent</decent>
-    <synereo>$project_rain->synereo</synereo>
-    <lbry>$project_rain->lbry</lbry>
-    <wings>$project_rain->wings</wings>
-    <hong>$project_rain->hong</hong>
-    <boardroom>$project_rain->boardroom</boardroom>
-    <expanse>$project_rain->expanse</expanse>
-    <akasha>$project_rain->akasha</akasha>
-    <cosmos>$project_rain->cosmos</cosmos>
-    <metaverse>$project_rain->metaverse</metaverse>
-    <zcash>$project_rain->zcash</zcash>
-    <stratis>$project_rain->stratis</stratis>
-    <echo>$project_rain->echo</echo>
-    <tox>$project_rain->tox</tox>
-    <retroshare>$project_rain->retroshare</retroshare>
-    <wickr>$project_rain->wickr</wickr>
-    <ring>$project_rain->ring</ring>
-    <pgp>$project_rain->pgp</pgp>
     <total_credit>$user->total_credit</total_credit>
     <expavg_credit>$user->expavg_credit</expavg_credit>
     <expavg_time>$user->expavg_time</expavg_time>
@@ -172,46 +132,6 @@ function show_team_member($user, $project_rain, $creditonly = false) {
     <name>".htmlspecialchars($user->name)."</name>
     <country>$user->country</country>
     <bitshares>$project_rain->bitshares</bitshares>
-    <steem>$project_rain->steem</steem>
-    <gridcoin>$project_rain->gridcoin</gridcoin>
-    <ethereum>$project_rain->ethereum</ethereum>
-    <ethereum_classic>$project_rain->ethereum_classic</ethereum_classic>    
-    <golem>$project_rain->golem</golem>
-    <nxt>$project_rain->nxt</nxt>
-    <ardor>$project_rain->ardor</ardor>
-    <hyperledger_sawtooth_lake>$project_rain->hyperledger_sawtooth_lake</hyperledger_sawtooth_lake>
-    <hyperledger_fabric>$project_rain->hyperledger_fabric</hyperledger_fabric>
-    <hyperledger_misc>$project_rain->hyperledger_misc</hyperledger_misc>
-    <waves>$project_rain->waves</waves>
-    <peershares>$project_rain->peershares</peershares>
-    <omnilayer>$project_rain->omnilayer</omnilayer>
-    <counterparty>$project_rain->counterparty</counterparty>
-    <heat_ledger>$project_rain->heat_ledger</heat_ledger>
-    <peerplays>$project_rain->peerplays</peerplays>
-    <storj>$project_rain->storj</storj>
-    <nem>$project_rain->nem</nem>
-    <ibm_bluemix_blockchain>$project_rain->ibm_bluemix_blockchain</ibm_bluemix_blockchain>
-    <coloredcoins>$project_rain->coloredcoins</coloredcoins>
-    <antshares>$project_rain->antshares</antshares>
-    <lisk>$project_rain->lisk</lisk>
-    <decent>$project_rain->decent</decent>
-    <synereo>$project_rain->synereo</synereo>
-    <lbry>$project_rain->lbry</lbry>
-    <wings>$project_rain->wings</wings>
-    <hong>$project_rain->hong</hong>
-    <boardroom>$project_rain->boardroom</boardroom>
-    <expanse>$project_rain->expanse</expanse>
-    <akasha>$project_rain->akasha</akasha>
-    <cosmos>$project_rain->cosmos</cosmos>
-    <metaverse>$project_rain->metaverse</metaverse>
-    <zcash>$project_rain->zcash</zcash>
-    <stratis>$project_rain->stratis</stratis>
-    <echo>$project_rain->echo</echo>
-    <tox>$project_rain->tox</tox>
-    <retroshare>$project_rain->retroshare</retroshare>
-    <wickr>$project_rain->wickr</wickr>
-    <ring>$project_rain->ring</ring>
-    <pgp>$project_rain->pgp</pgp>
     <expavg_credit>$user->expavg_credit</expavg_credit>
     <expavg_time>$user->expavg_time</expavg_time>
     <url>".htmlspecialchars($user->url)."</url>

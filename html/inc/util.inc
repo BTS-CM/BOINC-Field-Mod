@@ -121,7 +121,7 @@ function clear_cookie($name, $ops=false) {
     setcookie($name, '', time()-3600, $path);
 }
 
-// We want to check if users are logged in before showing project rain details
+// We want to check if users are logged in
 // Preventing bots from scraping the website
 
 $g_logged_in_user = null;
