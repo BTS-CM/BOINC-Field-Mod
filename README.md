@@ -107,9 +107,9 @@ create table project_rain (
 
 # In accordance with the schema.sql guidance, todo:
 
-* investigate sched dump & purge
-* add field to database.py
-* host.inc, db_update
+* Investigate sched dump & purge
+* Add fields to database.py
+* db_update --> Does this help upgrade existing BOINC projects SQL databases to include new tables?
 
 ---
 
@@ -345,3 +345,46 @@ Simply added a field to the export, untested & may be unable to access $project_
 </team>
 "
 ```
+
+# /html/user/am_get_info.php
+
+```
+$project_rain = BoincRain::lookup_auth($auth);
+$bitshares = urlencode($project_rain->bitshares);
+```
+
+Added to $ret:
+```
+    <bitshares>$bitshares</bitshares>
+```
+
+# /html/user/am_set_info.php
+
+```
+$bitshares = post_str("bitshares", true);
+```
+
+```
+$bitshares = BoincDb::escape_string($bitshares);
+```
+
+```
+if ($bitshares) {
+    $query .= " bitshares='$bitshares', ";
+}
+```
+
+# /html/user/delete_account.php
+
+Need to be able to delete the added data from the DB when deleting an account.
+
+```
+$retval = $user->update("email_addr='$x', authenticator='$x', name='', country='', postal_code='', bitshares='', has_profile=0");
+```
+
+# /html/user/show_user.php
+
+# Custom files (no need to edit existing files)
+
+* /html/user/edit_project_rain_action.php
+* /html/user/edit_project_Rain_form.php
