@@ -559,10 +559,6 @@ function show_rain_private($project_rain) {
     start_table();
     show_project_rain_crypto_private($project_rain);
     end_table();
-    echo "</td><td valign=top>";
-    start_table();
-    show_project_rain_dao_message_private($project_rain);
-    end_table();
     echo "</td></tr></table>";
 }
 
@@ -571,10 +567,6 @@ function show_rain_public($project_rain) {
     echo "<tr><td valign=top>";
     start_table();
     show_project_rain_crypto_public($project_rain);
-    end_table();
-    echo "</td><td valign=top>";
-    start_table();
-    show_project_rain_dao_message_public($project_rain);
     end_table();
     echo "</td></tr></table>";
 }
@@ -630,7 +622,7 @@ function make_user(
 
     $uid = BoincUser::insert("(create_time, email_addr, name, authenticator, country, postal_code, total_credit, expavg_credit, expavg_time, project_prefs, teamid,  venue, send_email, show_hosts, posts, seti_id, seti_nresults, seti_last_result_time, seti_total_cpu, has_profile, cross_project_id, passwd_hash, email_validated, donated) values($now, '$email_addr', '$name', '$authenticator', '$country', '$postal_code', 0, 0, unix_timestamp(), '$project_prefs', $teamid, '', 1, 1, 0, 0, 0, 0, 0, 0, '$cross_project_id', '$passwd_hash', 0, 0)");
 
-    $rainid = BoincRain::insert("(authenticator, bitshares, steem, peerplays, storj, nem, ibm_bluemix_blockchain, coloredcoins, antshares, lisk, decent, synereo, lbry, wings, hong, boardroom, gridcoin, ethereum, ethereum_classic, expanse, golem, nxt, ardor, hyperledger_sawtooth_lake, hyperledger_fabric, hyperledger_misc, waves, akasha, cosmos, metaverse, zcash, stratis, peershares, omnilayer, counterparty, heat_ledger, echo, tox, retroshare, wickr, ring, pgp) values('$authenticator', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '')");
+    $rainid = BoincRain::insert("(authenticator, bitshares) values('$authenticator', '')");
 
     if (!$uid) {
         return null;
@@ -653,6 +645,8 @@ function make_user_ldap($email_addr, $name) {
     $passwd_hash = random_string();
     $now = time();
     $uid = BoincUser::insert("(create_time, email_addr, name, authenticator, country, postal_code, total_credit, expavg_credit, expavg_time, project_prefs, teamid,  send_email, show_hosts, cross_project_id, passwd_hash) values($now, '$email_addr', '$name', '$authenticator', '', '', 0, 0, unix_timestamp(), '', 0, 1, 1, '$cross_project_id', '$passwd_hash')");
+
+    $rainid = BoincRain::insert("(authenticator, bitshares) values('$authenticator', '')");
 
     if ($uid) {
         return BoincUser::lookup_id($uid);

@@ -221,6 +221,28 @@ function show_project_rain_crypto_public($project_rain) {
 }
 ```
 
+The following segments need the rain/crypto terminology removed.
+
+```
+function show_rain_private($project_rain) {
+    start_table();
+    echo "<tr><td valign=top>";
+    start_table();
+    show_project_rain_crypto_private($project_rain);
+    end_table();
+    echo "</td></tr></table>";
+}
+
+function show_rain_public($project_rain) {
+    start_table();
+    echo "<tr><td valign=top>";
+    start_table();
+    show_project_rain_crypto_public($project_rain);
+    end_table();
+    echo "</td></tr></table>";
+}
+```
+
 # /html/inc/util.inc
 
 ```
@@ -545,6 +567,7 @@ void write_user(USER& user, FILE* f, bool /*detail*/) {
   * 'USER& user' -> Custom equivelant?
   * Able to import 'USER& user' AND 'RAIN& rain', or will we only be able to export from one table at a time? No joins?
     * We may need to include more info in our schema, such as RAC and TotalCredit, if we cannot import 2 table contents..
+    * New concern: We will need to get the BOINC server updating both the user and rain tables for total_credit and expavg_credit. An update function is likely in the db files.
 * Reducing the size of the xml extract by minimizing the field names.
   * user -> u
   * total_credit -> trac

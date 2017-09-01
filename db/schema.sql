@@ -339,6 +339,8 @@ create table project_rain (
     id                      integer         not null auto_increment,
     cross_project_id        varchar(254),
     authenticator           varchar(254),
+    total_credit            double          not null,
+    expavg_credit           double          not null,
     bitshares               varchar(254),
     primary key (id)
 ) engine=InnoDB;
