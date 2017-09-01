@@ -284,7 +284,7 @@ function show_user_xml($user, $show_hosts, $project_rain) {
 ";
     if ($show_hosts) {
         $hosts = BoincHost::enum("userid=$user->id");
-        echo "   <venue>$user->venue</venue>\n";
+        echo "   <venue>$user->venue</venue>";
         foreach ($hosts as $host) {
             show_host_xml($host);
         }
@@ -400,3 +400,182 @@ show_rain_public($project_rain);
 
 * /html/user/edit_project_rain_action.php
 * /html/user/edit_project_Rain_form.php
+
+---
+
+# /py/BOINC/database.py
+
+## Reference User section
+
+```
+class User(DatabaseObject):
+    _table = DatabaseTable(
+        table = 'user',
+        columns = [ 'create_time',
+                    'email_addr',
+                    'name',
+                    'authenticator',
+                    'country',
+                    'postal_code',
+                    'total_credit',
+                    'expavg_credit',
+                    'expavg_time',
+                    'global_prefs',
+                    'project_prefs',
+                    'teamid',
+                    'venue',
+                    'url',
+                    'send_email',
+                    'show_hosts',
+                    'posts',
+                    'seti_id',
+                    'seti_nresults',
+                    'seti_last_result_time',
+                    'seti_total_cpu',
+                    'signature',
+                    'has_profile',
+                    'cross_project_id',
+                    'passwd_hash',
+                    'email_validated',
+                    'donated'
+                    ])
+```
+
+## Guesstimated implementation
+
+### Note:
+
+* Change: 'project_rain' to the db name defined in the '/db/schema.sql'
+* Change: 'bitshares' to the rebranded term.
+
+```
+class Project_Rain(DatabaseObject):
+    _table = DatabaseTable(
+        table = 'project_rain',
+        columns = [ 'authenticator',
+                    'cross_project_id',
+                    'bitshares'
+                    ])
+```
+
+---
+
+# /sched/db_dump.cpp
+
+## DbDump Readme
+
+* [BOINC wiki: DbDump](https://boinc.berkeley.edu/trac/wiki/DbDump)
+
+```
+"This program generates XML files containing project statistics."
+"It should be run once a day as a periodic task in config.xml."
+"For more info, see https://boinc.berkeley.edu/trac/wiki/DbDump"
+"Usage: %s [options]"
+"Options:"
+"    --dump_spec filename          Use the given config file (use ../db_dump_spec.xml)"
+"    [-d N | --debug_level]        Set verbosity level (1 to 4)"
+"    [--db_host H]                 Use the DB server on host H"
+"    [--retry_period H]            When can't connect to DB, retry after N sec instead of terminating"
+"    [-h | --help]                 Show this"
+"    [-v | --version]              Show version information",
+```
+
+## DbDump write_user reference segment
+
+```
+void write_user(USER& user, FILE* f, bool /*detail*/) {
+    char buf[1024];
+    char cpid[MD5_LEN];
+
+    char name[2048], url[2048];
+    xml_escape(user.name, name, sizeof(name));
+    xml_escape(user.url, url, sizeof(url));
+
+    safe_strcpy(buf, user.cross_project_id);
+    safe_strcat(buf, user.email_addr);
+    md5_block((unsigned char*)buf, strlen(buf), cpid);
+
+    fprintf(f,
+        "<user>"
+        " <id>%lu</id>"
+        " <name>%s</name>"
+        " <country>%s</country>"
+        " <create_time>%d</create_time>"
+        " <total_credit>%f</total_credit>"
+        " <expavg_credit>%f</expavg_credit>"
+        " <expavg_time>%f</expavg_time>"
+        " <cpid>%s</cpid>",
+        user.id,
+        name,
+        user.country,
+        user.create_time,
+        user.total_credit,
+        user.expavg_credit,
+        user.expavg_time,
+        cpid
+    );
+    if (strlen(user.url)) {
+        fprintf(f,
+            " <url>%s</url>",
+            url
+        );
+    }
+    if (user.teamid) {
+        fprintf(f,
+            " <teamid>%lu</teamid>",
+            user.teamid
+        );
+    }
+    if (user.has_profile) {
+        fprintf(f,
+            " <has_profile/>"
+        );
+    }
+    fprintf(f,
+        "</user>"
+    );
+}
+```
+
+## Guesstimated rain implementation
+
+## Brainstorming how to change this file
+
+* Create rain equivelant of write_user
+  * 'USER& user' -> Custom equivelant?
+  * Able to import 'USER& user' AND 'RAIN& rain', or will we only be able to export from one table at a time? No joins?
+    * We may need to include more info in our schema, such as RAC and TotalCredit, if we cannot import 2 table contents..
+* Reducing the size of the xml extract by minimizing the field names.
+  * user -> u
+  * total_credit -> trac
+  * expavg_credit -> rac
+* If XML validation isn't being performed during the dump, we could potentially switch to an alternative to xml to further reduce the filesize of dumped files. JSON for example.
+* We check that the user has provided the information we want to scrape, if they haven't then they aren't included in the xml dump - further reducing the file size.
+
+
+```
+void write_rain(RAIN& rain, FILE* f, bool /*detail*/) {
+    char buf[1024];
+    char cpid[MD5_LEN];
+    safe_strcpy(buf, user.cross_project_id);
+    safe_strcat(buf, user.email_addr);
+    md5_block((unsigned char*)buf, strlen(buf), cpid);
+
+    if (user.rain) {
+    fprintf(f,
+        "<u>"
+        " <id>%lu</id>"
+        " <trac>%f</trac>"
+        " <rac>%f</rac>"
+        " <cpid>%s</cpid>"
+        " <rain>%s</rain>"
+        "</u>",
+        user.id,
+        user.total_credit,
+        user.expavg_credit,
+        cpid,
+        rain
+    );
+    }
+}
+```
