@@ -1,1 +1,0 @@
-mv index_page/* /var/www/html/
