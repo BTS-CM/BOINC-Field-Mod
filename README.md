@@ -559,7 +559,7 @@ void write_user(USER& user, FILE* f, bool /*detail*/) {
 }
 ```
 
-## Guesstimated rain implementation
+# Guesstimated rain implementation
 
 ## Brainstorming how to change this file
 
