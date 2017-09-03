@@ -559,10 +559,6 @@ void write_user(USER& user, FILE* f, bool /*detail*/) {
 }
 ```
 
-# Guesstimated rain implementation
-
-## Brainstorming how to change this file
-
 * Create rain equivelant of write_user
   * 'USER& user' -> Custom equivelant?
   * Able to import 'USER& user' AND 'RAIN& rain', or will we only be able to export from one table at a time? No joins?
@@ -602,8 +598,6 @@ void write_rain(RAIN& rain, FILE* f, bool /*detail*/) {
     }
 }
 ```
-
----
 
 # /sched/db_dump_spec.xml
 
